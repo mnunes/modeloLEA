@@ -1,0 +1,19 @@
+Package: modeloLEA
+Type: Package
+Title: Modelo de Relatorio de Consultoria Estatistica
+Version: 0.0.1
+Date: 2018-02-01
+Author: Marcus Nunes
+Maintainer: Marcus Nunes <marcus.nunes@gmail.com>
+Description: Um estilo de relatorio 'PNAS'-alike 'rmarkdown', derivado 
+  do estilo 'Proceedings of the National Academy of Sciences of the 
+  United States of America' ('PNAS', veja <https://www.pnas.org>) para 
+  'LaTeX', do pacote pinp do 'R' (veja <https://github.com/eddelbuettel/pinp>) 
+  e adaptado para uso de 'markdown' e 'pandoc', alem da traducao para o 
+  portugues.
+URL: https://github.com/mnunes/modeloLEA
+BugReports: https://github.com/mnunes/modeloLEA/issues
+Imports: rmarkdown, knitr
+VignetteBuilder: knitr
+License: MIT
+RoxygenNote: 6.0.1
