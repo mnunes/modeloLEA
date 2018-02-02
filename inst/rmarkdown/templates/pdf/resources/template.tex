@@ -65,6 +65,15 @@ $if(footer_contents)$
 \pinpfootercontents{$footer_contents$}
 $endif$
 
+% pacotes a serem utilizados
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\usepackage{icomma}
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs}
+
 \begin{document}
 
 % Optional adjustment to line up main text (after abstract) of first page with line numbers, when using both lineno and twocolumn options.

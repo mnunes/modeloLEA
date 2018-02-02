@@ -53,13 +53,7 @@
 \RequirePackage[scaled]{helvet}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lettrine} % For dropped capitals
-\RequirePackage{amsmath}
-\numberwithin{equation}{section}
-\numberwithin{figure}{section}
-\numberwithin{table}{section}
-\RequirePackage{icomma}
-\RequirePackage{mathtools}
-\mathtoolsset{showonlyrefs}
+
 
 %% For the Significance Statement & footnote on the first page
 \RequirePackage{afterpage}
@@ -192,7 +186,7 @@
 \makeatletter
 \renewcommand\AB@affilsepx{; \protect\Affilfont}
 \makeatother
-\renewcommand\Authands{, and }
+\renewcommand\Authands{, e }
 
 %% Options for element switching
 \RequirePackage{xifthen}
