@@ -1,52 +1,55 @@
 ---
-title: A Template for Two or One-Column Vignettes
+title: Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio
 
-# Use letters for affiliations
+# Use letras para afiliação
 author:
-  - name: First Author
-    affiliation: a
-  - name: Second Author
+  - name: Aluno Consultor 1
     affiliation: a,b
+  - name: Aluno Consultor 2
+    affiliation: a,b
+  - name: Consulente
+    affiliation: c,d
+  - name: Marcus A. Nunes
+    affiliation: a,e
 address:
   - code: a
-    address: Institute of Smoke and Magic, University of Sometown, Sometown, XY, 12345
+    address: Departamento de Estatística - UFRN
   - code: b
-    address: Department of Neat Tricks, Whereever State University, Someplace, MC, 67890
+    address: Consultor
+  - code: c
+    address: Outro Departamento - UFRN
+  - code: d
+    address: Consulente
+  - code: e
+    address: Orientação
 
-# For footer text  TODO(fold into template, allow free form two-authors)
+# For footer text TODO (fold into template, allow free form two-authors)
 lead_author_surname: Author and Author
 
-# Place DOI URL or CRAN Package URL here
-doi: "https://cran.r-project.org/package=YourPackage"
-
 # Abstract
-abstract: |
-  Your abstract will be typeset here, and used by default a visually distinctive font.
-  An abstract should explain to the general reader the major contributions of the article. 
+abstract: Este trabalho estuda a relação entre a velocidade de carros (mph) e a distância (pés) que eles levaram para parar completamente. Utilizamos regressão linear simples para determinar se há relação entre estas duas variáveis.
 
 # Optional: Acknowledgements
-acknowledgements: |
-  This template package builds upon, and extends, the work of the excellent
-  [rticles](https://cran.r-project.org/package=rticles) package, and both packages rely on the
-  [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) macros. Both these sources are
-  gratefully acknowledged as this work would not have been possible without them.  Our extensions
-  are under the same respective licensing term
-  ([GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html) and
-  [LPPL (>= 1.3)](https://www.latex-project.org/lppl/)).
+#acknowledgements: |
+#  This template package builds upon, and extends, the work of the excellent
+#  [rticles](https://cran.r-project.org/package=rticles) package, and both packages rely on the
+#  [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) macros. Both these sources are
+#  gratefully acknowledged as this work would not have been possible without them.  Our extensions
+#  are under the same respective licensing term
+#  ([GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html) and
+#  [LPPL (>= 1.3)](https://www.latex-project.org/lppl/)).
 
-# Optional: One or more keywords
+# Optional: palavras-chave
 keywords:
-  - one
-  - two
-  - optional
-  - keywords
-  - here
+  - regressão linear
+  - automobilismo
+  - segurança
 
 # Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
-fontsize: 9pt
+fontsize: 12pt
 
 # Optional: Force one-column layout, default is two-column
-#one_column: true
+one_column: true
 
 # Optional: Enables lineno mode, but only if one_column mode is also true
 #lineno: true
@@ -55,25 +58,25 @@ fontsize: 9pt
 #one_sided: true
 
 # Optional: Enable section numbering, default is unnumbered
-#numbersections: true
+numbersections: true
 
 # Optional: Specify the depth of section number, default is 5
-#secnumdepth: 5
+secnumdepth: 5
 
 # Optional: Skip inserting final break between acknowledgements, default is false
 skip_final_break: true
 
 # Optional: Bibliography 
-bibliography: modeloLEA
+bibliography: pinp
 
 # Optional: Enable a 'Draft' watermark on the document
-watermark: true
+watermark: false
 
 # Customize footer, eg by referencing the vignette
 footer_contents: "YourPackage Vignette"
 
 # Produce a pinp document
-output: modeloLEA::modeloLEA
+output: pinp::pinp
 
 # Required: Vignette metadata for inclusion in a package.
 vignette: >
@@ -83,30 +86,48 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
 ---
 
-## Introduction 
 
-This *pinp is not PNAS* template started when the introduction to
-[Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html) by \cite{PeerJ:Rcpp} 
-was converted into this updated
-[Rcpp Introduction](https://eddelbuettel.github.io/pinp/Rcpp-introduction.pdf)
-vignette.  It is based on the
-[pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
-template of the wonderful [rticles](https://cran.r-project.org/package=rticles) package by
-\cite{CRAN:rticles}. The conversion from markdown to latex is facilitated by
-[rmarkdown](https://cran.r-project.org/package=rmarkdown)
-\citep{CRAN:rmarkdown} and [knitr](https://cran.r-project.org/package=knitr)
-\citep{CRAN:knitr}. The underlying LaTeX macros are from
-[pnas.org](http://www.pnas.org/site/authors/latex.xhtml).
 
-The remainder of the document carries over from the corresponding
-[pnas_article](https://github.com/rstudio/rticles/tree/master/inst/rmarkdown/templates/pnas_article)
-template document. but has been edited and updated to our use case.  A
-few specific tips follow.  In general, for fine-tuning some knowledge
-of LaTeX is helpful.
+# Objetivos
+
+Neste trabalho estamos interessados em verificar que existe alguma relação entre a velocidade de um carro (em milhas por hora) e a distância que o carro levou para parar (em pés). A hipótese com a qual trabalhamos é a de que existe uma relação positiva entre estas variáveis. Isto é, quanto mais rápido um carro estiver viajando, maior vai ser a distância necessária para que este carro pare completamente.
+
+Além de verificar se há uma relação entre estas variáveis, desejamos uma relação capaz de prever o quanto uma variável varia em relação a outra. Assim, gostaríamos de poder estimar a distância necessária para um carro parar se soubermos qual a sua velocidade.
 
 
 
-## Author Affiliations 
+# Metodologia
+
+Os dados foram obtidos a partir de 50 carros. As medições foram realizadas na década de 1920 e disponibilizadas no pacote estatístico `R`. Não há informações a respeito dos modelos dos carros utilizados neste experimento.
+
+Utilizaremos um método estatístico chamado regressão linear a fim de verificar se há relação entre a distância necessária para um carro parar completamente e sua velocidade. Este é um método bastante popular, capaz de descrever com bastante precisão a relação entre as variáveis que nos interessam.
+
+Sejam $x_1, x_2, \cdots, x_n$ as observações referentes à velocidade dos carros em questão. Considere $y_1, y_2, \cdots, y_n$ as observações referentes à distância necessária para os carros pararem. Podemos expressar a dependência entre $y$ e $x$ através da equação
+
+\begin{equation}
+y_i = \beta_0 + \beta_1x_i + \varepsilon_i,
+\end{equation}
+
+\noindent onde $\beta_0$ e $\beta_1$ são coeficientes estimados pelas equações
+
+\begin{align}
+\widehat{\beta}_1 &= \frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n(x_i-\overline{x})^2}  \label{estimadores01} \\
+\widehat{\beta}_0 &= \overline{y}-\widehat{\beta}_1\overline{x}  \label{estimadores02}
+\end{align}
+
+\noindent As quantidades $\overline{x}$ e $\overline{y}$ são, respectivamente, as médias amostrais de $x_1, x_2, \cdots, x_n$ e $y_1, y_2, \cdots, y_n$. Estas médias amostrais são dadas por
+
+\begin{align}
+\overline{x} &= \frac{1}{n}\sum_{i=1}^nx_i \\
+\overline{y} &= \frac{1}{n}\sum_{i=1}^ny_i 
+\end{align}
+
+Determinamos se o coeficiente $\beta_1$ é estatisticamente significante através de um teste $t$. Sob a hipótese nula, assumimos que o estimador possui distribuição $t$ com $n-1$ graus de liberdade.
+
+
+
+
+# Author Affiliations 
 
 Per common academic best practice, you can include your department,
 institution, and complete address, with the ZIP/postal code, for each
@@ -114,7 +135,7 @@ author. Use lower case letters to match authors with institutions, as
 shown in the example. Authors with an ORCID ID may supply this
 information at submission.
 
-## Document Options
+# Document Options
 
 We support several options via the YAML header
 
@@ -128,7 +149,7 @@ We support several options via the YAML header
 
 
 
-## References 
+# References 
 
 Here we differ from PNAS and suggest natbib. References will appear in
 author-year form. Use `\citet{}`, `\citep{}`, etc as usual.
@@ -137,7 +158,7 @@ We default to the `jss.bst` style. To switch to a different bibliography
 style, please use `biblio-style: style` in the YAML header.
 
 
-## Inline R Code 
+# Inline R Code 
 
 The PNAS sample included a fixed PNG image here, but this document prefers
 to show the results and embedding of _R_ code. 
@@ -156,7 +177,7 @@ Here we use a standard knitr bloc with explicit options for
 - the caption (`fig.cap`) as shown above.
 
 
-## Digital Figures 
+# Digital Figures 
 
 Markdown, Pandoc and LaTeX support `.eps` and `.pdf` files.
 
@@ -189,59 +210,4 @@ This file is then included via standard LaTeX commands.
   \end{center}
   \caption{Wide ggplot2 figure}\label{fig}
 \end{figure*}
-
-
-## Typeset Code (But Do Not Run It) 
-
-We can also just show code.
-
-```r
-xx <- faithful[,"eruptions"]
-fit <- density(xx)
-plot(fit)
-```
-
-This simply used a pandoc bloc started and ended by three backticks,
-with `r` as the language choice.  Similarly, _many_ other languages
-can be typeset directly simply by relying on pandoc.
-
-
-## Single column equations 
-
-Authors may use 1- or 2-column equations in their article, according to
-their preference.
-
-To allow an equation to span both columns, options are to use the
-`\begin{figure*}...\end{figure*}` environment mentioned above for
-figures, or to use the `\begin{widetext}...\end{widetext}` environment
-as shown in equation \ref{eqn:example} below.
-
-Please note that this option may run into problems with floats and
-footnotes, as mentioned in the [cuted package
-documentation](http://texdoc.net/pkg/cuted). In the case of problems
-with footnotes, it may be possible to correct the situation using
-commands `\footnotemark` and `\footnotetext`.
-
-\begin{equation}
-  \begin{aligned}
-(x+y)^3&=(x+y)(x+y)^2\\
-       &=(x+y)(x^2+2xy+y^2) \\
-       &=x^3+3x^2y+3xy^3+x^3. 
-       \label{eqn:example} 
-  \end{aligned}
-\end{equation}
-
-
-<!-- pandoc writes all tables using longtable, which fails in 2-column mode
-
-  Species                    CBS     CV     G3
-  ----------------------- ------ ------ ------
-  1\. Acetaldehyde           0.0    0.0    0.0
-  2\. Vinyl alcohol          9.1    9.6   13.5
-  3\. Hydroxyethylidene     50.8   51.2   54.0
-
-  : Comparison of the fitted potential energy surfaces and ab initio
-  benchmark electronic energy calculations
-
--->
 

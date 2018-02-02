@@ -1,28 +1,33 @@
 ---
-title: A Template for Two or One-Column Vignettes
+title: Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio
 
-# Use letters for affiliations
+# Use letras para afiliação
 author:
-  - name: First Author
-    affiliation: a
-  - name: Second Author
+  - name: Aluno Consultor 1
     affiliation: a,b
+  - name: Aluno Consultor 2
+    affiliation: a,b
+  - name: Consulente
+    affiliation: c,d
+  - name: Marcus A. Nunes
+    affiliation: a,e
 address:
   - code: a
-    address: Institute of Smoke and Magic, University of Sometown, Sometown, XY, 12345
+    address: Departamento de Estatística - UFRN
   - code: b
-    address: Department of Neat Tricks, Whereever State University, Someplace, MC, 67890
+    address: Consultor
+  - code: c
+    address: Outro Departamento - UFRN
+  - code: d
+    address: Consulente
+  - code: e
+    address: Orientação
 
-# For footer text  TODO(fold into template, allow free form two-authors)
+# For footer text TODO (fold into template, allow free form two-authors)
 lead_author_surname: Author and Author
 
-# Place DOI URL or CRAN Package URL here
-doi: "https://cran.r-project.org/package=YourPackage"
-
 # Abstract
-abstract: |
-  Your abstract will be typeset here, and used by default a visually distinctive font.
-  An abstract should explain to the general reader the major contributions of the article. 
+abstract: Este trabalho estuda a relação entre a velocidade de carros (mph) e a distância (pés) que eles levaram para parar completamente. Utilizamos regressão linear simples para determinar se há relação entre estas duas variáveis.
 
 # Optional: Acknowledgements
 acknowledgements: |

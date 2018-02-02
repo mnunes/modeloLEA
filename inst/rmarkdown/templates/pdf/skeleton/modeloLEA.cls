@@ -1,5 +1,5 @@
 %%%
-%% ping.cls
+%% modeloLEA.cls
 %%   based on pnas-new.cls and supporting material from
 %%   http://www.pnas.org/site/authors/latex.xhtml
 %%   as well as local changes 
@@ -7,6 +7,11 @@
 %% Dirk Eddelbuettel and James Balamuta
 %% August - September 2017
 %% 
+%% adaptado por Marcus Nunes
+%% marcusnunes.me
+%%
+%% github.com/mnunes/modeloLEA
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pnas-new.cls, v1.2, 2016/02/28 
 %
@@ -32,7 +37,7 @@
 % to produce the PDF, not dvis -> ps -> pdf nor dvipdf
 % 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{pinp}[2017-Sep-12, based on pnas-new 28/02/2015, v1.2]
+\ProvidesClass{modeloLEA}[2017-Sep-12, based on pnas-new 28/02/2015, v1.2]
 \AtEndOfClass{\RequirePackage{microtype}}
 % Option for line numbers
 \newif\if@pnaslineno
@@ -43,12 +48,18 @@
 
 %% Fonts and language
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[english]{babel}
-\RequirePackage{amsmath,amsfonts,amssymb}
+\RequirePackage[portuguese]{babel}
 \RequirePackage{lmodern}
 \RequirePackage[scaled]{helvet}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lettrine} % For dropped capitals
+\RequirePackage{amsmath}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\RequirePackage{icomma}
+\RequirePackage{mathtools}
+\mathtoolsset{showonlyrefs}
 
 %% For the Significance Statement & footnote on the first page
 \RequirePackage{afterpage}
