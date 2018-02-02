@@ -1,6 +1,6 @@
-#' modelo de relatorio PNAS-alike
+#' modelo de relatorio para laboratorio de consultoria no estilo PNAS
 #'
-#' Format suitable for attractive two-column pdf vignettes
+#' inspirado e adaptado do pacote pinp
 #'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Additional arguments to \code{rmarkdown::pdf_document}
