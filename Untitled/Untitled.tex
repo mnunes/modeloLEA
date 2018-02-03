@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,twoside,printwatermark=false]{modeloLEA}
+\documentclass[a4paper,12pt,twoside,printwatermark=true]{modeloLEA}
 
 %% Some pieces required from the pandoc template
 \providecommand{\tightlist}{%
@@ -11,8 +11,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
-\definecolor{pnasbluetext}{RGB}{101,0,0} %
+%\definecolor{modeloLEAblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+\definecolor{modeloLEAblue}{HTML}{000000}  % imagecolorpicker on blue for new R logo
+%\definecolor{pnasbluetext}{RGB}{101,0,0} %
+\definecolor{pnasbluetext}{RGB}{0,0,0} %
 
 
 
@@ -29,13 +31,13 @@
   \affil[d]{Consulente}
   \affil[e]{Orientação}
 
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{3}
 
 % Please give the surname of the lead author for the running footer
-\leadauthor{Author and Author}
+\leadauthor{}
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
- \keywords{  regressão linear |  automobilismo |  segurança  }  
+ \keywords{  regressão linear |  automobilismo |  segurança |  trânsito  }  
 
 \begin{abstract}
 Este trabalho estuda a relação entre a velocidade de carros (mph) e a
@@ -44,9 +46,9 @@ regressão linear simples para determinar se há relação entre estas duas
 variáveis.
 \end{abstract}
 
-\dates{This version was compiled on \today}
+\dates{Data: \today}
 
-\pinpfootercontents{YourPackage Vignette}
+\modeloLEAfootercontents{YourPackage Vignette}
 
 % pacotes a serem utilizados
 \usepackage{amsmath}
@@ -56,6 +58,7 @@ variáveis.
 \usepackage{icomma}
 \usepackage{mathtools}
 \mathtoolsset{showonlyrefs}
+
 
 \begin{document}
 
@@ -135,10 +138,10 @@ liberdade.
 
 A fim de verificar visualmente se há algum tipo de relação entre as
 variáveis consideradas neste estudo, exibimos o gráfico de dispersão dos
-dados na Figura \ref{ajuste}. Note que é possível perceber uma forte
-tendência linear positiva na relação entre estas variáveis. Quanto maior
-o valor da velocidade, maior a distância necessária para o carro parar
-completamente.
+dados na Figura \ref{fig:GraficoDispersao}. Note que é possível perceber
+uma forte tendência linear positiva na relação entre estas variáveis.
+Quanto maior o valor da velocidade, maior a distância necessária para o
+carro parar completamente.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -148,13 +151,21 @@ completamente.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{Untitled_files/figure-latex/graficoDispersao-1} \end{center}
+\begin{figure}
 
-Além disso, adicionamos ao gráfico exibido na Figura \ref{ajuste} a reta
-que melhor descreve a relação entre estas variáveis. Esta reta foi
-obtida através do método descrito na seção anterior, fazendo uso das
-fórmulas \eqref{estimadores01} e \eqref{estimadores02}. Explicitamente,
-a equação representada na figura é dada por
+{\centering \includegraphics{Untitled_files/figure-latex/GraficoDispersao-1} 
+
+}
+
+\caption{\label{fig:GraficoDispersao} Gráfico de dispersão da distância de parada completa (pés) versus velocidade (mph) dos carros.}\label{fig:GraficoDispersao}
+\end{figure}
+
+Além disso, adicionamos ao gráfico exibido na Figura
+\ref{fig:GraficoDispersao} a reta que melhor descreve a relação entre
+estas variáveis. Esta reta foi obtida através do método descrito na
+seção anterior, fazendo uso das fórmulas \eqref{estimadores01} e
+\eqref{estimadores02}. Explicitamente, a equação representada na figura
+é dada por
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -183,7 +194,18 @@ H_1 &: \beta_1 \neq 0 \\
 \end{align*}
 
 \noindent Os resultados destes testes estão apresentados na Tabela
-\ref{tabelaResultados}.
+\ref{tab:Resultados}.
+
+\begin{table}[!h]
+\caption{\label{tab:Resultados} Resultados dos testes de hipóteses realizados para a análise de regressão.}
+\begin{center}
+\begin{tabular}{loooo}\hline
+Coeficiente & \mbox{Estimativa} & \mbox{Erro Padrão} &   $t$  & \mbox{p-valor} \\ \hline
+$\beta_0$   & -17,5791   &    6,7584   & -2,601 &  0,0123  \\
+$\beta_1$   &   3,9324   &    0,4155   & 9,464  & <0,0001  \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
 
 Note que, em ambos os casos, o p-valor encontrado é inferior a
 \(\alpha = 0,05\). Portanto, podemos rejeitar ambas as hipóteses nulas e
@@ -191,7 +213,7 @@ Note que, em ambos os casos, o p-valor encontrado é inferior a
 
 Para finalizar a análise, devemos verificar se o modelo ajustado não
 viola as hipóteses do modelo de regressão linear. Para tal, exibimos a
-análise de resíduos na Figura \ref{residuos}.
+análise de resíduos na Figura \ref{fig:Residuos}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -199,7 +221,14 @@ análise de resíduos na Figura \ref{residuos}.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{Untitled_files/figure-latex/residuos-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics{Untitled_files/figure-latex/residuos-1} 
+
+}
+
+\caption{\label{fig:Residuos} Análise de resíduos da regressão linear realizada.}\label{fig:residuos}
+\end{figure}
 
 Note que na parte superior esquerda da imagem, embora o gráfico dos
 resíduos versus valores ajustados não apresente tendência, a variância
@@ -213,7 +242,7 @@ outro método de análise, como um modelo linear generalizado.
 %\showmatmethods
 
 
-\bibliography{pinp}
+\bibliography{modeloLEA}
 \bibliographystyle{jss}
 
 

@@ -45,10 +45,10 @@ keywords:
   - automobilismo
   - segurança
 
-# Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
+# Tamanho da fonte do documento. Os tamanhos sugeridos sao 9pt, 10pt, 11pt e 12pt (padrao)
 fontsize: 12pt
 
-# Opcional: Rela
+# Opcional: Relatorio com uma ou duas colunas (usamos uma coluna no LEA)
 one_column: true
 
 # Opcional: Enable one-sided layout, default is two-sided

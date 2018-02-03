@@ -267,9 +267,9 @@
 \pagestyle{fancy}          % Enables the custom headers/footers
 
 % Add name footer option
-\def\pinpfootercontents#1{\def\@pinpfootercontents{#1}}
-\pinpfootercontents{Package Vignette}
-\newcommand{\printpinpfootercontents}{\@pinpfootercontents}
+\def\modeloLEAfootercontents#1{\def\@modeloLEAfootercontents{#1}}
+\modeloLEAfootercontents{Package Vignette}
+\newcommand{\printmodeloLEAfootercontents}{\@modeloLEAfootercontents}
 
 %% For the line numbers overlay
 \def\leftlinenos{%
@@ -286,7 +286,7 @@
 
 \makeatletter
 \fancypagestyle{firststyle}{
-   \fancyfoot[R]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
+   \fancyfoot[R]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
    \fancyfoot[L]{\footerfont\@ifundefined{@doi}{}{\@doi}}
 }
 \makeatother
@@ -300,7 +300,7 @@
 \rfoot{}%
 \makeatletter
 \fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doi}{}{\@doi}}
-\fancyfoot[RO]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
+\fancyfoot[RO]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
 \fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}}
 
 % Use footer routine for line numbers
@@ -462,7 +462,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \providecommand*{\toclevel@acknow@section}{0}
 % Format is set for research articles by default
 \titleformat{\acknow@section}[runin]
-   {\sffamily\normalsize\bfseries\color{pinpblue}}
+   {\sffamily\normalsize\bfseries\color{modeloLEAblue}}
    {}
    {0em}
    {#1.}
@@ -619,26 +619,26 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \newenvironment{CodeChunk}{}{}
 
 %% Set colors -- now via test and fallback default in template
-%\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+%\definecolor{modeloLEAblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
 
 % Add colour to the title
-\appto{\titlefont}{\color{pinpblue}}
+\appto{\titlefont}{\color{modeloLEAblue}}
 
 % ...and section headings
 \titleformat{\section}
-  {\large\sffamily\bfseries\color{pinpblue}}
+  {\large\sffamily\bfseries\color{modeloLEAblue}}
   {\thesection.}
   {0.5em}
   {#1}
   []
 \titleformat{name=\section,numberless}
-  {\large\sffamily\bfseries\color{pinpblue}}
+  {\large\sffamily\bfseries\color{modeloLEAblue}}
   {}
   {0em}
   {#1}
   []  
 \titleformat{\subsection}[runin]
-  {\sffamily\bfseries\color{pinpblue}} %\itshape}%
+  {\sffamily\bfseries\color{modeloLEAblue}} %\itshape}%
   {\thesubsection.}
   {0.5em}
   {#1. }

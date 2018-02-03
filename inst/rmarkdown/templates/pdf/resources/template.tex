@@ -1,4 +1,4 @@
-\documentclass[a5paper,$if(fontsize)$$fontsize$,$else$9pt,$endif$$if(one_column)$$if(lineno)$lineno,$endif$$else$twocolumn,$endif$$if(one_sided)$$else$twoside,$endif$printwatermark=$if(watermark)$$watermark$$else$false$endif$]{modeloLEA}
+\documentclass[a4paper,$if(fontsize)$$fontsize$,$else$9pt,$endif$$if(one_column)$$if(lineno)$lineno,$endif$$else$twocolumn,$endif$$if(one_sided)$$else$twoside,$endif$printwatermark=$if(watermark)$$watermark$$else$false$endif$]{modeloLEA}
 
 %% Some pieces required from the pandoc template
 \providecommand{\tightlist}{%
@@ -15,14 +15,18 @@ $if(tables)$
 $endif$
 
 $if(headercolor)$
-\definecolor{pinpblue}{HTML}{$headercolor$}
+%\definecolor{modeloLEAblue}{HTML}{$headercolor$}
+\definecolor{modeloLEAblue}{HTML}{$headercolor$}
 $else$
-\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+%\definecolor{modeloLEAblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+\definecolor{modeloLEAblue}{HTML}{000000}  % imagecolorpicker on blue for new R logo
 $endif$
 $if(linkcolor)$
+%\definecolor{pnasbluetext}{HTML}{$linkcolor$}
 \definecolor{pnasbluetext}{HTML}{$linkcolor$}
 $else$
-\definecolor{pnasbluetext}{RGB}{101,0,0} %
+%\definecolor{pnasbluetext}{RGB}{101,0,0} %
+\definecolor{pnasbluetext}{RGB}{0,0,0} %
 $endif$
 
 
@@ -56,13 +60,13 @@ $if(keywords)$ \keywords{ $for(keywords)$ $keywords$ $sep$| $endfor$ } $endif$
 $abstract$
 \end{abstract}
 
-\dates{This version was compiled on \today}
+\dates{Data: \today}
 $if(doi)$
 \doi{$doi$}
 $endif$
 
 $if(footer_contents)$
-\pinpfootercontents{$footer_contents$}
+\modeloLEAfootercontents{$footer_contents$}
 $endif$
 
 % pacotes a serem utilizados
@@ -73,6 +77,7 @@ $endif$
 \usepackage{icomma}
 \usepackage{mathtools}
 \mathtoolsset{showonlyrefs}
+
 
 \begin{document}
 
