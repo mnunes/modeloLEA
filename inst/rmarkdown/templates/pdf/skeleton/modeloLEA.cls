@@ -199,7 +199,7 @@
 %% Watermark 
 % See: http://mirrors.ctan.org/macros/latex/contrib/xwatermark/doc/xwatermark-guide.pdf#page=3
 \RequirePackage[printwatermark]{xwatermark}
-\newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+\newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{RASCUNHO}
 
 \RequirePackage{textcomp} % For copyright symbol styling
 
@@ -244,7 +244,7 @@
 \renewcommand\bibfont{\normalfont\sffamily\fontsize{8}{10}\selectfont} % set font to be sans serif
 
 %% Figure caption style
-\DeclareCaptionFormat{pnasformat}{\normalfont\sffamily\fontsize{7}{9}\selectfont#1#2#3}
+\DeclareCaptionFormat{pnasformat}{\normalfont\sffamily\fontsize{12}{12}\selectfont#1#2#3}
 \captionsetup{format=pnasformat}
 
 %% Table style

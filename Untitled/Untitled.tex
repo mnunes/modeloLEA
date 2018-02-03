@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside,printwatermark=false]{pinp}
+\documentclass[a4paper,12pt,twoside,printwatermark=false]{modeloLEA}
 
 %% Some pieces required from the pandoc template
 \providecommand{\tightlist}{%
@@ -47,6 +47,15 @@ variáveis.
 \dates{This version was compiled on \today}
 
 \pinpfootercontents{YourPackage Vignette}
+
+% pacotes a serem utilizados
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\usepackage{icomma}
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs}
 
 \begin{document}
 

@@ -1,6 +1,0 @@
-PWD /Users/marcus/Documents/Research/github/modeloLEA/inst/rmarkdown/templates/pdf/skeleton
-INPUT /usr/local/texlive/2016/texmf.cnf
-INPUT /usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT skeleton.tex
-OUTPUT skeleton.log

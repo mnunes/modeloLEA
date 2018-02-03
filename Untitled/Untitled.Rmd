@@ -29,7 +29,7 @@ lead_author_surname: Author and Author
 # Abstract
 abstract: Este trabalho estuda a relação entre a velocidade de carros (mph) e a distância (pés) que eles levaram para parar completamente. Utilizamos regressão linear simples para determinar se há relação entre estas duas variáveis.
 
-# Optional: Acknowledgements
+# Opcional: Acknowledgements
 #acknowledgements: |
 #  This template package builds upon, and extends, the work of the excellent
 #  [rticles](https://cran.r-project.org/package=rticles) package, and both packages rely on the
@@ -39,7 +39,7 @@ abstract: Este trabalho estuda a relação entre a velocidade de carros (mph) e 
 #  ([GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html) and
 #  [LPPL (>= 1.3)](https://www.latex-project.org/lppl/)).
 
-# Optional: palavras-chave
+# Opcional: palavras-chave
 keywords:
   - regressão linear
   - automobilismo
@@ -48,35 +48,35 @@ keywords:
 # Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
 fontsize: 12pt
 
-# Optional: Force one-column layout, default is two-column
+# Opcional: Rela
 one_column: true
 
-# Optional: Enables lineno mode, but only if one_column mode is also true
+# Opcional: Enables lineno mode, but only if one_column mode is also true
 #lineno: true
 
-# Optional: Enable one-sided layout, default is two-sided
+# Opcional: Enable one-sided layout, default is two-sided
 #one_sided: true
 
-# Optional: Enable section numbering, default is unnumbered
+# Opcional: Enable section numbering, default is unnumbered
 numbersections: true
 
-# Optional: Specify the depth of section number, default is 5
+# Opcional: Specify the depth of section number, default is 5
 secnumdepth: 5
 
-# Optional: Skip inserting final break between acknowledgements, default is false
+# Opcional: Skip inserting final break between acknowledgements, default is false
 skip_final_break: true
 
-# Optional: Bibliography 
+# Opcional: Bibliography 
 bibliography: pinp
 
-# Optional: Enable a 'Draft' watermark on the document
+# Opcional: Enable a 'Draft' watermark on the document
 watermark: false
 
 # Customize footer, eg by referencing the vignette
 footer_contents: "YourPackage Vignette"
 
 # Produce a pinp document
-output: pinp::pinp
+output: modeloLEA::modeloLEA
 
 # Required: Vignette metadata for inclusion in a package.
 vignette: >
@@ -86,10 +86,13 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
 ---
 
+
 ```{r definicoes, include=FALSE, message=FALSE}
+# pacotes a serem carregados para a analise
 library(tidyverse)
 theme_set(theme_bw())
 library(ggfortify)
+# definicao do tamanho da figura
 knitr::opts_chunk$set(fig.width=6, fig.height=4)
 ```
 
