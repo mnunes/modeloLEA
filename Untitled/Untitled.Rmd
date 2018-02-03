@@ -1,0 +1,186 @@
+---
+title: Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio
+
+# Use letras para afiliação
+author:
+  - name: Aluno Consultor 1
+    affiliation: a,b
+  - name: Aluno Consultor 2
+    affiliation: a,b
+  - name: Consulente
+    affiliation: c,d
+  - name: Marcus A. Nunes
+    affiliation: a,e
+address:
+  - code: a
+    address: Departamento de Estatística - UFRN
+  - code: b
+    address: Consultor
+  - code: c
+    address: Outro Departamento - UFRN
+  - code: d
+    address: Consulente
+  - code: e
+    address: Orientação
+
+# For footer text TODO (fold into template, allow free form two-authors)
+lead_author_surname: Author and Author
+
+# Abstract
+abstract: Este trabalho estuda a relação entre a velocidade de carros (mph) e a distância (pés) que eles levaram para parar completamente. Utilizamos regressão linear simples para determinar se há relação entre estas duas variáveis.
+
+# Optional: Acknowledgements
+#acknowledgements: |
+#  This template package builds upon, and extends, the work of the excellent
+#  [rticles](https://cran.r-project.org/package=rticles) package, and both packages rely on the
+#  [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) macros. Both these sources are
+#  gratefully acknowledged as this work would not have been possible without them.  Our extensions
+#  are under the same respective licensing term
+#  ([GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html) and
+#  [LPPL (>= 1.3)](https://www.latex-project.org/lppl/)).
+
+# Optional: palavras-chave
+keywords:
+  - regressão linear
+  - automobilismo
+  - segurança
+
+# Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
+fontsize: 12pt
+
+# Optional: Force one-column layout, default is two-column
+one_column: true
+
+# Optional: Enables lineno mode, but only if one_column mode is also true
+#lineno: true
+
+# Optional: Enable one-sided layout, default is two-sided
+#one_sided: true
+
+# Optional: Enable section numbering, default is unnumbered
+numbersections: true
+
+# Optional: Specify the depth of section number, default is 5
+secnumdepth: 5
+
+# Optional: Skip inserting final break between acknowledgements, default is false
+skip_final_break: true
+
+# Optional: Bibliography 
+bibliography: pinp
+
+# Optional: Enable a 'Draft' watermark on the document
+watermark: false
+
+# Customize footer, eg by referencing the vignette
+footer_contents: "YourPackage Vignette"
+
+# Produce a pinp document
+output: pinp::pinp
+
+# Required: Vignette metadata for inclusion in a package.
+vignette: >
+  %\VignetteIndexEntry{YourPackage-vignetteentry}
+  %\VignetteKeywords{YourPackage, r, anotherkeyword}
+  %\VignettePackage{YourPackage}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+```{r definicoes, include=FALSE, message=FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+library(ggfortify)
+knitr::opts_chunk$set(fig.width=6, fig.height=4)
+```
+
+
+# Objetivos
+
+Neste trabalho estamos interessados em verificar que existe alguma relação entre a velocidade de um carro (em milhas por hora) e a distância que o carro levou para parar (em pés). A hipótese com a qual trabalhamos é a de que existe uma relação positiva entre estas variáveis. Isto é, quanto mais rápido um carro estiver viajando, maior vai ser a distância necessária para que este carro pare completamente.
+
+Além de verificar se há uma relação entre estas variáveis, desejamos uma relação capaz de prever o quanto uma variável varia em relação a outra. Assim, gostaríamos de poder estimar a distância necessária para um carro parar se soubermos qual a sua velocidade.
+
+
+
+# Metodologia
+
+Os dados foram obtidos a partir de 50 carros. As medições foram realizadas na década de 1920 e disponibilizadas no pacote estatístico `R`. Não há informações a respeito dos modelos dos carros utilizados neste experimento.
+
+Utilizaremos um método estatístico chamado regressão linear a fim de verificar se há relação entre a distância necessária para um carro parar completamente e sua velocidade. Este é um método bastante popular, capaz de descrever com bastante precisão a relação entre as variáveis que nos interessam.
+
+Sejam $x_1, x_2, \cdots, x_n$ as observações referentes à velocidade dos carros em questão. Considere $y_1, y_2, \cdots, y_n$ as observações referentes à distância necessária para os carros pararem. Podemos expressar a dependência entre $y$ e $x$ através da equação
+
+\begin{equation}
+y_i = \beta_0 + \beta_1x_i + \varepsilon_i,
+\end{equation}
+
+\noindent onde $\beta_0$ e $\beta_1$ são coeficientes estimados pelas equações
+
+\begin{align}
+\widehat{\beta}_1 &= \frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n(x_i-\overline{x})^2}  \label{estimadores01} \\
+\widehat{\beta}_0 &= \overline{y}-\widehat{\beta}_1\overline{x}  \label{estimadores02}
+\end{align}
+
+\noindent As quantidades $\overline{x}$ e $\overline{y}$ são, respectivamente, as médias amostrais de $x_1, x_2, \cdots, x_n$ e $y_1, y_2, \cdots, y_n$. Estas médias amostrais são dadas por
+
+\begin{align}
+\overline{x} &= \frac{1}{n}\sum_{i=1}^nx_i \\
+\overline{y} &= \frac{1}{n}\sum_{i=1}^ny_i 
+\end{align}
+
+Determinamos se o coeficiente $\beta_1$ é estatisticamente significante através de um teste $t$. Sob a hipótese nula, assumimos que o estimador possui distribuição $t$ com $n-1$ graus de liberdade.
+
+# Resultados
+
+A fim de verificar visualmente se há algum tipo de relação entre as variáveis consideradas neste estudo, exibimos o gráfico de dispersão dos dados na Figura \ref{ajuste}. Note que é possível perceber uma forte tendência linear positiva na relação entre estas variáveis. Quanto maior o valor da velocidade, maior a distância necessária para o carro parar completamente.
+
+
+```{r graficoDispersao}
+ggplot(cars, aes(x=speed, y=dist)) +
+  geom_point() +
+  labs(x="Velocidade (mph)", y="Distância (pés)")
+```
+
+Além disso, adicionamos ao gráfico exibido na Figura \ref{ajuste} a reta que melhor descreve a relação entre estas variáveis. Esta reta foi obtida através do método descrito na seção anterior, fazendo uso das fórmulas \eqref{estimadores01} e \eqref{estimadores02}. Explicitamente, a equação representada na figura é dada por
+
+
+```{r ajusteModeloLinear}
+ajuste <- lm(dist ~ speed, data=cars)
+```
+
+
+\begin{equation}\label{equacaoFinal}
+\widehat{y}_i = -17,5791 + 3,9324x_i.
+\end{equation}
+
+Entretanto, precisamos testar se os coeficientes estimados e apresentados na relação \eqref{equacaoFinal} são, de fato, estatisticamente significantes. Para isto, testaremos as hipóteses
+
+\begin{align*}
+H_0 &: \beta_0 = 0 \\
+H_1 &: \beta_0 \neq 0 \\
+\end{align*}
+
+\noindent e 
+
+\begin{align*}
+H_0 &: \beta_1 = 0 \\
+H_1 &: \beta_1 \neq 0 \\
+\end{align*}
+
+\noindent Os resultados destes testes estão apresentados na Tabela \ref{tabelaResultados}.
+
+
+
+Note que, em ambos os casos, o p-valor encontrado é inferior a $\alpha = 0,05$. Portanto, podemos rejeitar ambas as hipóteses nulas e $\beta_0$ e $\beta_1$ são estatisticamente diferentes de zero.
+
+Para finalizar a análise, devemos verificar se o modelo ajustado não viola as hipóteses do modelo de regressão linear. Para tal, exibimos a análise de resíduos na Figura \ref{residuos}.
+
+```{r residuos}
+autoplot(ajuste)
+```
+
+
+Note que na parte superior esquerda da imagem, embora o gráfico dos resíduos versus valores ajustados não apresente tendência, a variância não é constante. Note que os pontos próximos de zero estão mais próximos entre si do que os pontos mais à direita no gráfico. Portanto, há uma violação das hipóteses da regressão linear neste caso.
+
+Assim, podemos sugerir uma transformação nestes dados ou a utilização de outro método de análise, como um modelo linear generalizado.
+
