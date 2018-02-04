@@ -181,7 +181,7 @@ Note que, em ambos os casos, o p-valor encontrado é inferior a $\alpha = 0,05$.
 
 Para finalizar a análise, devemos verificar se o modelo ajustado não viola as hipóteses do modelo de regressão linear. Para tal, exibimos a análise de resíduos na Figura \ref{fig:Residuos}.
 
-```{r residuos, fig.cap="\\label{fig:Residuos} Análise de resíduos da regressão linear realizada."}
+```{r residuos, fig.cap="\\label{fig:Residuos} Análise de resíduos do modelo de regressão linear ajustado."}
 autoplot(ajuste)
 ```
 
