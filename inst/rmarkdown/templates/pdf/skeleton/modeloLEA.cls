@@ -8,8 +8,8 @@
 %% August - September 2017
 %% 
 %% adaptado por Marcus Nunes
+%% Fevereiro de 2018
 %% marcusnunes.me
-%%
 %% github.com/mnunes/modeloLEA
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -251,15 +251,15 @@
 \RequirePackage{etoolbox}
 \captionsetup[table]{labelfont+={small},textfont+={small,sf,bf},skip=10pt,position=above}
 % booktabs provide nice spacing, but rule widths and distances need fixing
-\setlength{\heavyrulewidth}{0.5pt}
-\setlength{\lightrulewidth}{0.5pt}
-\setlength{\aboverulesep}{1.5pt}
-\setlength{\belowrulesep}{1.5pt}
+\setlength{\heavyrulewidth}{0.75pt}
+\setlength{\lightrulewidth}{0.75pt}
+\setlength{\aboverulesep}{1.75pt}
+\setlength{\belowrulesep}{1.75pt}
 \setlength{\belowbottomsep}{10pt}
 \AtBeginEnvironment{tabular}{
-\sffamily\fontsize{7.5}{10}\selectfont
+\sffamily\fontsize{12}{12}\selectfont
 }
-\newcommand{\addtabletext}[1]{{\setlength{\leftskip}{9pt}\fontsize{7}{9}\selectfont#1}}
+\newcommand{\addtabletext}[1]{{\setlength{\leftskip}{9pt}\fontsize{12}{12}\selectfont#1}}
 
 %% Headers and footers
 \RequirePackage{fancyhdr}  % custom headers/footers

@@ -80,19 +80,21 @@ knitr::opts_chunk$set(fig.width=6, fig.height=4,
 
 # Objetivos
 
-Neste trabalho estamos interessados em verificar que existe alguma relação entre a velocidade de um carro (em milhas por hora) e a distância que o carro levou para parar (em pés). A hipótese com a qual trabalhamos é a de que existe uma relação positiva entre estas variáveis. Isto é, quanto mais rápido um carro estiver viajando, maior vai ser a distância necessária para que este carro pare completamente.
+Diversos já publicaram diversos estudos referentes à segurança no trânsito. \cite{McKenna1991}, por exemplo, estuda a relação entre as habilidades dos motoristas e a percepção que eles possuem sobre estas habilidades. Além desta característica, existem diversas outras que, se estudadas, podem aumentar a segurança no trânsito. Uma destas características é a distância mínima necessária para que um carro pare completamente após seus freios serem acionados.
 
-Além de verificar se há uma relação entre estas variáveis, desejamos uma relação capaz de prever o quanto uma variável varia em relação a outra. Assim, gostaríamos de poder estimar a distância necessária para um carro parar se soubermos qual a sua velocidade.
+Neste trabalho estamos interessados em verificar qual é a relação que existe entre a velocidade de um carro (em milhas por hora) e a distância que ele levou para parar completamente (em pés). Este conjunto de dados foi fornecido pelo programa R: A Language and Environment for Statistical Computing (\cite{R2017}). A hipótese com a qual trabalhamos é a de que existe uma relação positiva entre estas variáveis. Isto é, quanto mais rápido um carro estiver trafegando, maior vai ser a distância necessária para que este carro pare completamente.
+
+Além de verificar se há correlação entre estas variáveis, desejamos obter uma relação capaz de prever o quanto uma variável varia em relação a outra. Ou seja, gostaríamos de poder estimar a distância necessária para um carro parar completamente se soubermos qual a sua velocidade de tráfego no momento em que os freios foram acionados.
 
 
 
 # Metodologia
 
-Os dados foram obtidos a partir de 50 carros. As medições foram realizadas na década de 1920 e disponibilizadas no pacote estatístico `R`. Não há informações a respeito dos modelos dos carros utilizados neste experimento.
+Os dados aqui analisados foram obtidos a partir de uma amostra de 50 carros. As medições foram realizadas na década de 1920 e disponibilizadas originalmente por \cite{Ezekiel1930}. Não há informações a respeito dos modelos dos carros utilizados neste experimento.
 
 Utilizaremos um método estatístico chamado regressão linear a fim de verificar se há relação entre a distância necessária para um carro parar completamente e sua velocidade. Este é um método bastante popular, capaz de descrever com bastante precisão a relação entre as variáveis que nos interessam.
 
-Sejam $x_1, x_2, \cdots, x_n$ as observações referentes à velocidade dos carros em questão. Considere $y_1, y_2, \cdots, y_n$ as observações referentes à distância necessária para os carros pararem. Podemos expressar a dependência entre $y$ e $x$ através da equação
+Sejam $x_1, x_2, \cdots, x_n$ as observações referentes à velocidade dos carros em questão. Considere $y_1, y_2, \cdots, y_n$ as observações referentes à distância necessária para os carros pararem. De acordo com \cite{Kutner2004}, podemos expressar a dependência entre $y$ e $x$ através da equação
 
 \begin{equation}
 y_i = \beta_0 + \beta_1x_i + \varepsilon_i,
@@ -179,12 +181,13 @@ Assim, podemos sugerir uma transformação nestes dados ou a utilização de out
 
 
 <!-- 
-Isto eh um comentario.
-As referencias do trabalho devem ser colocadas dentro do arquivo 
+Perceba que o relatorio esta finalizado. Entretanto, ainda eh necessario colocar as referencias. Estas referencias devem ser colocadas dentro do arquivo 
 
 modeloLEA.bib
 
-que foi criado automaticamente quando relatorio foi inicializado. Veja o estilo de citacao dentro dele e adapte as suas necessidades.
+que foi criado automaticamente dentro da pasta NomeDoRelatorio, criada quando relatorio foi inicializado atraves do menu do RStudio. Veja o estilo de citacao dentro dele e adapte de acordo com as suas necessidades.
+
+Note que apenas as referencias citadas explicitamente dentro do texto aparecerao listadas ao final do relatorio. Portanto, nao esqueca de listar nenhuma delas no corpo do texto.
 -->
 
 
