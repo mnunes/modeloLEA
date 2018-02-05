@@ -12,7 +12,7 @@ para instalar o pacote. Se não funcionar, primeiro instale o pacote `devtools` 
 
 Esta é uma versão preliminar deste modelo de relatório. É possível que hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer problema.
 
-O arquivo [modeloLEA.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA.pdf) exibe o resultado esperado pelo modelo.
+O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_rascunho.pdf) exibe o resultado esperado para o rascunho do relatório, que deve ser avaliado pelo professor orientador. O arquivo [modeloLEA_final.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_final.pdf) exibe o resultado esperado para o relatório final, a ser entregue ao consulente.
 
 
 ## Requisitos do Sistema
