@@ -170,9 +170,9 @@
 \newcommand{\footerfont}{\normalfont\sffamily\fontsize{7}{9} \selectfont}
 \newcommand{\titlefont}{\fontfamily{lmss}\bfseries\fontsize{22pt}{24pt}\selectfont}
 \newcommand{\dropcapfont}{\fontfamily{lmss}\bfseries\fontsize{26pt}{28pt}\selectfont}
-\newcommand{\datesfont}{\normalfont\sffamily\fontsize{7}{8}\selectfont}
-\newcommand{\absfont}{\normalfont\sffamily\bfseries\fontsize{8}{11}\selectfont}
-\newcommand{\keywordsfont}{\normalfont\rmfamily\fontsize{7}{10}\selectfont}
+\newcommand{\datesfont}{\normalfont\sffamily\fontsize{10}{10}\selectfont}
+\newcommand{\absfont}{\normalfont\sffamily\bfseries\fontsize{10}{10}\selectfont}
+\newcommand{\keywordsfont}{\normalfont\rmfamily\fontsize{10}{10}\selectfont}
 \newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{6}{8}\selectfont}
 
 %% Set URL link color & font
@@ -181,8 +181,8 @@
 %% Author and affiliation
 \RequirePackage{authblk}
 \setlength{\affilsep}{8.5pt} % 16.5pts between base of author line and base of affil line
-\renewcommand\Authfont{\color{color0}\normalfont\sffamily\bfseries\fontsize{9}{11}\selectfont}
-\renewcommand\Affilfont{\color{color0}\normalfont\sffamily\fontsize{7}{8}\selectfont}
+\renewcommand\Authfont{\color{color0}\normalfont\sffamily\bfseries\fontsize{10}{12}\selectfont}
+\renewcommand\Affilfont{\color{color0}\normalfont\sffamily\fontsize{10}{12}\selectfont}
 \makeatletter
 \renewcommand\AB@affilsepx{; \protect\Affilfont}
 \makeatother
@@ -241,7 +241,7 @@
 %% Bibliography    
 \RequirePackage{natbib}
 \setlength{\bibsep}{0.0pt}
-\renewcommand\bibfont{\normalfont\sffamily\fontsize{8}{10}\selectfont} % set font to be sans serif
+\renewcommand\bibfont{\normalfont\fontsize{12}{12}\selectfont} % set font to be sans serif
 
 %% Figure caption style
 \DeclareCaptionFormat{pnasformat}{\normalfont\sffamily\fontsize{12}{12}\selectfont#1#2#3}
@@ -249,7 +249,7 @@
 
 %% Table style
 \RequirePackage{etoolbox}
-\captionsetup[table]{labelfont+={small},textfont+={small,sf,bf},skip=10pt,position=above}
+\captionsetup[table]{labelfont+={normalsize},textfont+={normalsize},skip=10pt,position=above}
 % booktabs provide nice spacing, but rule widths and distances need fixing
 \setlength{\heavyrulewidth}{0.75pt}
 \setlength{\lightrulewidth}{0.75pt}

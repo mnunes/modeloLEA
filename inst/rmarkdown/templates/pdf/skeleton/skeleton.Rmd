@@ -33,9 +33,6 @@ keywords:
   - segurança
   - trânsito
 
-# Tamanho da fonte do documento. Os tamanhos sugeridos sao 9pt, 10pt, 11pt e 12pt (padrao)
-fontsize: 12pt
-
 # Opcional: Relatorio com uma ou duas colunas (usamos uma coluna no LEA)
 one_column: true
 
