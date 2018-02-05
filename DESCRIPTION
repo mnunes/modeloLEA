@@ -13,7 +13,7 @@ Description: Um estilo de relatorio 'PNAS'-alike 'rmarkdown', derivado
   portugues.
 URL: https://github.com/mnunes/modeloLEA
 BugReports: https://github.com/mnunes/modeloLEA/issues
-Imports: rmarkdown, knitr, tidyverse
+Imports: rmarkdown, knitr, tidyverse, ggfortify
 VignetteBuilder: knitr
 License: GPL3
 RoxygenNote: 6.0.1
