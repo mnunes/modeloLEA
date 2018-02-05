@@ -1,7 +1,7 @@
 Package: modeloLEA
 Type: Package
 Title: Modelo de Relatorio de Consultoria Estatistica
-Version: 0.0.1
+Version: 0.1
 Date: 2018-02-04
 Author: Marcus Nunes
 Maintainer: Marcus Nunes <marcus.nunes@gmail.com>
@@ -15,5 +15,5 @@ URL: https://github.com/mnunes/modeloLEA
 BugReports: https://github.com/mnunes/modeloLEA/issues
 Imports: rmarkdown, knitr, tidyverse
 VignetteBuilder: knitr
-License: MIT
+License: GPL3
 RoxygenNote: 6.0.1
