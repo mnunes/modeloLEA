@@ -42,10 +42,7 @@ numbersections: true
 # Opcional: Especificar a profundidade da numeracao das secoes
 secnumdepth: 3
 
-# Opcional: Skip inserting final break between acknowledgements, default is false
-skip_final_break: true
-
-# Opcional: Bibliography 
+# Opcional: referencias 
 bibliography: modeloLEA
 
 # Opcional: Coloque a marca 'Rascunho' no documento nao-finalizado
@@ -77,7 +74,7 @@ knitr::opts_chunk$set(fig.width=6, fig.height=4,
 
 # Objetivos
 
-Diversos já publicaram diversos estudos referentes à segurança no trânsito. \cite{McKenna1991}, por exemplo, estuda a relação entre as habilidades dos motoristas e a percepção que eles possuem sobre estas habilidades. Além desta característica, existem diversas outras que, se estudadas, podem aumentar a segurança no trânsito. Uma destas características é a distância mínima necessária para que um carro pare completamente após seus freios serem acionados.
+Diversos autores já publicaram estudos referentes à segurança no trânsito. \cite{McKenna1991}, por exemplo, estuda a relação entre as habilidades dos motoristas e a percepção que eles possuem sobre estas habilidades. Além desta característica, existem diversas outras que, se estudadas, podem aumentar a segurança no trânsito. Uma destas características é a distância mínima necessária para que um carro pare completamente após seus freios serem acionados.
 
 Neste trabalho estamos interessados em verificar qual é a relação que existe entre a velocidade de um carro (em milhas por hora) e a distância que ele levou para parar completamente (em pés). Este conjunto de dados foi fornecido pelo programa R: A Language and Environment for Statistical Computing (\cite{R2017}). A hipótese com a qual trabalhamos é a de que existe uma relação positiva entre estas variáveis. Isto é, quanto mais rápido um carro estiver trafegando, maior vai ser a distância necessária para que este carro pare completamente.
 
@@ -186,5 +183,4 @@ que foi criado automaticamente dentro da pasta NomeDoRelatorio, criada quando re
 
 Note que apenas as referencias citadas explicitamente dentro do texto aparecerao listadas ao final do relatorio. Portanto, nao esqueca de listar nenhuma delas no corpo do texto.
 -->
-
 
