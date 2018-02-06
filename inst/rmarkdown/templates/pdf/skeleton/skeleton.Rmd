@@ -59,7 +59,7 @@ output: modeloLEA::modeloLEA
 
 ```{r definicoes, include=FALSE, message=FALSE}
 # pacotes a serem carregados para a analise
-library(tidyverse)
+library(ggplot2)
 theme_set(theme_bw())
 library(ggfortify)
 # definicoes globais 
