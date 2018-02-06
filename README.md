@@ -28,13 +28,16 @@ Para rodar os exemplos disponíveis neste repositório, é necessário instalar 
 
 ## Utilização do pacote
 
-Após o pacote ser instalado, feche e abra o RStudio. Carregue o pacote `modeloLEA` na memória do `R` através do comando `library(modeloLEA)`. Desta forma, ao clicar no menu File > New File > R Markdown..., aparecerá a opção Modelo LEA (PDF) dentro da guia From Template. Acompanhe as figuras abaixo para uma explicação visual.
+Após o pacote ser instalado, clique no menu `File > New File > R Markdown...`. Veja a figura abaixo.
 
 ![alt text](fig03.png "Como criar um novo relatório - Figura 1")
 
+Uma tela de diálogo aparecerá. Escolha a opção Modelo LEA (PDF) dentro da guia From Template. Veja a figura abaixo.
+
+
 ![alt text](fig02.png "Como criar um novo relatório - Figura 2")
 
-Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta terá o nome que você quiser. No exemplo acima, o nome da pasta criada é `relatorio`. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Basta editar os arquivos `relatorio.Rmd` e `modeloLEA.bib` para produzir seu texto. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
+Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta criada é `relatorio`. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Basta editar os arquivos `relatorio.Rmd` e `modeloLEA.bib` para produzir seu texto. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
 
 ## Opções do Relatório
 
