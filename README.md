@@ -25,15 +25,16 @@ Para rodar os exemplos disponíveis neste repositório, é necessário instalar 
 
 - RStudio (versão 1.1.383 ou superior)
 
+É possível que o pacote funcione em outras configurações, mas ele foi testado com estas.
+
 
 ## Utilização do pacote
 
-Após o pacote ser instalado, clique no menu `File > New File > R Markdown...`. Veja a figura abaixo.
+Após o pacote ser instalado, clique no menu `File > New File > R Markdown...`. Veja na figura abaixo como fazer isto.
 
 ![alt text](fig03.png "Como criar um novo relatório - Figura 1")
 
-Uma tela de diálogo aparecerá. Escolha a opção Modelo LEA (PDF) dentro da guia From Template. Veja a figura abaixo.
-
+Uma tela de diálogo aparecerá. Escolha a opção Modelo LEA (PDF) dentro da guia From Template. Veja na figura abaixo como fazer isto.
 
 ![alt text](fig02.png "Como criar um novo relatório - Figura 2")
 
