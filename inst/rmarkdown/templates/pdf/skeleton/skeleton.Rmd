@@ -90,9 +90,8 @@ Utilizaremos um método estatístico chamado regressão linear a fim de verificar s
 
 Sejam $x_1, x_2, \cdots, x_n$ as observações referentes à velocidade dos carros em questão. Considere $y_1, y_2, \cdots, y_n$ as observações referentes à distância necessária para os carros pararem. De acordo com \cite{Kutner2004}, podemos expressar a dependência entre $y$ e $x$ através da equação
 
-\begin{equation}
-y_i = \beta_0 + \beta_1x_i + \varepsilon_i,
-\end{equation}
+
+$$y_i = \beta_0 + \beta_1x_i + \varepsilon_i,$$
 
 \noindent onde $\beta_0$ e $\beta_1$ são coeficientes estimados pelas equações
 
@@ -103,10 +102,10 @@ y_i = \beta_0 + \beta_1x_i + \varepsilon_i,
 
 \noindent As quantidades $\overline{x}$ e $\overline{y}$ são, respectivamente, as médias amostrais de $x_1, x_2, \cdots, x_n$ e $y_1, y_2, \cdots, y_n$. Estas médias amostrais são dadas por
 
-\begin{align}
+\begin{align*}
 \overline{x} &= \frac{1}{n}\sum_{i=1}^nx_i \\
 \overline{y} &= \frac{1}{n}\sum_{i=1}^ny_i 
-\end{align}
+\end{align*}
 
 Determinamos se o coeficiente $\beta_1$ é estatisticamente significante através de um teste $t$. Sob a hipótese nula, assumimos que o estimador possui distribuição $t$ com $n-1$ graus de liberdade.
 
