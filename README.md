@@ -6,7 +6,9 @@ Rode o comando
 
     devtools::install_github("mnunes/modeloLEA")
 
-para instalar o pacote. Se não funcionar, primeiro instale o pacote `devtools` através do comando
+para instalar o pacote. Se o R Markdown nunca foi utilizado em computador, é possível que muito pacotes tenham que ser baixados. Seja paciente.
+
+Se este comando não funcionar, primeiro instale o pacote `devtools` através do comando
 
     install.packages("devtools")
 
@@ -19,7 +21,7 @@ O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/mast
 
 Para rodar os exemplos disponíveis neste repositório, é necessário instalar os seguintes programas em seu computador:
 
-- MikTex (versão 2.9 ou superior)
+- MikTex (versão 2.9 ou superior, versão completa)
 
 - R (versão 3.4.3 ou superior)
 
@@ -32,13 +34,15 @@ Para rodar os exemplos disponíveis neste repositório, é necessário instalar 
 
 Após o pacote ser instalado, clique no menu `File > New File > R Markdown...`. Veja na figura abaixo como fazer isto.
 
-![alt text](fig03.png "Como criar um novo relatório - Figura 1")
+![alt text](fig01.png "Como criar um novo relatório - Figura 1")
 
 Uma tela de diálogo aparecerá. Escolha a opção Modelo LEA (PDF) dentro da guia From Template. Veja na figura abaixo como fazer isto.
 
 ![alt text](fig02.png "Como criar um novo relatório - Figura 2")
 
-Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta criada é `relatorio`. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Basta editar os arquivos `relatorio.Rmd` e `modeloLEA.bib` para produzir seu texto. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
+Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta criada é `relatorio`. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Se houver algum problema com os acentos das palavras, vá ao menu `File > Reopen With Encoding...` e escolha a opção Windows 1252.
+
+Basta editar os arquivos `relatorio.Rmd` e `modeloLEA.bib` para produzir seu texto. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
 
 ## Opções do Relatório
 
