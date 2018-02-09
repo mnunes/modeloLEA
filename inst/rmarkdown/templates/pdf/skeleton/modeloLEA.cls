@@ -11,7 +11,7 @@
 %% Fevereiro de 2018
 %% marcusnunes.me
 %% github.com/mnunes/modeloLEA
-%%
+%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pnas-new.cls, v1.2, 2016/02/28 
 %

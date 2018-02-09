@@ -173,7 +173,7 @@ Note que na parte superior esquerda da imagem, embora o gráfico dos resíduos ver
 Assim, podemos sugerir uma transformação nestes dados ou a utilização de outro método de análise, como um modelo linear generalizado.
 
 
-<!-- 
+<!--  
 Perceba que o relatorio esta finalizado. Entretanto, ainda eh necessario colocar as referencias. Estas referencias devem ser colocadas dentro do arquivo 
 
 modeloLEA.bib
