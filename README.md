@@ -21,11 +21,11 @@ O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/mast
 
 Para rodar os exemplos disponíveis neste repositório, é necessário instalar os seguintes programas em seu computador:
 
-- LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja na Seção _Instalação do LaTeX_ como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio R)
+- LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja na Seção _Instalação do LaTeX_ como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
 
-- R (versão 3.4.3 ou superior)
+- `R` (versão 3.4.3 ou superior) - [link](https://cran.rstudio.com/)
 
-- RStudio (versão 1.1.423 ou superior)
+- RStudio (versão 1.1.423 ou superior) - [link](https://www.rstudio.com/products/rstudio/download/#download)
 
 É possível que o pacote funcione em outras configurações, mas estas são aquelas em que ele foi testado.
 
@@ -35,8 +35,8 @@ Em vez de instalar o MikTeX em seu computador, sugiro que o [TinyTeX](https://yi
 
 * É mais leve do que o MikTeX
 * É baseado no Tex Live, versão do LaTeX que pessoalmente utilizo há mais de 10 anos
-* Pode ser instalado de dentro do R
-* Foi desenvolvido pelo criador do `knitr`, o pacote do R utilizado para criar os documentos de forma dinâmica
+* Pode ser instalado de dentro do `R`
+* Foi desenvolvido pelo criador do `knitr`, o pacote do `R` utilizado para criar os documentos de forma dinâmica
 * Funciona em todas as plataformas (Windows, Linux, macOS)
 * A manutenção é mais simples
 
@@ -45,7 +45,9 @@ A instalação do Tiny TeX é simples. Se o pacote `devtools` estiver instalado 
     devtools::install_github(c('yihui/tinytex', 'rstudio/rmarkdown'))
     tinytex::install_tinytex()
 
-Vão aparecer um aviso e duas mensagens de erro durante a execução do segundo comando. Ignore-as dando OK no prompt que aparecer e pronto. Seu computador vai estar com o LaTeX instalado.
+Vão aparecer um aviso e duas mensagens de erro durante a execução do segundo comando. Ignore-as dando OK no prompt que aparecer e pronto. Após os procedimentos necessários, seu computador vai estar com o LaTeX instalado.
+
+Feche e abra o RStudio antes de compilar o relatório pela primeira vez.
 
 
 
