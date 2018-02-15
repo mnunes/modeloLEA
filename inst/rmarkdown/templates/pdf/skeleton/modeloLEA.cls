@@ -48,12 +48,11 @@
 
 %% Fonts and language
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[portuguese]{babel}
 \RequirePackage{lmodern}
 \RequirePackage[scaled]{helvet}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lettrine} % For dropped capitals
-
+\RequirePackage[portuguese]{babel}
 
 %% For the Significance Statement & footnote on the first page
 \RequirePackage{afterpage}
@@ -581,12 +580,12 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \additionalelement{%
 \afterpage{\begin{sigstatement}
 \sffamily
-\mdfdefinestyle{pnassigstyle}{linewidth=0.7pt,backgroundcolor=pnasblueback,linecolor=pnasbluetext,fontcolor=pnasbluetext,innertopmargin=6pt,innerrightmargin=6pt,innerbottommargin=6pt,innerleftmargin=6pt}
-\@ifundefined{@significancestatement}{}{%	
-	\begin{mdframed}[style=pnassigstyle]%
-	\section*{Significance Statement}%
-	\@significancestatement
-	\end{mdframed}}
+%\mdfdefinestyle{pnassigstyle}{linewidth=0.7pt,backgroundcolor=pnasblueback,linecolor=pnasbluetext,fontcolor=pnasbluetext,innertopmargin=6pt,innerrightmargin=6pt,innerbottommargin=6pt,innerleftmargin=6pt}
+%\@ifundefined{@significancestatement}{}{%	
+%	\begin{mdframed}[style=pnassigstyle]%
+%	\section*{Significance Statement}%
+%	\@significancestatement
+%	\end{mdframed}}
 %     \medskip
 \scriptsize
 \@ifundefined{@authorcontributions}{}{\@authorcontributions}
