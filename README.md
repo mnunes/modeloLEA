@@ -6,7 +6,7 @@ Rode o comando
 
     devtools::install_github("mnunes/modeloLEA")
 
-para instalar o pacote. Se o R Markdown nunca foi utilizado em computador, é possível que muito pacotes tenham que ser baixados. Seja paciente.
+para instalar o pacote. Se o R Markdown nunca foi utilizado em computador, é possível que alguns pacotes tenham que ser baixados. Seja paciente.
 
 Se este comando não funcionar, primeiro instale o pacote `devtools` através do comando
 
@@ -21,13 +21,32 @@ O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/mast
 
 Para rodar os exemplos disponíveis neste repositório, é necessário instalar os seguintes programas em seu computador:
 
-- MikTex (versão 2.9 ou superior, versão completa)
+- LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja na Seção _Instalação do LaTeX_ como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio R)
 
 - R (versão 3.4.3 ou superior)
 
-- RStudio (versão 1.1.383 ou superior)
+- RStudio (versão 1.1.423 ou superior)
 
-É possível que o pacote funcione em outras configurações, mas ele foi testado com estas.
+É possível que o pacote funcione em outras configurações, mas estas são aquelas em que ele foi testado.
+
+## Instalação do LaTeX
+
+Em vez de instalar o MikTeX em seu computador, sugiro que o [TinyTeX](https://yihui.name/tinytex/) seja instalado. Ele possui uma série de vantagens:
+
+* É mais leve do que o MikTeX
+* É baseado no Tex Live, versão do LaTeX que pessoalmente utilizo há mais de 10 anos
+* Pode ser instalado de dentro do R
+* Foi desenvolvido pelo criador do `knitr`, o pacote do R utilizado para criar os documentos de forma dinâmica
+* Funciona em todas as plataformas (Windows, Linux, macOS)
+* A manutenção é mais simples
+
+A instalação do Tiny TeX é simples. Se o pacote `devtools` estiver instalado em seu computador, rode os comandos
+
+    devtools::install_github(c('yihui/tinytex', 'rstudio/rmarkdown'))
+    tinytex::install_tinytex()
+
+Vão aparecer um aviso e duas mensagens de erro durante a execução do segundo comando. Ignore-as dando OK no prompt que aparecer e pronto. Seu computador vai estar com o LaTeX instalado.
+
 
 
 ## Utilização do pacote
@@ -42,7 +61,13 @@ Uma tela de diálogo aparecerá. Escolha a opção Modelo LEA (PDF) dentro da gu
 
 Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta criada é `relatorio`. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Se houver algum problema com os acentos das palavras, vá ao menu `File > Reopen With Encoding...` e escolha a opção Windows 1252.
 
-Basta editar os arquivos `relatorio.Rmd` e `modeloLEA.bib` para produzir seu texto. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
+Basta editar os arquivos `relatorio.Rmd` e `modeloLEA.bib` para produzir seu texto. O arquivo `relatorio.Rmd` contém o relatório em si, enquanto o arquivo `modeloLEA.bib` possui as referências bibliográficas. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
+
+A primeira compilação do relatório será um pouco demorada. A instalação padrão do Tiny TeX não possui alguns dos pacotes exigidos pelo modelo do relatório, então tenha paciência. As compilações seguintes serão muito mais rápidas.
+
+Lembre-se que esta é uma versão preliminar deste modelo de relatório. É possível que ainda hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer problema.
+
+
 
 ## Opções do Relatório
 
@@ -56,4 +81,4 @@ Por fim, após a compilação é gerada uma pasta chamada `relatorio_files`, que
 
 <hr>
 
-Este pacote foi fortemente inspirado pelo [pinp](https://github.com/eddelbuettel/pinp). 
+Este pacote foi inspirado pelo [pinp](https://github.com/eddelbuettel/pinp). 
