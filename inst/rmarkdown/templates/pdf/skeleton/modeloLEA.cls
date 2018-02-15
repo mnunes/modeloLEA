@@ -52,7 +52,7 @@
 \RequirePackage[scaled]{helvet}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lettrine} % For dropped capitals
-\RequirePackage[portuguese]{babel}
+%\RequirePackage[portuguese]{babel}
 
 %% For the Significance Statement & footnote on the first page
 \RequirePackage{afterpage}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/modeloLEA.R
 \name{modeloLEA}
 \alias{modeloLEA}
-\title{modelo de relatorio PNAS-alike}
+\title{Modelo de Relatório para o Laboratório de Estatística Aplicada (LEA)}
 \usage{
 modeloLEA(..., keep_tex = TRUE, citation_package = "natbib")
 }
