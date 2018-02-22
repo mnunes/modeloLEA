@@ -6,7 +6,7 @@ Date: 2018-02-04
 Author: Marcus Nunes
 Maintainer: Marcus Nunes <marcus.nunes@gmail.com>
 Depends:
-  R (>= 3.4.0)
+  R (>= 3.4.3)
 Description: Um estilo de relatorio 'PNAS'-alike 'rmarkdown', derivado 
   do estilo 'Proceedings of the National Academy of Sciences of the 
   United States of America' ('PNAS', veja <https://www.pnas.org>) para 
