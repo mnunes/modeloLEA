@@ -40,7 +40,7 @@ one_column: true
 numbersections: true
 
 # Opcional: Especificar a profundidade da numeracao das secoes
-secnumdepth: 3
+secnumdepth: 5
 
 # Opcional: referencias 
 bibliography: modeloLEA
@@ -50,6 +50,8 @@ watermark: true
 
 # Rodape personalizado com o titulo do relatorio. Se ficar muito grande, deixe ele resumido.
 footer_contents: "Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio"
+
+one_sided: true
 
 # Produce a modeloLEA document
 output: modeloLEA::modeloLEA
