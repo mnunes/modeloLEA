@@ -51,7 +51,7 @@ watermark: true
 # Rodape personalizado com o titulo do relatorio. Se ficar muito grande, deixe ele resumido.
 footer_contents: "Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio"
 
-one_sided: true
+
 
 # Produce a modeloLEA document
 output: modeloLEA::modeloLEA
@@ -163,7 +163,7 @@ $\beta_1$   &   3,9324   &    0,4155   & 9,464  & <0,0001  \\ \hline
 
 Note que, em ambos os casos, o p-valor encontrado é inferior a $\alpha = 0,05$. Portanto, podemos rejeitar ambas as hipóteses nulas e $\beta_0$ e $\beta_1$ são estatisticamente diferentes de zero.
 
-Para finalizar a análise, devemos verificar se o modelo ajustado não viola as hipóteses do modelo de regressão linear. Para tal, exibimos a análise de resíduos na Figura \ref{fig:Residuos}.
+Para finalizar a análise, devemos verificar se o modelo ajustado não viola as hipóteses do modelo de regressão linear. Para verificar isto, exibimos a análise de resíduos na Figura \ref{fig:Residuos}.
 
 ```{r residuos, fig.cap="\\label{fig:Residuos} Análise de resíduos do modelo de regressão linear ajustado."}
 autoplot(ajuste)

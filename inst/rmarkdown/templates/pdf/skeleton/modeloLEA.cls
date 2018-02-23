@@ -286,7 +286,7 @@
 \makeatletter
 \fancypagestyle{firststyle}{
    \fancyfoot[R]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
-   \fancyfoot[L]{\footerfont\@ifundefined{@doi}{}{\@doi}}
+   \fancyfoot[L]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
 }
 \makeatother
 
