@@ -39,13 +39,13 @@ one_column: true
 # Opcional: Numerar as secoes do relatorio
 numbersections: true
 
-# Opcional: Especificar a profundidade da numeracao das secoes
+# Opcional: Especificar a profundidade da numeracao das secoes (5 eh o padrao)
 secnumdepth: 5
 
-# Opcional: referencias 
+# Obrigatorio: Referencias 
 bibliography: modeloLEA
 
-# Opcional: Coloque a marca 'Rascunho' no documento nao-finalizado
+# Opcional: Colocar a marca 'Rascunho' no documento nao-finalizado
 watermark: true
 
 # Rodape personalizado com o titulo do relatorio. Se ficar muito grande, deixe ele resumido.

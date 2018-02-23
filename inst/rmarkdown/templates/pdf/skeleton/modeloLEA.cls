@@ -48,6 +48,7 @@
 
 %% Fonts and language
 \RequirePackage[utf8]{inputenc}
+\RequirePackage[portuges]{babel}
 \RequirePackage{lmodern}
 \RequirePackage[scaled]{helvet}
 \RequirePackage[T1]{fontenc}
@@ -286,7 +287,7 @@
 \makeatletter
 \fancypagestyle{firststyle}{
    \fancyfoot[R]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
-   \fancyfoot[L]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
+   \fancyfoot[L]{\footerfont\@ifundefined{@doi}{}{\@doi}}
 }
 \makeatother
 
@@ -298,9 +299,10 @@
 \cfoot{}%
 \rfoot{}%
 \makeatletter
-\fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doi}{}{\@doi}}
-\fancyfoot[RO]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
-\fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}}
+\fancyfoot[R]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
+%\fancyfoot[RE]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
+%\fancyfoot[RO]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
+%\fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}}
 
 % Use footer routine for line numbers
 \AtBeginDocument{
