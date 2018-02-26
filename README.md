@@ -43,7 +43,8 @@ Em vez de instalar o MikTeX em seu computador, sugiro que o [TinyTeX](https://yi
 
 A instalação do Tiny TeX é simples. Se o pacote `devtools` estiver instalado em seu computador, rode os comandos
 
-    devtools::install_github(c('yihui/tinytex', 'rstudio/rmarkdown'))
+    library(devtools)
+    install_github(c("yihui/tinytex", "rstudio/rmarkdown"))
     tinytex::install_tinytex()
 
 Vão aparecer um aviso e duas mensagens de erro durante a execução do segundo comando. Ignore-as dando OK no prompt que aparecer e pronto. Após os procedimentos necessários, seu computador vai estar com o LaTeX instalado.
