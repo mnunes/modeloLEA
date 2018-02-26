@@ -4,13 +4,14 @@ Este pacote do `R` utiliza rmarkdown para criar relatórios mesclando `R` e LaTe
 
 Rode o comando
 
-    devtools::install_github("mnunes/modeloLEA")
-
-para instalar o pacote. Se o R Markdown nunca foi utilizado em computador, é possível que alguns pacotes tenham que ser baixados. Seja paciente.
-
-Se este comando não funcionar, primeiro instale o pacote `devtools` através do comando
-
     install.packages("devtools")
+    
+para instalar o pacote `devtools`, resposnsável pela instalação do pacote `modeloLEA`. Em seguida, execute os comandos
+
+    library(devtools)
+    install_github("mnunes/modeloLEA")
+
+para instalar o pacote `modeloLEA`. Se o R Markdown nunca foi utilizado em computador, é possível que alguns pacotes extras tenham que ser baixados. Seja paciente.
 
 Esta é uma versão preliminar deste modelo de relatório. É possível que hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer problema.
 
@@ -21,7 +22,7 @@ O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/mast
 
 Para rodar os exemplos disponíveis neste repositório, é necessário instalar os seguintes programas em seu computador:
 
-- LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja na Seção _Instalação do LaTeX_ como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
+- LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja abaixo, na Seção _Instalação do LaTeX_, como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
 
 - `R` (versão 3.4.3 ou superior) - [link](https://cran.rstudio.com/)
 
