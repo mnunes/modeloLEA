@@ -49,11 +49,10 @@
 %% Fonts and language
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[portuges]{babel}
-%\RequirePackage{lmodern}
+\RequirePackage{lmodern}
 \RequirePackage[scaled]{helvet}
 \RequirePackage[T1]{fontenc}
-%\RequirePackage{lmodern}
-%\RequirePackage{lettrine} % For dropped capitals
+\RequirePackage{lettrine} % For dropped capitals
 %\RequirePackage[portuguese]{babel}
 
 %% For the Significance Statement & footnote on the first page
