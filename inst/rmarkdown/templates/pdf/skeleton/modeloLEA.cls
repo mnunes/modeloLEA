@@ -52,6 +52,7 @@
 \RequirePackage{lmodern}
 \RequirePackage[scaled]{helvet}
 \RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
 \RequirePackage{lettrine} % For dropped capitals
 %\RequirePackage[portuguese]{babel}
 
