@@ -1,22 +1,23 @@
 Package: modeloLEA
 Type: Package
 Title: Modelo de Relatorio de Consultoria Estatistica
-Version: 0.2
+Version: 0.3
 Date: 2018-02-04
 Author: Marcus Nunes
-Maintainer: Marcus Nunes <marcus.nunes@gmail.com>
+Maintainer: Marcus Nunes <marcus@marcusnunes.me>
 Depends:
   R (>= 3.4.3)
 Description: Um estilo de relatorio 'PNAS'-alike 'rmarkdown', derivado 
   do estilo 'Proceedings of the National Academy of Sciences of the 
-  United States of America' ('PNAS', veja <https://www.pnas.org>) para 
-  'LaTeX', do pacote pinp do 'R' (veja <https://github.com/eddelbuettel/pinp>) 
-  e adaptado para uso de 'markdown' e 'pandoc', alem da traducao para o 
-  portugues.
+  United States of America' ('PNAS', veja <https://www.pnas.org>). Foi 
+  pensado com 'LaTeX', em mente, para geracao de pdfs. Fortemente 
+  baseado no pacote pinp do 'R' (veja <https://github.com/eddelbuettel/pinp>) 
+  e adaptado para o uso pelo Laboratorio de Estatistica Aplicada (LEA) da
+  UFRN. 
 URL: https://github.com/mnunes/modeloLEA
 BugReports: https://github.com/mnunes/modeloLEA/issues
 Imports: rmarkdown, knitr, ggplot2, devtools, caTools, bitops
 Remotes: sinhrks/ggfortify
-VignetteBuilder: knitr
+VignetteBuilder: 
 License: GPL3
 RoxygenNote: 6.0.1
