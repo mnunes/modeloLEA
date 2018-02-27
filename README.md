@@ -13,9 +13,12 @@ para instalar o pacote `devtools`, resposnsável pela instalação do pacote `mo
 
 para instalar o pacote `modeloLEA`. Se o R Markdown nunca foi utilizado em computador, é possível que alguns pacotes extras tenham que ser baixados. Seja paciente.
 
-Esta é uma versão preliminar deste modelo de relatório. É possível que hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer problema.
+Embora o pacote já esteja instalado, ele não vai funcionar se não houver uma distribuição do LaTeX em seu computador. A Seção _Instalação do LaTeX_, logo abaixo, mostra como instalar o [TinyTeX](https://yihui.name/tinytex/) em seu computador. Esta distribuição do LaTeX foi pensada especialmente para uuários do `R`, de modo que fosse o menor possível e, ainda assim, completa o suficiente para a produção de relatórios de pesquisa.
+
+Perceba que esta é uma versão preliminar do modelo de relatório. É possível (bastante provável, na verdade) que hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer bug ou problema de instalação ou uso.
 
 O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_rascunho.pdf) exibe o resultado esperado para o rascunho do relatório, que deve ser avaliado pelo professor orientador. O arquivo [modeloLEA_final.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_final.pdf) exibe o resultado esperado para o relatório final, a ser entregue ao consulente.
+
 
 
 ## Requisitos do Sistema
@@ -29,6 +32,8 @@ Para rodar os exemplos disponíveis neste repositório, é necessário instalar 
 - RStudio (versão 1.1.423 ou superior) - [link](https://www.rstudio.com/products/rstudio/download/#download)
 
 É possível que o pacote funcione em outras configurações, mas estas são aquelas em que ele foi testado.
+
+
 
 ## Instalação do LaTeX
 
@@ -80,8 +85,6 @@ A primeira versão do arquivo é criada com duas opções específicas. A opçã
 Também por padrão, a opção `echo=TRUE`, na linha 71, vai exibir o código do `R` utilizado na análise. Quando a versão final do relatório ficar pronta, basta alterar esta opção para `echo=FALSE`, de modo que apenas o resultado do código executado apareça na versão final do relatório.
 
 Por fim, após a compilação é gerada uma pasta chamada `relatorio_files`, que contém pdfs de alta resolução de todas as figuras do relatório. Assim, estas figuras podem ser, posteriormente, entregues ao consulente.
-
-
 
 <hr>
 
