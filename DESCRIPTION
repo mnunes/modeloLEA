@@ -16,7 +16,7 @@ Description: Um estilo de relatorio 'PNAS'-alike 'rmarkdown', derivado
   UFRN. 
 URL: https://github.com/mnunes/modeloLEA
 BugReports: https://github.com/mnunes/modeloLEA/issues
-Imports: rmarkdown, knitr, ggplot2, ggfortify
+Imports: knitr, ggplot2, ggfortify
 Remotes: sinhrks/ggfortify
 VignetteBuilder: 
 License: GPL3
