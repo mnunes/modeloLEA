@@ -51,13 +51,10 @@ watermark: true
 # Rodape personalizado com o titulo do relatorio. Se ficar muito grande, deixe ele resumido.
 footer_contents: "Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio"
 
-
-
-# Produce a modeloLEA document
+# Cria um documento do tipo modeloLEA
 output: modeloLEA::modeloLEA
 
 ---
-
 
 ```{r definicoes, include=FALSE, message=FALSE}
 # pacotes a serem carregados para a analise
@@ -69,7 +66,7 @@ library(ggfortify)
 knitr::opts_chunk$set(fig.width=6, fig.height=4, 
 # exibir o codigo do R nos chunks (mudar para FALSE na versao final)
                       echo=TRUE,
-# mandar o latex manter a figura na posicao
+# mandar o latex manter a figura na posicao correta
                       fig.pos='h')
 ```
 
@@ -92,7 +89,6 @@ Utilizaremos um método estatístico chamado regressão linear a fim de verificar s
 
 Sejam $x_1, x_2, \cdots, x_n$ as observações referentes à velocidade dos carros em questão. Considere $y_1, y_2, \cdots, y_n$ as observações referentes à distância necessária para os carros pararem. De acordo com \cite{Kutner2004}, podemos expressar a dependência entre $y$ e $x$ através da equação
 
-
 $$y_i = \beta_0 + \beta_1x_i + \varepsilon_i,$$
 
 \noindent onde $\beta_0$ e $\beta_1$ são coeficientes estimados pelas equações
@@ -111,10 +107,11 @@ $$y_i = \beta_0 + \beta_1x_i + \varepsilon_i,$$
 
 Determinamos se o coeficiente $\beta_1$ é estatisticamente significante através de um teste $t$. Sob a hipótese nula, assumimos que o estimador possui distribuição $t$ com $n-1$ graus de liberdade.
 
+
+
 # Resultados
 
 A fim de verificar visualmente se há algum tipo de relação entre as variáveis consideradas neste estudo, exibimos o gráfico de dispersão dos dados na Figura \ref{fig:GraficoDispersao}. Note que é possível perceber uma forte tendência linear positiva na relação entre estas variáveis. Quanto maior o valor da velocidade, maior a distância necessária para o carro parar completamente.
-
 
 ```{r GraficoDispersao, fig.cap="\\label{fig:GraficoDispersao} Gráfico de dispersão da distância de parada completa (pés) versus velocidade (mph) dos carros."}
 ggplot(cars, aes(x=speed, y=dist)) +
@@ -124,11 +121,9 @@ ggplot(cars, aes(x=speed, y=dist)) +
 
 Além disso, adicionamos ao gráfico exibido na Figura \ref{fig:GraficoDispersao} a reta que melhor descreve a relação entre estas variáveis. Esta reta foi obtida através do método descrito na seção anterior, fazendo uso das fórmulas \eqref{estimadores01} e \eqref{estimadores02}. Explicitamente, a equação representada na figura é dada por
 
-
 ```{r ajusteModeloLinear}
 ajuste <- lm(dist ~ speed, data=cars)
 ```
-
 
 \begin{equation}\label{equacaoFinal}
 \widehat{y}_i = -17,5791 + 3,9324x_i.
@@ -168,7 +163,6 @@ Para finalizar a análise, devemos verificar se o modelo ajustado não viola as hi
 ```{r residuos, fig.cap="\\label{fig:Residuos} Análise de resíduos do modelo de regressão linear ajustado."}
 autoplot(ajuste)
 ```
-
 
 Note que na parte superior esquerda da imagem, embora o gráfico dos resíduos versus valores ajustados não apresente tendência, a variância não é constante. Note que os pontos próximos de zero estão mais próximos entre si do que os pontos mais à direita no gráfico. Portanto, há uma violação das hipóteses da regressão linear neste caso.
 
