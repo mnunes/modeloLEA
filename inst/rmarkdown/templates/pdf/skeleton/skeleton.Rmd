@@ -125,6 +125,7 @@ Além disso, adicionamos ao gráfico exibido na Figura \ref{fig:GraficoDispersao} 
 ajuste <- lm(dist ~ speed, data=cars)
 ```
 
+<!--
 \begin{equation}\label{equacaoFinal}
 \widehat{y}_i = -17,5791 + 3,9324x_i.
 \end{equation}
@@ -144,6 +145,8 @@ H_1 &: \beta_1 \neq 0 \\
 \end{align*}
 
 \noindent Os resultados destes testes estão apresentados na Tabela \ref{tab:Resultados}.
+-->
+
 
 \begin{table}[!h]
 \caption{\label{tab:Resultados} Resultados dos testes de hipóteses realizados para a análise de regressão.}
