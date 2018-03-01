@@ -242,7 +242,7 @@ FUNCTION {space.word}
  % Each function has a name bbl.xxx where xxx is the English word.
  % The language selected here is ENGLISH
 FUNCTION {bbl.and}
-{ "and"}
+{ " e "}
 
 FUNCTION {bbl.etal}
 { "et~al." }
@@ -257,13 +257,13 @@ FUNCTION {bbl.edby}
 { "edited by" }
 
 FUNCTION {bbl.edition}
-{ "edition" }
+{ "edição" }
 
 FUNCTION {bbl.volume}
 { "volume" }
 
 FUNCTION {bbl.of}
-{ "of" }
+{ "de" }
 
 FUNCTION {bbl.number}
 { "number" }

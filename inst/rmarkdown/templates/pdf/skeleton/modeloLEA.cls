@@ -186,7 +186,8 @@
 \makeatletter
 \renewcommand\AB@affilsepx{; \protect\Affilfont}
 \makeatother
-\renewcommand\Authands{, e }
+\renewcommand\Authand{ e }
+\renewcommand\Authands{ e }
 
 %% Options for element switching
 \RequirePackage{xifthen}
