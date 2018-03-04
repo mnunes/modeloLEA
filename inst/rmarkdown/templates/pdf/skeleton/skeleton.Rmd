@@ -170,7 +170,7 @@ Assim, podemos sugerir uma transformação nestes dados ou a utilização de outro m
 
 
 <!--  
-Perceba que o relatorio esta finalizado. Entretanto, ainda eh necessario colocar as referencias. Estas referencias devem ser colocadas dentro do arquivo 
+Perceba que o relatorio estah finalizado. Entretanto, ainda eh necessario colocar as referencias. Estas referencias devem ser colocadas dentro do arquivo 
 
 modeloLEA.bib
 
