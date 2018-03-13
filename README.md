@@ -13,6 +13,12 @@ para instalar o pacote `devtools`, resposnsável pela instalação do pacote `mo
 
 para instalar o pacote `modeloLEA`. Se o R Markdown nunca foi utilizado em computador, é possível que alguns pacotes extras tenham que ser baixados. Seja paciente.
 
+Alguns usuários já reportaram problemas na instalação de algumas dependências do pacote `modeloLEA`. Se este for o seu caso, rode o comando
+
+    options(repos=c(CRAN="http://cran.rstudio.com"))
+    
+dentro do RStudio para configurar outro servidor do CRAN como o fornecedor de pacotes para a sua instalação. Como o servidor do RStudio está baseado em um serviço na nuvem, a probabilidade dele estar fora do ar é mais baixa do que a de outros servidores, embora, teoricamente, ele seja um pouco mais lento para quem mora no Brasil.
+
 Embora o pacote já esteja instalado, ele não vai funcionar se não houver uma distribuição do LaTeX em seu computador. A Seção _Instalação do LaTeX_, logo abaixo, mostra como instalar o [TinyTeX](https://yihui.name/tinytex/) em seu computador. Esta distribuição do LaTeX foi pensada especialmente para uuários do `R`, de modo que fosse o menor possível e, ainda assim, completa o suficiente para a produção de relatórios de pesquisa.
 
 Perceba que esta é uma versão preliminar do modelo de relatório. É possível (bastante provável, na verdade) que hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer bug ou problema de instalação ou uso.
