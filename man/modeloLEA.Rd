@@ -1,43 +1,43 @@
 \name{modeloLEA}
 \alias{modeloLEA}
-\title{Modelo de Relat√≥rio para o Laborat√≥rio de Estat√≠stica Aplicada (LEA)}
+\title{Modelo de RelatÛrio para o LaboratÛrio de EstatÌstica Aplicada (LEA)}
 \usage{
 modeloLEA(..., keep_tex = TRUE, citation_package = "natbib")
 }
 \arguments{
 \item{...}{Argumentos adicionais para \code{rmarkdown::pdf_document}}
 
-\item{keep_tex}{Argument boleano para selecionar se os arquivos \code{.tex} intermedi√°rios devem ficar armazenados no disco. O padr√£o √© \code{TRUE}}
+\item{keep_tex}{Argument boleano para selecionar se os arquivos \code{.tex} intermedi·rios devem ficar armazenados no disco. O padr„o È \code{TRUE}}
 
-\item{citation_package}{Tipo de bibliografia a ser utilizada. O padr√£o √© \code{natbib}.}
+\item{citation_package}{Tipo de bibliografia a ser utilizada. O padr„o È \code{natbib}.}
 }
 \value{
 Output de R Markdown output para ser passado para
 \code{\link[rmarkdown:render]{render}}
 }
 \description{
-Modelo de documento para gera√ß√£o de relat√≥rios no Laborat√≥rio de Estat√≠stica Aplicada da UFRN.
+Modelo de documento para geraÁ„o de relatÛrios no LaboratÛrio de EstatÌstica Aplicada da UFRN.
 }
 \section{Document options}{
 
-Existem diversas op√ß√µes a serem utilizadas no pre√¢mbulo do documento, a fim de personaliz√°-lo. Estas op√ß√µes est√£o descritas abaixo:
+Existem diversas opÁıes a serem utilizadas no pre‚mbulo do documento, a fim de personaliz·-lo. Estas opÁıes est„o descritas abaixo:
 
 \describe{
-  \item{\code{abstract}}{(Opcional, mas recomendado) Resumo do relat√≥rio.}
-  \item{\code{address}}{(Obrigat√≥rio) Descri√ß√£o do local onde consulente e consultores trabalham ou est√£o vinculados.}
-  \item{\code{author}}{(Obrigat√≥rio) Lista de consultores, consulente(s) e orientador(a) do trabalho.}
-  \item{\code{bibliography}}{(Opcional, mas recomendado) Nome do arquivo \code{.bib} no qual as refer√™ncias est√£o colocadas.}
-  \item{\code{footer_contents}}{(Opcional, mas recomendado) T√≠tulo do relat√≥rio (ou uma abrevia√ß√£o dele) a fim que que apare√ßa no rodap√© de todas as p√°ginas do documento.}
-  \item{\code{keywords}}{(Opcional, mas recomendado) Palavras-chave do relat√≥rio. Coloque o principal m√©todo estat√≠stico utilizado no documento como primeira palavra-chave, a fim de facilitar a cataloga√ß√£o nos registros do LEA.}
-  \item{\code{numbersections}}{(Obrigat√≥rio) Define se as se√ß√µes do relat√≥rio ser√£o numeradas ou n√£o. Por padr√£o, as se√ß√µes dos relat√≥rios s√£o numeradas.}
-  \item{\code{one_column}}{(Obrigat√≥rio) Valor l√≥gico respons√°vel por definir se o relat√≥rio ser√° em uma \code{TRUE} ou duas colunas \code{FALSE}. A vers√£o em duas colunas est√° bugada por enquanto.}
-  \item{\code{output}}{(Obrigat√≥rio) Avida ao \code{rmarkdown} para renderizar o documento final atrav√©s da fun√ß√£o \code{modeloLEA}; precisa ser colocada como \code{modeloLEA::modeloLEA}.}
-  \item{\code{secnumdepth}}{(Optional) N√≠vel de subnumera√ß√£o do (LaTeX). O padr√£o √© 5.}
-  \item{\code{title}}{(Obrigat√≥rio) T√≠tulo do relat√≥rio.}
-  \item{\code{watermark}}{(Obrigat√≥rio) Valor l√≥gico que colocar√° a marca d'√°gua \sQuote{RASCUNHO} nas p√°ginas do documento. Deve estar colocada como \code{TRUE} enquanto o relat√≥rio estiver circulando entre os consultores e os orientadores. Deve ser mudado para \code{FALSE} antes de ser entregue ao consulente.}
+  \item{\code{abstract}}{(Opcional, mas recomendado) Resumo do relatÛrio.}
+  \item{\code{address}}{(ObrigatÛrio) DescriÁ„o do local onde consulente e consultores trabalham ou est„o vinculados.}
+  \item{\code{author}}{(ObrigatÛrio) Lista de consultores, consulente(s) e orientador(a) do trabalho.}
+  \item{\code{bibliography}}{(Opcional, mas recomendado) Nome do arquivo \code{.bib} no qual as referÍncias est„o colocadas.}
+  \item{\code{footer_contents}}{(Opcional, mas recomendado) TÌtulo do relatÛrio (ou uma abreviaÁ„o dele) a fim que que apareÁa no rodapÈ de todas as p·ginas do documento.}
+  \item{\code{keywords}}{(Opcional, mas recomendado) Palavras-chave do relatÛrio. Coloque o principal mÈtodo estatÌstico utilizado no documento como primeira palavra-chave, a fim de facilitar a catalogaÁ„o nos registros do LEA.}
+  \item{\code{numbersections}}{(ObrigatÛrio) Define se as seÁıes do relatÛrio ser„o numeradas ou n„o. Por padr„o, as seÁıes dos relatÛrios s„o numeradas.}
+  \item{\code{one_column}}{(ObrigatÛrio) Valor lÛgico respons·vel por definir se o relatÛrio ser· em uma \code{TRUE} ou duas colunas \code{FALSE}. A vers„o em duas colunas est· bugada por enquanto.}
+  \item{\code{output}}{(ObrigatÛrio) Avida ao \code{rmarkdown} para renderizar o documento final atravÈs da funÁ„o \code{modeloLEA}; precisa ser colocada como \code{modeloLEA::modeloLEA}.}
+  \item{\code{secnumdepth}}{(Optional) NÌvel de subnumeraÁ„o do (LaTeX). O padr„o È 5.}
+  \item{\code{title}}{(ObrigatÛrio) TÌtulo do relatÛrio.}
+  \item{\code{watermark}}{(ObrigatÛrio) Valor lÛgico que colocar· a marca d'·gua \sQuote{RASCUNHO} nas p·ginas do documento. Deve estar colocada como \code{TRUE} enquanto o relatÛrio estiver circulando entre os consultores e os orientadores. Deve ser mudado para \code{FALSE} antes de ser entregue ao consulente.}
 }
 
-O arquivo de exemplo do pacote possui um relat√≥rio fict√≠cio com estas op√ß√µes j√° todas preenchidas.
+O arquivo de exemplo do pacote possui um relatÛrio fictÌcio com estas opÁıes j· todas preenchidas.
 }
 
 \examples{

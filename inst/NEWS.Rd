@@ -3,32 +3,32 @@
 
 \section{Novidades no pacote modeloLEA - version 0.4 (2018-03-13)}{
   \itemize{
-    \item Revis√£o geral de estilo, com updates no help, nas novidades e no modelo padr√£o do relat√≥rio.
+    \item Revis„o geral de estilo, com updates no help, nas novidades e no modelo padr„o do relatÛrio.
   }
 }
 
 
 \section{Novidades no pacote modeloLEA - version 0.3 (2018-02-27)}{
   \itemize{
-    \item Primeira vers√£o est√°vel e universal do pacote, que pode ser instalada sem problemas no Windows, Linux e macOS.
+    \item Primeira vers„o est·vel e universal do pacote, que pode ser instalada sem problemas no Windows, Linux e macOS.
   }
 }
 
 
 \section{Novidades no pacote modeloLEA - version 0.2 (2018-02-08)}{
   \itemize{
-    \item Vers√£o corrigida, baseada no TinyTex.
+    \item Vers„o corrigida, baseada no TinyTex.
   }
 }
 
 \section{Novidades no pacote modeloLEA - version 0.1 (2018-02-01)}{
   \itemize{
-    \item Primeira vers√£o do pacote divulgada para outras pessoas.
+    \item Primeira vers„o do pacote divulgada para outras pessoas.
   }
 }
 
 \section{Novidades no pacote modeloLEA - version 0.0.1 (2018-02-01)}{
   \itemize{
-    \item Primeira vers√£o do pacote
+    \item Primeira vers„o do pacote
   }
 }
