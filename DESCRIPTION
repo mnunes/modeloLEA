@@ -20,4 +20,4 @@ Imports: rmarkdown, knitr, ggplot2, ggfortify
 Remotes: sinhrks/ggfortify
 VignetteBuilder: 
 License: GPL3
-RoxygenNote: 6.0.1
+Encoding: UTF-8
