@@ -46,7 +46,7 @@ secnumdepth: 5
 bibliography: modeloLEA
 
 # Opcional: Colocar a marca 'Rascunho' no documento nao-finalizado
-watermark: true
+watermark: false
 
 # Rodape personalizado com o titulo do relatorio. Se ficar muito grande, deixe ele resumido.
 footer_contents: "Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio"
@@ -65,7 +65,7 @@ library(ggfortify)
 # tamanho das figuras: largura=6, altura=4 (polegadas)
 knitr::opts_chunk$set(fig.width=6, fig.height=4, 
 # exibir o codigo do R nos chunks (mudar para FALSE na versao final)
-                      echo=TRUE,
+                      echo=FALSE,
 # mandar o latex manter a figura na posicao correta
                       fig.pos='h')
 ```
@@ -119,7 +119,14 @@ ggplot(cars, aes(x=speed, y=dist)) +
   labs(x="Velocidade (mph)", y="Distância (pés)")
 ```
 
-Além disso, adicionamos ao gráfico exibido na Figura \ref{fig:GraficoDispersao} a reta que melhor descreve a relação entre estas variáveis. Esta reta foi obtida através do método descrito na seção anterior, fazendo uso das fórmulas \eqref{estimadores01} e \eqref{estimadores02}. Explicitamente, a equação representada na figura é dada por
+```{r GraficoDispersao02, fig.cap="\\label{fig:GraficoDispersao02} Gráfico de dispersão da distância de parada completa (pés) versus velocidade (mph) dos carros com a reta que melhor se ajusta a estes dados."}
+ggplot(cars, aes(x=speed, y=dist)) +
+  geom_point() +
+  labs(x="Velocidade (mph)", y="Distância (pés)") +
+  geom_smooth(method="lm", se=FALSE)
+```
+
+Além disso, adicionamos ao gráfico exibido na Figura \ref{fig:GraficoDispersao02} a reta que melhor descreve a relação entre estas variáveis. Esta reta foi obtida através do método descrito na seção anterior, fazendo uso das fórmulas \eqref{estimadores01} e \eqref{estimadores02}. Explicitamente, a equação representada na Figura \ref{fig:GraficoDispersao02} é dada por
 
 ```{r ajusteModeloLinear}
 ajuste <- lm(dist ~ speed, data=cars)

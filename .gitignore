@@ -4,3 +4,4 @@
 .Ruserdata
 *.Rproj
 man/modeloLEA_bk.Rd
+inst/rmarkdown/templates/pdf/skeleton/skeleton.tex
