@@ -46,7 +46,7 @@ Em vez de instalar o MikTeX em seu computador, sugiro que o [TinyTeX](https://yi
 * Funciona em todas as plataformas (Windows, Linux, macOS)
 * A manutenção é mais simples
 
-A instalação do Tiny TeX é simples. Se o pacote `devtools` estiver instalado em seu computador, rode os comandos
+A instalação do TinyTeX é simples. Se o pacote `devtools` estiver instalado em seu computador, rode os comandos
 
     library(devtools)
     install_github(c("yihui/tinytex", "rstudio/rmarkdown"))
@@ -72,7 +72,7 @@ Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta
 
 Basta editar os arquivos `relatorio.Rmd` e `modeloLEA.bib` para produzir seu texto. O arquivo `relatorio.Rmd` contém o relatório em si, enquanto o arquivo `modeloLEA.bib` possui as referências bibliográficas. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
 
-A primeira compilação do relatório será um pouco demorada. A instalação padrão do Tiny TeX não possui alguns dos pacotes exigidos pelo modelo do relatório, então tenha paciência. As compilações seguintes serão muito mais rápidas.
+A primeira compilação do relatório será um pouco demorada. A instalação padrão do TinyTeX não possui alguns dos pacotes exigidos pelo modelo do relatório, então tenha paciência. As compilações seguintes serão muito mais rápidas.
 
 Lembre-se que esta é uma versão preliminar deste modelo de relatório. É possível que ainda hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer problema.
 
