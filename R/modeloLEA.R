@@ -18,7 +18,7 @@
 #'
 #' \describe{
 #'   \item{\code{abstract}}{(Optional but recommended) A free-format abstract summarizing the
-#'   document.}
+#'   .}
 #'   \item{\code{acknowledgements}}{(Optional) A free-format entry which will be placed at the
 #'   end of the document.}
 #'   \item{\code{address}}{(Mandatory) YAML list with entries for \code{code} and \code{address}.
@@ -124,4 +124,3 @@ knitr_fun <- function(name) utils::getFromNamespace(name, 'knitr')
 output_asis <- knitr_fun('output_asis')
 
 
- 
