@@ -5,3 +5,6 @@
 *.Rproj
 man/modeloLEA_bk.Rd
 inst/rmarkdown/templates/pdf/skeleton/skeleton.tex
+inst/rmarkdown/templates/pdf/skeleton/skeleton_files/figure-latex/residuos-1.pdf
+inst/rmarkdown/templates/pdf/skeleton/skeleton_files/figure-latex/GraficoDispersao-1.pdf
+inst/rmarkdown/templates/pdf/skeleton/skeleton_files/figure-latex/GraficoDispersao02-1.pdf
