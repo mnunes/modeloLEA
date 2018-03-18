@@ -22,6 +22,10 @@ address:
     address: Consulente
   - code: e
     address: Orientação
+    
+# Pacotes extras para o LaTeX
+header-includes:
+  - \usepackage{bbm}
 
 # Resumo
 abstract: Este trabalho estuda a relação entre a velocidade de carros (mph) e a distância (pés) que eles levaram para parar completamente. Utilizamos regressão linear simples para determinar se há relação entre estas duas variáveis.
