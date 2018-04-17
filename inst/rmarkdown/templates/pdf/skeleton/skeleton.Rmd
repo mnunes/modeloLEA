@@ -30,7 +30,7 @@ header-includes:
 # Resumo
 abstract: Este trabalho estuda a relação entre a velocidade de carros (mph) e a distância (pés) que eles levaram para parar completamente. Utilizamos regressão linear simples para determinar se há relação entre estas duas variáveis.
 
-# Opcional: palavras-chave
+# Obrigatorio: palavras-chave
 keywords:
   - regressão linear # colocar o principal metodo estatistico utlizado como primeira palavra chave a fim de facilitar a catalogacao do LEA
   - automobilismo
@@ -40,7 +40,7 @@ keywords:
 # Opcional: Relatorio com uma ou duas colunas (usamos uma coluna no LEA)
 one_column: true
 
-# Opcional: Numerar as secoes do relatorio
+# Obrigatorio: Numerar as secoes do relatorio
 numbersections: true
 
 # Opcional: Especificar a profundidade da numeracao das secoes (5 eh o padrao)
