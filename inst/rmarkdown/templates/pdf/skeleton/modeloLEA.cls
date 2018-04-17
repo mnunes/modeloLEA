@@ -269,7 +269,7 @@
 
 % Add name footer option
 \def\modeloLEAfootercontents#1{\def\@modeloLEAfootercontents{#1}}
-\modeloLEAfootercontents{Coloque o título aqui}
+\modeloLEAfootercontents{Coloque o título do relatório aqui}
 \newcommand{\printmodeloLEAfootercontents}{\@modeloLEAfootercontents}
 
 %% For the line numbers overlay
