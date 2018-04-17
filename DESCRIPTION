@@ -1,8 +1,8 @@
 Package: modeloLEA
 Type: Package
 Title: Modelo de Relatorio de Consultoria Estatistica
-Version: 0.4
-Date: 2018-03-13
+Version: 0.4.1
+Date: 2018-04-17
 Author: Marcus Nunes
 Maintainer: Marcus Nunes <marcus@marcusnunes.me>
 Depends:
