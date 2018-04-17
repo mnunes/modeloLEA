@@ -1,6 +1,13 @@
 \name{NEWS}
 \title{News for Package \pkg{modeloLEA}}
 
+\section{Novidades no pacote modeloLEA - version 0.4.1 (2018-04-17)}{
+  \itemize{
+    \item O rodapé do relatório foi atualizado
+    \item Alguns itens deixaram de ser opcionais e passaram a ser obrigatórios
+  }
+}
+
 \section{Novidades no pacote modeloLEA - version 0.4 (2018-03-13)}{
   \itemize{
     \item Revisão geral de estilo, com updates no help, nas novidades e no modelo padrão do relatório.
