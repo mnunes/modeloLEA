@@ -1,6 +1,6 @@
 ## modeloLEA
 
-Este pacote do `R` utiliza rmarkdown para criar relatórios mesclando `R` e LaTeX.
+Este pacote do `R` utiliza rmarkdown para criar relatórios mesclando `R` e LaTeX. 
 
 Rode o comando
 
