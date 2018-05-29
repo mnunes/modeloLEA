@@ -6,7 +6,7 @@ Rode o comando
 
     install.packages("devtools")
     
-para instalar o pacote `devtools`, resposnsável pela instalação do pacote `modeloLEA`. Em seguida, execute os comandos
+para instalar o pacote `devtools`, responsável pela instalação do pacote `modeloLEA`. Em seguida, execute os comandos
 
     library(devtools)
     install_github("mnunes/modeloLEA")
