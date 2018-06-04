@@ -33,7 +33,7 @@ Para rodar os exemplos disponíveis neste repositório, é necessário instalar 
 
 - LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja abaixo, na Seção _Instalação do LaTeX_, como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
 
-- `R` (versão 3.4.3 ou superior) - [link](https://cran.rstudio.com/)
+- `R` (versão 3.5.0 ou superior) - [link](https://cran.rstudio.com/)
 
 - RStudio (versão 1.1.423 ou superior) - [link](https://www.rstudio.com/products/rstudio/download/#download)
 
