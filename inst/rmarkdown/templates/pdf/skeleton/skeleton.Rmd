@@ -50,7 +50,7 @@ secnumdepth: 5
 bibliography: modeloLEA
 
 # Opcional: Colocar a marca 'Rascunho' no documento nao-finalizado
-watermark: false
+watermark: true
 
 # Rodape personalizado com o titulo do relatorio. Se ficar muito grande, deixe ele resumido.
 footer_contents: "Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio"
@@ -69,7 +69,7 @@ library(ggfortify)
 # tamanho das figuras: largura=6, altura=4 (polegadas)
 knitr::opts_chunk$set(fig.width=6, fig.height=4, 
 # exibir o codigo do R nos chunks (mudar para FALSE na versao final)
-                      echo=FALSE,
+                      echo=TRUE,
 # mandar o latex manter a figura na posicao correta
                       fig.pos='h')
 ```
