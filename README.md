@@ -1,18 +1,22 @@
 ## modeloLEA
 
-Este pacote do `R` utiliza rmarkdown para criar relatórios mesclando `R` e LaTeX. 
+Este pacote do `R` utiliza rmarkdown para criar relatórios mesclando `R` e LaTeX. O principal objetivo é unir a análise dos dados à escrita do relatório, fazendo com que o processo de comunicação dos resultados seja mais ágil. 
+
+Além disso, o autor do relatório não precisará se preocupar com a formatação do documento, fazendo com que ele tenha uma tarefa a menos para pensar e deixando todos os relatórios produzidos pelo Laboratório de Estatística Aplicada da UFRN dentro do mesmo padrão visual.
 
 ## Requisitos do Sistema
 
 Para rodar os exemplos disponíveis neste repositório, é necessário instalar os seguintes programas em seu computador:
 
-- LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja abaixo, na Seção _Instalação do LaTeX_, como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
-
 - `R` (versão 3.5.2 ou superior) - [link](https://cran.rstudio.com/)
 
 - RStudio (versão 1.1.463 ou superior) - [link](https://www.rstudio.com/products/rstudio/download/#download)
 
-É possível que o pacote funcione em outras configurações, mas ele foi testado apenas nestas configurações.
+- LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja abaixo, na Seção _Instalação do LaTeX_, como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
+
+É possível que o pacote funcione em outras configurações de software, mas ele foi testado apenas nestas.
+
+Reserve um tempo especial para realizar o procedimento abaixo, pois ele pode demora em torno de 10 minutos para finalizar. Além disso, a compilação do primeiro relatório pode levar até 20 minutos, devido aos pacotes extras do LaTeX que serão baixados automaticamente.
 
 ## Instalação dos Pacotes do R
 
