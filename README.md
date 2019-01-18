@@ -2,7 +2,27 @@
 
 Este pacote do `R` utiliza rmarkdown para criar relatórios mesclando `R` e LaTeX. 
 
-Rode o comando
+## Requisitos do Sistema
+
+Para rodar os exemplos disponíveis neste repositório, é necessário instalar os seguintes programas em seu computador:
+
+- LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja abaixo, na Seção _Instalação do LaTeX_, como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
+
+- `R` (versão 3.5.2 ou superior) - [link](https://cran.rstudio.com/)
+
+- RStudio (versão 1.1.463 ou superior) - [link](https://www.rstudio.com/products/rstudio/download/#download)
+
+É possível que o pacote funcione em outras configurações, mas ele foi testado apenas nestas configurações.
+
+## Instalação dos Pacotes do R
+
+Alguns usuários já reportaram problemas na instalação de algumas dependências do pacote `modeloLEA`. Por isso, antes de começar a instalação do pacote, rode o comando
+
+    options(repos=c(CRAN="http://cran.rstudio.com"))
+
+dentro do RStudio. Isto vai configurar outro servidor do CRAN como o fornecedor de pacotes para a sua instalação. Como o servidor do RStudio está baseado em um serviço na nuvem, a probabilidade dele estar fora do ar é mais baixa do que a de outros servidores, embora, teoricamente, ele seja um pouco mais lento para quem mora no Brasil.
+
+Após configurar o servidor do qual os pacotes serão baixados, rode o comando
 
     install.packages("devtools")
     
@@ -11,34 +31,13 @@ para instalar o pacote `devtools`, responsável pela instalação do pacote `mod
     library(devtools)
     install_github("mnunes/modeloLEA")
 
-para instalar o pacote `modeloLEA`. Se o R Markdown nunca foi utilizado em computador, é possível que alguns pacotes extras tenham que ser baixados. Seja paciente.
+para instalar o pacote `modeloLEA`. Se o R Markdown nunca foi utilizado em seu computador, é possível que alguns pacotes extras tenham que ser baixados. Seja paciente.
 
-Alguns usuários já reportaram problemas na instalação de algumas dependências do pacote `modeloLEA`. Se este for o seu caso, rode o comando
-
-    options(repos=c(CRAN="http://cran.rstudio.com"))
-    
-dentro do RStudio para configurar outro servidor do CRAN como o fornecedor de pacotes para a sua instalação. Como o servidor do RStudio está baseado em um serviço na nuvem, a probabilidade dele estar fora do ar é mais baixa do que a de outros servidores, embora, teoricamente, ele seja um pouco mais lento para quem mora no Brasil.
-
-Embora o pacote já esteja instalado, ele não vai funcionar se não houver uma distribuição do LaTeX em seu computador. A Seção _Instalação do LaTeX_, logo abaixo, mostra como instalar o [TinyTeX](https://yihui.name/tinytex/) em seu computador. Esta distribuição do LaTeX foi pensada especialmente para uuários do `R`, de modo que fosse o menor possível e, ainda assim, completa o suficiente para a produção de relatórios de pesquisa.
+Embora o pacote já esteja instalado, ele não vai funcionar se não houver uma distribuição do LaTeX em seu computador. A Seção _Instalação do LaTeX_, logo abaixo, mostra como instalar o [TinyTeX](https://yihui.name/tinytex/), uma das melhores distribuições de LaTeX atuais, na sua máquina. Esta distribuição do LaTeX foi pensada especialmente para usuários do `R`, de modo que fosse a menor possível e, ainda assim, completa o suficiente para a produção de relatórios de pesquisa.
 
 Perceba que esta é uma versão preliminar do modelo de relatório. É possível (bastante provável, na verdade) que hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer bug ou problema de instalação ou uso.
 
 O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_rascunho.pdf) exibe o resultado esperado para o rascunho do relatório, que deve ser avaliado pelo professor orientador. O arquivo [modeloLEA_final.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_final.pdf) exibe o resultado esperado para o relatório final, a ser entregue ao consulente.
-
-
-
-## Requisitos do Sistema
-
-Para rodar os exemplos disponíveis neste repositório, é necessário instalar os seguintes programas em seu computador:
-
-- LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja abaixo, na Seção _Instalação do LaTeX_, como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
-
-- `R` (versão 3.5.0 ou superior) - [link](https://cran.rstudio.com/)
-
-- RStudio (versão 1.1.423 ou superior) - [link](https://www.rstudio.com/products/rstudio/download/#download)
-
-É possível que o pacote funcione em outras configurações, mas estas são aquelas em que ele foi testado.
-
 
 
 ## Instalação do LaTeX
@@ -94,4 +93,4 @@ Por fim, após a compilação é gerada uma pasta chamada `relatorio_files`, que
 
 <hr>
 
-Este pacote foi inspirado pelo [pinp](https://github.com/eddelbuettel/pinp). 
+Este pacote foi inspirado pelo pacote [pinp](https://github.com/eddelbuettel/pinp). 
