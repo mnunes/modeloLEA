@@ -114,8 +114,9 @@ modeloLEA <- function(..., keep_tex = TRUE, citation_package = 'natbib') {
 
 # Call rmarkdown::pdf_documet and mark the return value as inheriting pdf_document
 inherit_pdf_document <- function(...) {
-    fmt <- rmarkdown::pdf_document(...)
+    fmt <- rmarkdown::pdf_document(latex_engine = "xelatex")
     fmt$inherits <- "pdf_document"
+    fmt$pandoc$args
     fmt
 }
 
