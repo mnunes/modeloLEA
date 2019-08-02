@@ -1,6 +1,6 @@
-#' modelo de relatorio para laboratorio de consultoria no estilo PNAS
+#' PNAS-alike two-column journal format.
 #'
-#' inspirado e adaptado do pacote pinp
+#' Format suitable for attractive two-column pdf vignettes
 #'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Additional arguments to \code{rmarkdown::pdf_document}
@@ -18,7 +18,7 @@
 #'
 #' \describe{
 #'   \item{\code{abstract}}{(Optional but recommended) A free-format abstract summarizing the
-#'   .}
+#'   document.}
 #'   \item{\code{acknowledgements}}{(Optional) A free-format entry which will be placed at the
 #'   end of the document.}
 #'   \item{\code{address}}{(Mandatory) YAML list with entries for \code{code} and \code{address}.
@@ -114,9 +114,8 @@ modeloLEA <- function(..., keep_tex = TRUE, citation_package = 'natbib') {
 
 # Call rmarkdown::pdf_documet and mark the return value as inheriting pdf_document
 inherit_pdf_document <- function(...) {
-    fmt <- rmarkdown::pdf_document(latex_engine = "xelatex")
+    fmt <- rmarkdown::pdf_document(...)
     fmt$inherits <- "pdf_document"
-    fmt$pandoc$args
     fmt
 }
 
