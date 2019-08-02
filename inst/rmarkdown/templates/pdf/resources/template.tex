@@ -1,4 +1,4 @@
-\documentclass[a4paper,$if(fontsize)$$fontsize$,$else$12pt,$endif$$if(one_column)$$if(lineno)$lineno,$endif$$else$twocolumn,$endif$$if(one_sided)$$else$twoside,$endif$printwatermark=$if(watermark)$$watermark$$else$false$endif$]{modeloLEA}
+\documentclass[$if(fontsize)$$fontsize$,$else$12pt,$endif$$if(one_column)$$if(lineno)$lineno,$endif$$else$onecolumn,$endif$$if(one_sided)$$else$twoside,$endif$printwatermark=$if(watermark)$$watermark$$else$false$endif$]{modeloLEA}
 
 %% Some pieces required from the pandoc template
 \providecommand{\tightlist}{%
@@ -15,17 +15,13 @@ $if(tables)$
 $endif$
 
 $if(headercolor)$
-%\definecolor{modeloLEAblue}{HTML}{$headercolor$}
-\definecolor{modeloLEAblue}{HTML}{$headercolor$}
+\definecolor{pinpblue}{HTML}{$headercolor$}
 $else$
-%\definecolor{modeloLEAblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
-\definecolor{modeloLEAblue}{HTML}{000000}  % imagecolorpicker on black for new R logo
+\definecolor{pinpblue}{HTML}{000000}  % imagecolorpicker on blue for new R logo
 $endif$
 $if(linkcolor)$
-%\definecolor{pnasbluetext}{HTML}{$linkcolor$}
 \definecolor{pnasbluetext}{HTML}{$linkcolor$}
 $else$
-%\definecolor{pnasbluetext}{RGB}{101,0,0} %
 \definecolor{pnasbluetext}{RGB}{0,0,0} %
 $endif$
 
@@ -44,11 +40,9 @@ $for(address)$
   \affil[$address.code$]{$address.address$}
 $endfor$
 
-$if(numbersections)$
+
 \setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
-$else$
-\setcounter{secnumdepth}{0}
-$endif$
+
 
 % Please give the surname of the lead author for the running footer
 \leadauthor{$lead_author_surname$}
@@ -62,26 +56,9 @@ $abstract$
 
 \dates{\today}
 
-$if(doi)$
-\doi{$doi$}
-$endif$
-
 $if(footer_contents)$
-\modeloLEAfootercontents{$footer_contents$}
+\pinpfootercontents{$footer_contents$}
 $endif$
-
-% pacotes a serem utilizados
-\usepackage{amsmath}
-\numberwithin{equation}{section}
-\numberwithin{figure}{section}
-\numberwithin{table}{section}
-\usepackage{icomma}
-\RequirePackage{lmodern}
-
-
-% altera o nome das referencias para portugues
-%\renewcommand\r{}efname{Referências}
-
 
 \begin{document}
 
@@ -106,10 +83,8 @@ $if(acknowledgements)$
 \showacknow
 $endif$
 
-%$if(skip_final_break)$
-%$else$
 \pnasbreak 
-%$endif$
+
 
 $if(natbib)$
 $if(bibliography)$
@@ -135,4 +110,3 @@ $endfor$
 
 \end{document}
 
- 

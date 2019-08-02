@@ -1,6 +1,6 @@
-name: Modelo LEA (PDF)
+name: modeloLEA
 description: >
-  A plesant-looking one-column pdf template derived
-  from the PNAS research article style
+  Modelo de relatorio utilizado nas consultorias
+  realizadas pela equipe do Laboratorio de Estatistica
+  Aplicada da Universidade Federal do Rio Grande do Norte
 create_dir: false
-

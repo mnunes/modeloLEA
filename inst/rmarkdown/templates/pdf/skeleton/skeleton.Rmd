@@ -1,7 +1,7 @@
 ---
-title: Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio
+title: Relacao Entre Velocidade e Distancia de Frenagem para Carros de Passeio
 
-# Use letras para afiliação
+# Use letras para afiliacaoo
 author:
   - name: Aluno Consultor 1
     affiliation: a,b
@@ -13,7 +13,7 @@ author:
     affiliation: a,e
 address:
   - code: a
-    address: Departamento de Estatística - UFRN
+    address: Departamento de Estatistica - UFRN # acentue 'Estatistica' corretamente
   - code: b
     address: Consultor
   - code: c
@@ -21,44 +21,36 @@ address:
   - code: d
     address: Consulente
   - code: e
-    address: Orientação
-    
-# Pacotes extras para o LaTeX
+    address: Orientacao # acentue esta palavra corretamente
+
+# Pacotes extras para o LaTeX (caso sejam necessarios)
 header-includes:
   - \usepackage{bbm}
 
 # Resumo
-abstract: Este trabalho estuda a relação entre a velocidade de carros (mph) e a distância (pés) que eles levaram para parar completamente. Utilizamos regressão linear simples para determinar se há relação entre estas duas variáveis.
+abstract: Este trabalho estuda a relacao entre a velocidade de carros (mph) e a distancia (pes) que eles levaram para parar completamente. Utilizamos o modelo de regressao linear simples para determinar se existe relacao entre estas duas variaveis.
 
 # Obrigatorio: palavras-chave
 keywords:
-  - regressão linear # colocar o principal metodo estatistico utlizado como primeira palavra chave a fim de facilitar a catalogacao do LEA
+  - regressao linear # colocar o principal metodo estatistico utlizado como primeira palavra chave a fim de facilitar a catalogacao do LEA
   - automobilismo
-  - segurança
-  - trânsito
+  - seguranÃ§a
+  - transito
 
-# Opcional: Relatorio com uma ou duas colunas (usamos uma coluna no LEA)
-one_column: true
-
-# Obrigatorio: Numerar as secoes do relatorio
-numbersections: true
-
-# Opcional: Especificar a profundidade da numeracao das secoes (5 eh o padrao)
-secnumdepth: 5
-
-# Obrigatorio: Referencias 
+# Obrigatorio: Arquivo .bib no qual estao as referencias do trabalho
 bibliography: modeloLEA
 
 # Opcional: Colocar a marca 'Rascunho' no documento nao-finalizado
 watermark: true
 
 # Rodape personalizado com o titulo do relatorio. Se ficar muito grande, deixe ele resumido.
-footer_contents: "Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio"
+footer_contents: "Relacao Entre Velocidade e Distancia de Frenagem para Carros de Passeio"
 
 # Cria um documento do tipo modeloLEA
 output: modeloLEA::modeloLEA
 
 ---
+
 
 ```{r definicoes, include=FALSE, message=FALSE}
 # pacotes a serem carregados para a analise
@@ -74,63 +66,62 @@ knitr::opts_chunk$set(fig.width=6, fig.height=4,
                       fig.pos='h')
 ```
 
-
 # Objetivos
 
-Diversos autores já publicaram estudos referentes à segurança no trânsito. \cite{McKenna1991}, por exemplo, estuda a relação entre as habilidades dos motoristas e a percepção que eles possuem sobre estas habilidades. Além desta característica, existem diversas outras que, se estudadas, podem aumentar a segurança no trânsito. Uma destas características é a distância mínima necessária para que um carro pare completamente após seus freios serem acionados.
+Diversos autores ja publicaram estudos referentes a seguranca no transito. \cite{McKenna1991}, por exemplo, estuda a relacao entre as habilidades dos motoristas e a percepcao que eles possuem sobre estas habilidades. Alem desta caracteristica, existem diversas outras que, se estudadas, podem aumentar a seguranca no transito. Uma destas caracteristicas e a distancia minima necessaria para que um carro pare completamente apos seus freios serem acionados.
 
-Neste trabalho estamos interessados em verificar qual é a relação que existe entre a velocidade de um carro (em milhas por hora) e a distância que ele levou para parar completamente (em pés). Este conjunto de dados foi fornecido pelo programa R: A Language and Environment for Statistical Computing (\cite{R2017}). A hipótese com a qual trabalhamos é a de que existe uma relação positiva entre estas variáveis. Isto é, quanto mais rápido um carro estiver trafegando, maior vai ser a distância necessária para que este carro pare completamente.
+Neste trabalho estamos interessados em verificar qual e a relacao que existe entre a velocidade de um carro (em milhas por hora) e a distancia que ele levou para parar completamente (em pes). Este conjunto de dados foi fornecido pelo programa R: A Language and Environment for Statistical Computing (\cite{R2017}). A hipotese com a qual trabalhamos e a de que existe uma relacao positiva entre estas variaveis. Isto e, quanto mais rapido um carro estiver trafegando, maior vai ser a distancia necessaria para que este carro pare completamente.
 
-Além de verificar se há correlação entre estas variáveis, desejamos obter uma relação capaz de prever o quanto uma variável varia em relação a outra. Ou seja, gostaríamos de poder estimar a distância necessária para um carro parar completamente se soubermos qual a sua velocidade de tráfego no momento em que os freios foram acionados.
+Alem de verificar se ha correlacao entre estas variaveis, desejamos obter uma relacao capaz de prever o quanto uma variavel varia em relacao a outra. Ou seja, gostariamos de poder estimar a distancia necessaria para um carro parar completamente se soubermos qual a sua velocidade de trafego no momento em que os freios foram acionados.
 
 
 
 # Metodologia
 
-Os dados analisados neste trabalho foram obtidos a partir de uma amostra de 50 carros. As medições foram realizadas na década de 1920 e disponibilizadas originalmente por \cite{Ezekiel1930}. Não há informações a respeito dos modelos dos carros utilizados neste experimento.
+Os dados analisados neste trabalho foram obtidos a partir de uma amostra de 50 carros. As medicoes foram realizadas na decada de 1920 e disponibilizadas originalmente por \cite{Ezekiel1930}. Nao ha informacoes a respeito dos modelos dos carros utilizados neste experimento.
 
-Utilizaremos um método estatístico chamado regressão linear a fim de verificar se há relação entre a distância necessária para um carro parar completamente e sua velocidade. Este é um método bastante popular, capaz de descrever com bastante precisão a relação entre as variáveis que nos interessam.
+Utilizaremos um metodo estatistico chamado regressao linear a fim de verificar se ha relacao entre a distancia necessaria para um carro parar completamente e sua velocidade. Este e um metodo bastante popular, capaz de descrever com bastante precisao a relacao entre as variaveis que nos interessam.
 
-Sejam $x_1, x_2, \cdots, x_n$ as observações referentes à velocidade dos carros em questão. Considere $y_1, y_2, \cdots, y_n$ as observações referentes à distância necessária para os carros pararem. De acordo com \cite{Kutner2004}, podemos expressar a dependência entre $y$ e $x$ através da equação
+Sejam $x_1, x_2, \cdots, x_n$ as observacoes referentes a velocidade dos carros em questao. Considere $y_1, y_2, \cdots, y_n$ as observacoes referentes a distancia necessaria para os carros pararem. De acordo com \cite{Kutner2004}, podemos expressar a dependencia entre $y$ e $x$ atraves da equacao
 
 $$y_i = \beta_0 + \beta_1x_i + \varepsilon_i,$$
 
-\noindent onde $\beta_0$ e $\beta_1$ são coeficientes estimados pelas equações
+\noindent onde $\beta_0$ e $\beta_1$ sao coeficientes estimados pelas equacoes
 
 \begin{align}
 \widehat{\beta}_1 &= \frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n(x_i-\overline{x})^2}  \label{estimadores01} \\
 \widehat{\beta}_0 &= \overline{y}-\widehat{\beta}_1\overline{x}  \label{estimadores02}
 \end{align}
 
-\noindent As quantidades $\overline{x}$ e $\overline{y}$ são, respectivamente, as médias amostrais de $x_1, x_2, \cdots, x_n$ e $y_1, y_2, \cdots, y_n$. Estas médias amostrais são dadas por
+\noindent As quantidades $\overline{x}$ e $\overline{y}$ sao, respectivamente, as medias amostrais de $x_1, x_2, \cdots, x_n$ e $y_1, y_2, \cdots, y_n$. Estas medias amostrais sao dadas por
 
 \begin{align*}
 \overline{x} &= \frac{1}{n}\sum_{i=1}^nx_i \\
 \overline{y} &= \frac{1}{n}\sum_{i=1}^ny_i 
 \end{align*}
 
-Determinamos se o coeficiente $\beta_1$ é estatisticamente significante através de um teste $t$. Sob a hipótese nula, assumimos que o estimador possui distribuição $t$ com $n-1$ graus de liberdade.
+Determinamos se o coeficiente $\beta_1$ e estatisticamente significante atraves de um teste $t$. Sob a hipotese nula, assumimos que o estimador possui distribuicao $t$ com $n-1$ graus de liberdade.
 
 
 
 # Resultados
 
-A fim de verificar visualmente se há algum tipo de relação entre as variáveis consideradas neste estudo, exibimos o gráfico de dispersão dos dados na Figura \ref{fig:GraficoDispersao}. Note que é possível perceber uma forte tendência linear positiva na relação entre estas variáveis. Quanto maior o valor da velocidade, maior a distância necessária para o carro parar completamente.
+A fim de verificar visualmente se ha algum tipo de relacao entre as variaveis consideradas neste estudo, exibimos o grafico de dispersao dos dados na Figura \ref{fig:GraficoDispersao}. Note que e possivel perceber uma forte tendencia linear positiva na relacao entre estas variaveis. Quanto maior o valor da velocidade, maior a distancia necessaria para o carro parar completamente.
 
-```{r GraficoDispersao, fig.cap="\\label{fig:GraficoDispersao} Gráfico de dispersão da distância de parada completa (pés) versus velocidade (mph) dos carros."}
+```{r GraficoDispersao, fig.cap="\\label{fig:GraficoDispersao} Grafico de dispersao da distancia de parada completa (pes) versus velocidade (mph) dos carros."}
 ggplot(cars, aes(x=speed, y=dist)) +
   geom_point() +
-  labs(x="Velocidade (mph)", y="Distância (pés)")
+  labs(x="Velocidade (mph)", y="Distancia (pes)")
 ```
 
-```{r GraficoDispersao02, fig.cap="\\label{fig:GraficoDispersao02} Gráfico de dispersão da distância de parada completa (pés) versus velocidade (mph) dos carros com a reta que melhor se ajusta a estes dados."}
+```{r GraficoDispersao02, fig.cap="\\label{fig:GraficoDispersao02} Grafico de dispersao da distancia de parada completa (pes) versus velocidade (mph) dos carros com a reta que melhor se ajusta a estes dados."}
 ggplot(cars, aes(x=speed, y=dist)) +
   geom_point() +
-  labs(x="Velocidade (mph)", y="Distância (pés)") +
+  labs(x="Velocidade (mph)", y="Distancia (pes)") +
   geom_smooth(method="lm", se=FALSE)
 ```
 
-Além disso, adicionamos ao gráfico exibido na Figura \ref{fig:GraficoDispersao02} a reta que melhor descreve a relação entre estas variáveis. Esta reta foi obtida através do método descrito na seção anterior, fazendo uso das fórmulas \eqref{estimadores01} e \eqref{estimadores02}. Explicitamente, a equação representada na Figura \ref{fig:GraficoDispersao02} é dada por
+Alem disso, adicionamos ao grafico exibido na Figura \ref{fig:GraficoDispersao02} a reta que melhor descreve a relacao entre estas variaveis. Esta reta foi obtida atraves do metodo descrito na secao anterior, fazendo uso das formulas \eqref{estimadores01} e \eqref{estimadores02}. Explicitamente, a equacao representada na Figura \ref{fig:GraficoDispersao02} e dada por
 
 ```{r ajusteModeloLinear}
 ajuste <- lm(dist ~ speed, data=cars)
@@ -140,7 +131,7 @@ ajuste <- lm(dist ~ speed, data=cars)
 \widehat{y}_i = -17,5791 + 3,9324x_i.
 \end{equation}
 
-Entretanto, precisamos testar se os coeficientes estimados e apresentados na relação \eqref{equacaoFinal} são, de fato, estatisticamente significantes. Para isto, testaremos as hipóteses
+Entretanto, precisamos testar se os coeficientes estimados e apresentados na relacao \eqref{equacaoFinal} sao, de fato, estatisticamente significantes. Para isto, testaremos as hipoteses
 
 \begin{align*}
 H_0 &: \beta_0 = 0 \\
@@ -154,31 +145,30 @@ H_0 &: \beta_1 = 0 \\
 H_1 &: \beta_1 \neq 0 \\
 \end{align*}
 
-\noindent Os resultados destes testes estão apresentados na Tabela \ref{tab:Resultados}.s
+\noindent Os resultados destes testes estao apresentados na Tabela \ref{tab:Resultados}.s
 
 \begin{table}[!h]
-\caption{\label{tab:Resultados} Resultados dos testes de hipóteses realizados para a análise de regressão.}
+\caption{\label{tab:Resultados} Resultados dos testes de hipoteses realizados para a analise de regressao.}
 \begin{center}
 \begin{tabular}{lrrrr}\hline
-Coeficiente & \mbox{Estimativa} & \mbox{Erro Padrão} &   $t$  & \mbox{p-valor} \\ \hline
+Coeficiente & \mbox{Estimativa} & \mbox{Erro Padrao} &   $t$  & \mbox{p-valor} \\ \hline
 $\beta_0$   & -17,5791   &    6,7584   & -2,601 &  0,0123  \\
 $\beta_1$   &   3,9324   &    0,4155   & 9,464  & <0,0001  \\ \hline
 \end{tabular}
 \end{center}
 \end{table}
 
-Note que, em ambos os casos, o p-valor encontrado é inferior a $\alpha = 0,05$. Portanto, podemos rejeitar ambas as hipóteses nulas e $\beta_0$ e $\beta_1$ são estatisticamente diferentes de zero.
+Note que, em ambos os casos, o p-valor encontrado e inferior a $\alpha = 0,05$. Portanto, podemos rejeitar ambas as hipoteses nulas e $\beta_0$ e $\beta_1$ sao estatisticamente diferentes de zero.
 
-Para finalizar a análise, devemos verificar se o modelo ajustado não viola as hipóteses do modelo de regressão linear. Para verificar isto, exibimos a análise de resíduos na Figura \ref{fig:Residuos}.
+Para finalizar a analise, devemos verificar se o modelo ajustado nao viola as hipoteses do modelo de regressao linear. Para verificar isto, exibimos a analise de residuos na Figura \ref{fig:Residuos}.
 
-```{r residuos, fig.cap="\\label{fig:Residuos} Análise de resíduos do modelo de regressão linear ajustado."}
+```{r residuos, fig.cap="\\label{fig:Residuos} Analise de residuos do modelo de regressao linear ajustado."}
 autoplot(ajuste)
 ```
 
-Note que na parte superior esquerda da imagem, embora o gráfico dos resíduos versus valores ajustados não apresente tendência, a variância não é constante. Note que os pontos próximos de zero estão mais próximos entre si do que os pontos mais à direita no gráfico. Portanto, há uma violação das hipóteses da regressão linear neste caso.
+Note que na parte superior esquerda da imagem, embora o grafico dos residuos versus valores ajustados nao apresente tendencia, a variancia nao e constante. Note que os pontos proximos de zero estao mais proximos entre si do que os pontos mais a direita no grafico. Portanto, ha uma violacao das hipoteses da regressao linear neste caso.
 
-Assim, podemos sugerir uma transformação nestes dados ou a utilização de outro método de análise, como um modelo linear generalizado.
-
+Assim, podemos sugerir uma transformacao nestes dados ou a utilizacao de outro metodo de analise, como um modelo linear generalizado.
 
 <!--  
 Perceba que o relatorio estah finalizado. Entretanto, ainda eh necessario colocar as referencias. Estas referencias devem ser colocadas dentro do arquivo 

@@ -1,16 +1,11 @@
 %%%
-%% modeloLEA.cls
+%% ping.cls
 %%   based on pnas-new.cls and supporting material from
 %%   http://www.pnas.org/site/authors/latex.xhtml
 %%   as well as local changes 
 %%
 %% Dirk Eddelbuettel and James Balamuta
 %% August - September 2017
-%% 
-%% adaptado por Marcus Nunes
-%% Fevereiro de 2018
-%% marcusnunes.me
-%% github.com/mnunes/modeloLEA
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pnas-new.cls, v1.2, 2016/02/28 
@@ -49,11 +44,11 @@
 %% Fonts and language
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[portuges]{babel}
+\RequirePackage{amsmath,amsfonts,amssymb}
 \RequirePackage{lmodern}
 \RequirePackage[scaled]{helvet}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lettrine} % For dropped capitals
-%\RequirePackage[portuguese]{babel}
 
 %% For the Significance Statement & footnote on the first page
 \RequirePackage{afterpage}
@@ -170,10 +165,10 @@
 \newcommand{\footerfont}{\normalfont\sffamily\fontsize{7}{9} \selectfont}
 \newcommand{\titlefont}{\fontfamily{lmss}\bfseries\fontsize{22pt}{24pt}\selectfont}
 \newcommand{\dropcapfont}{\fontfamily{lmss}\bfseries\fontsize{26pt}{28pt}\selectfont}
-\newcommand{\datesfont}{\normalfont\sffamily\fontsize{10}{10}\selectfont}
+\newcommand{\datesfont}{\normalfont\sffamily\fontsize{9}{9}\selectfont}
 \newcommand{\absfont}{\normalfont\sffamily\bfseries\fontsize{10}{10}\selectfont}
-\newcommand{\keywordsfont}{\normalfont\rmfamily\fontsize{10}{10}\selectfont}
-\newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{6}{8}\selectfont}
+\newcommand{\keywordsfont}{\normalfont\rmfamily\fontsize{8}{8}\selectfont}
+\newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{6}{6}\selectfont}
 
 %% Set URL link color & font
 \renewcommand\UrlFont{\color{pnasbluetext}\sffamily}
@@ -181,12 +176,11 @@
 %% Author and affiliation
 \RequirePackage{authblk}
 \setlength{\affilsep}{8.5pt} % 16.5pts between base of author line and base of affil line
-\renewcommand\Authfont{\color{color0}\normalfont\sffamily\bfseries\fontsize{10}{12}\selectfont}
-\renewcommand\Affilfont{\color{color0}\normalfont\sffamily\fontsize{10}{12}\selectfont}
+\renewcommand\Authfont{\color{color0}\normalfont\sffamily\bfseries\fontsize{9}{11}\selectfont}
+\renewcommand\Affilfont{\color{color0}\normalfont\sffamily\fontsize{7}{8}\selectfont}
 \makeatletter
 \renewcommand\AB@affilsepx{; \protect\Affilfont}
 \makeatother
-\renewcommand\Authand{ e }
 \renewcommand\Authands{ e }
 
 %% Options for element switching
@@ -242,25 +236,25 @@
 %% Bibliography    
 \RequirePackage{natbib}
 \setlength{\bibsep}{0.0pt}
-\renewcommand\bibfont{\normalfont\fontsize{12}{12}\selectfont} % set font to be sans serif
+\renewcommand\bibfont{\normalfont\sffamily\fontsize{8}{10}\selectfont} % set font to be sans serif
 
 %% Figure caption style
-\DeclareCaptionFormat{pnasformat}{\normalfont\sffamily\fontsize{12}{12}\selectfont#1#2#3}
+\DeclareCaptionFormat{pnasformat}{\normalfont\sffamily\fontsize{7}{9}\selectfont#1#2#3}
 \captionsetup{format=pnasformat}
 
 %% Table style
 \RequirePackage{etoolbox}
-\captionsetup[table]{labelfont+={normalsize},textfont+={normalsize},skip=10pt,position=above}
+\captionsetup[table]{labelfont+={small},textfont+={small,sf,bf},skip=10pt,position=above}
 % booktabs provide nice spacing, but rule widths and distances need fixing
-\setlength{\heavyrulewidth}{0.75pt}
-\setlength{\lightrulewidth}{0.75pt}
-\setlength{\aboverulesep}{1.75pt}
-\setlength{\belowrulesep}{1.75pt}
+\setlength{\heavyrulewidth}{0.5pt}
+\setlength{\lightrulewidth}{0.5pt}
+\setlength{\aboverulesep}{1.5pt}
+\setlength{\belowrulesep}{1.5pt}
 \setlength{\belowbottomsep}{10pt}
 \AtBeginEnvironment{tabular}{
-\sffamily\fontsize{12}{12}\selectfont
+\sffamily\fontsize{7.5}{10}\selectfont
 }
-\newcommand{\addtabletext}[1]{{\setlength{\leftskip}{9pt}\fontsize{12}{12}\selectfont#1}}
+\newcommand{\addtabletext}[1]{{\setlength{\leftskip}{9pt}\fontsize{7}{9}\selectfont#1}}
 
 %% Headers and footers
 \RequirePackage{fancyhdr}  % custom headers/footers
@@ -268,9 +262,9 @@
 \pagestyle{fancy}          % Enables the custom headers/footers
 
 % Add name footer option
-\def\modeloLEAfootercontents#1{\def\@modeloLEAfootercontents{#1}}
-\modeloLEAfootercontents{Coloque o título do relatório aqui}
-\newcommand{\printmodeloLEAfootercontents}{\@modeloLEAfootercontents}
+\def\pinpfootercontents#1{\def\@pinpfootercontents{#1}}
+\pinpfootercontents{Package Vignette}
+\newcommand{\printpinpfootercontents}{\@pinpfootercontents}
 
 %% For the line numbers overlay
 \def\leftlinenos{%
@@ -287,7 +281,7 @@
 
 \makeatletter
 \fancypagestyle{firststyle}{
-   \fancyfoot[R]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
+   \fancyfoot[R]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
    \fancyfoot[L]{\footerfont\@ifundefined{@doi}{}{\@doi}}
 }
 \makeatother
@@ -300,10 +294,9 @@
 \cfoot{}%
 \rfoot{}%
 \makeatletter
-\fancyfoot[R]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
-%\fancyfoot[RE]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
-%\fancyfoot[RO]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
-%\fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}}
+\fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doi}{}{\@doi}}
+\fancyfoot[RO]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
+\fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}}
 
 % Use footer routine for line numbers
 \AtBeginDocument{
@@ -464,7 +457,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \providecommand*{\toclevel@acknow@section}{0}
 % Format is set for research articles by default
 \titleformat{\acknow@section}[runin]
-   {\sffamily\normalsize\bfseries\color{modeloLEAblue}}
+   {\sffamily\normalsize\bfseries\color{pinpblue}}
    {}
    {0em}
    {#1.}
@@ -583,12 +576,12 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \additionalelement{%
 \afterpage{\begin{sigstatement}
 \sffamily
-%\mdfdefinestyle{pnassigstyle}{linewidth=0.7pt,backgroundcolor=pnasblueback,linecolor=pnasbluetext,fontcolor=pnasbluetext,innertopmargin=6pt,innerrightmargin=6pt,innerbottommargin=6pt,innerleftmargin=6pt}
-%\@ifundefined{@significancestatement}{}{%	
-%	\begin{mdframed}[style=pnassigstyle]%
-%	\section*{Significance Statement}%
-%	\@significancestatement
-%	\end{mdframed}}
+\mdfdefinestyle{pnassigstyle}{linewidth=0.7pt,backgroundcolor=pnasblueback,linecolor=pnasbluetext,fontcolor=pnasbluetext,innertopmargin=6pt,innerrightmargin=6pt,innerbottommargin=6pt,innerleftmargin=6pt}
+\@ifundefined{@significancestatement}{}{%	
+	\begin{mdframed}[style=pnassigstyle]%
+	\section*{Significance Statement}%
+	\@significancestatement
+	\end{mdframed}}
 %     \medskip
 \scriptsize
 \@ifundefined{@authorcontributions}{}{\@authorcontributions}
@@ -621,26 +614,26 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \newenvironment{CodeChunk}{}{}
 
 %% Set colors -- now via test and fallback default in template
-%\definecolor{modeloLEAblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+%\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
 
 % Add colour to the title
-\appto{\titlefont}{\color{modeloLEAblue}}
+\appto{\titlefont}{\color{pinpblue}}
 
 % ...and section headings
 \titleformat{\section}
-  {\large\sffamily\bfseries\color{modeloLEAblue}}
+  {\large\sffamily\bfseries\color{pinpblue}}
   {\thesection.}
   {0.5em}
   {#1}
   []
 \titleformat{name=\section,numberless}
-  {\large\sffamily\bfseries\color{modeloLEAblue}}
+  {\large\sffamily\bfseries\color{pinpblue}}
   {}
   {0em}
   {#1}
   []  
 \titleformat{\subsection}[runin]
-  {\sffamily\bfseries\color{modeloLEAblue}} %\itshape}%
+  {\sffamily\bfseries\color{pinpblue}} %\itshape}%
   {\thesubsection.}
   {0.5em}
   {#1. }
