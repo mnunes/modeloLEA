@@ -6,6 +6,10 @@
 %%
 %% Dirk Eddelbuettel and James Balamuta
 %% August - September 2017
+%%
+%% Adapted by Marcus Nunes for Federal University of
+%%   Rio Grande do Norte
+%% 
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pnas-new.cls, v1.2, 2016/02/28 
@@ -60,7 +64,7 @@
     \pdfpageheight=\paperheight
 \fi\fi
 \RequirePackage{xcolor}
-\RequirePackage{tikz}
+%\RequirePackage{tikz}
 \RequirePackage[framemethod=tikz]{mdframed}
 
 %% For single column equations and balancing the columns on final page
