@@ -32,7 +32,7 @@ abstract: Este trabalho estuda a relacao entre a velocidade de carros (mph) e a 
 keywords:
   - regressao linear # colocar o principal metodo estatistico utilizado como primeira palavra chave a fim de facilitar a catalogacao do LEA
   - automobilismo
-  - segurança
+  - seguranca
   - transito
 
 # Obrigatorio: Arquivo .bib no qual estao as referencias do trabalho
