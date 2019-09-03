@@ -3,9 +3,7 @@ title: Relacao Entre Velocidade e Distancia de Frenagem para Carros de Passeio
 
 # Use letras para afiliacaoo
 author:
-  - name: Aluno Consultor 1
-    affiliation: a,b
-  - name: Aluno Consultor 2
+  - name: Aluno Consultor
     affiliation: a,b
   - name: Consulente
     affiliation: c,d
@@ -48,7 +46,6 @@ footer_contents: "Relacao Entre Velocidade e Distancia de Frenagem para Carros d
 
 # Cria um documento do tipo modeloLEA
 output: modeloLEA::modeloLEA
-
 ---
 
 
