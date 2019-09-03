@@ -8,11 +8,11 @@ Além disso, o autor do relatório não precisará se preocupar com a formataç�
 
 Para rodar os exemplos disponíveis neste repositório, é necessário instalar os seguintes programas em seu computador:
 
-- `R` (versão 3.5.2 ou superior) - [link](https://cran.rstudio.com/)
+- `R` (versão 3.6.1 ou superior) - [link](https://cran.rstudio.com/)
 
-- RStudio (versão 1.1.463 ou superior) - [link](https://www.rstudio.com/products/rstudio/download/#download)
+- RStudio (versão 1.2.1335 ou superior) - [link](https://www.rstudio.com/products/rstudio/download/#download)
 
-- Se o seu computador roda Windows, também é necessário instalar o programa [Rtools](https://cran.r-project.org/bin/windows/Rtools/)
+- Se o seu computador roda Windows, também é necessário instalar o programa RTool (versão 3.5) - [link](https://cran.r-project.org/bin/windows/Rtools/)
 
 - LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja abaixo, na Seção _Instalação do LaTeX_, como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
 
@@ -39,9 +39,9 @@ para instalar o pacote `devtools`, responsável pela instalação do pacote `mod
 
 para instalar o pacote `modeloLEA`. Se o R Markdown nunca foi utilizado em seu computador, é possível que alguns pacotes extras tenham que ser baixados. Seja paciente.
 
-Embora o pacote já esteja instalado, ele não vai funcionar se não houver uma distribuição do LaTeX em seu computador. A Seção _Instalação do LaTeX_, logo abaixo, mostra como instalar o [TinyTeX](https://yihui.name/tinytex/), uma das melhores distribuições de LaTeX atuais, na sua máquina. Esta distribuição do LaTeX foi pensada especialmente para usuários do `R`, de modo que fosse a menor possível e, ainda assim, completa o suficiente para a produção de relatórios de pesquisa.
+Embora o pacote já esteja instalado, ele não vai funcionar se não houver uma distribuição do LaTeX em seu computador. A Seção _Instalação do LaTeX_, logo abaixo, mostra como instalar o [TinyTeX](https://yihui.name/tinytex/) na sua máquina. Esta é uma das melhores distribuições de LaTeX atuais, pois vem apenas com o essencial, evitando que bibliotecas de uso muito específico sejam instaladas. Ela foi pensada especialmente para usuários do `R`, de modo que fosse a menor possível e, ainda assim, completa o suficiente para a produção de relatórios de pesquisa.
 
-Perceba que esta é uma versão preliminar do modelo de relatório. É possível (bastante provável, na verdade) que hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer bug ou problema de instalação ou uso.
+Perceba que esta é uma versão preliminar do pacote para o modelo de relatório. É possível (bastante provável, na verdade) que hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer bug ou problema de instalação ou uso.
 
 O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_rascunho.pdf) exibe o resultado esperado para o rascunho do relatório, que deve ser avaliado pelo professor orientador. O arquivo [modeloLEA_final.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_final.pdf) exibe o resultado esperado para o relatório final, a ser entregue ao consulente.
 
@@ -61,12 +61,15 @@ A instalação do TinyTeX é simples. Se o pacote `devtools` estiver instalado e
 
     library(devtools)
     install_github(c("yihui/tinytex", "rstudio/rmarkdown"))
-    tinytex::install_tinytex(force=TRUE)
+    tinytex::install_tinytex(force = TRUE)
 
 Vão aparecer um aviso e duas mensagens de erro durante a execução do segundo comando. Ignore-as dando OK no prompt que aparecer e pronto. Após os procedimentos necessários, seu computador vai estar com o LaTeX instalado.
 
-Feche e abra o RStudio antes de compilar o relatório pela primeira vez.
+**Feche e abra o RStudio antes de compilar o relatório pela primeira vez.** Ao reabrir o RStudio, rode o comando `tinytex:::is_tinytex()`. Se a resposta for `TRUE`, então o `TinyTex` foi instalado corretamente.
 
+Por fim, instale algumas fontes extras que o pacote exige através do comando
+
+    tinytex::tlmgr_install("cm-super")
 
 
 ## Utilização do pacote
