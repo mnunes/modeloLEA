@@ -67,11 +67,6 @@ Vão aparecer um aviso e duas mensagens de erro durante a execução do segundo 
 
 **Feche e abra o RStudio antes de compilar o relatório pela primeira vez.** Ao reabrir o RStudio, rode o comando `tinytex:::is_tinytex()`. Se a resposta for `TRUE`, então o `TinyTex` foi instalado corretamente.
 
-Por fim, instale algumas fontes extras que o pacote exige através do comando
-
-    tinytex::tlmgr_install("cm-super")
-
-
 ## Utilização do pacote
 
 Após o pacote ser instalado, clique no menu `File > New File > R Markdown...`. Veja na figura abaixo como fazer isto.
