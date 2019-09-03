@@ -1,4 +1,4 @@
-\documentclass[$if(fontsize)$$fontsize$,$else$12pt,$endif$$if(one_column)$$if(lineno)$lineno,$endif$$else$onecolumn,$endif$$if(one_sided)$$else$twoside,$endif$printwatermark=$if(watermark)$$watermark$$else$false$endif$]{modeloLEA}
+\documentclass[a4paper,11pt,one_column,printwatermark=$if(watermark)$$watermark$$else$false$endif$]{modeloLEA}
 
 %% Some pieces required from the pandoc template
 \providecommand{\tightlist}{%
@@ -14,10 +14,15 @@ $if(tables)$
 \usepackage{longtable}
 $endif$
 
+% The geometry package layout settings need to be set here...
+\geometry{layoutsize={0.95588\paperwidth,0.98864\paperheight},%
+          layouthoffset=0.02206\paperwidth,%
+		  layoutvoffset=0.00568\paperheight}
+
 $if(headercolor)$
-\definecolor{pinpblue}{HTML}{$headercolor$}
+\definecolor{modeloLEAblue}{HTML}{$headercolor$}
 $else$
-\definecolor{pinpblue}{HTML}{000000}  % imagecolorpicker on blue for new R logo
+\definecolor{modeloLEAblue}{HTML}{000000}  % imagecolorpicker on blue for new R logo
 $endif$
 $if(linkcolor)$
 \definecolor{pnasbluetext}{HTML}{$linkcolor$}
@@ -40,9 +45,11 @@ $for(address)$
   \affil[$address.code$]{$address.address$}
 $endfor$
 
-
-\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
-
+%$if(numbersections)$
+%\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+%$else$
+\setcounter{secnumdepth}{5}
+%$endif$
 
 % Please give the surname of the lead author for the running footer
 \leadauthor{$lead_author_surname$}
@@ -54,10 +61,23 @@ $if(keywords)$ \keywords{ $for(keywords)$ $keywords$ $sep$| $endfor$ } $endif$
 $abstract$
 \end{abstract}
 
-\dates{\today}
+$if(date_subtitle)$
+\dates{$date_subtitle$}
+$else$
+\dates{\today} 
+$endif$
+
+% initially we use doi so keep for backwards compatibility
+$if(doi)$
+\doifooter{$doi$}
+$endif$
+% new name is doi_footer
+$if(doi_footer)$
+\doifooter{$doi_footer$}
+$endif$
 
 $if(footer_contents)$
-\pinpfootercontents{$footer_contents$}
+\modeloLEAfootercontents{$footer_contents$}
 $endif$
 
 \begin{document}
@@ -72,10 +92,6 @@ $endif$
 
 % If your first paragraph (i.e. with the \dropcap) contains a list environment (quote, quotation, theorem, definition, enumerate, itemize...), the line after the list may have some extra indentation. If this is the case, add \parshape=0 to the end of the list environment.
 
-$if(acknowledgements)$
-\acknow{$acknowledgements$}
-$endif$
-
 $body$
 
 %\showmatmethods
@@ -83,6 +99,10 @@ $if(acknowledgements)$
 \showacknow
 $endif$
 
+%$if(skip_final_break)$
+%$else$
+%\pnasbreak 
+%$endif$
 
 $if(natbib)$
 $if(bibliography)$
@@ -94,7 +114,7 @@ $else$
 $endif$
 $endif$
 \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
-\bibliographystyle{$if(biblio-style)$$biblio-style$$else$jss$endif$}
+\bibliographystyle{jss}
 $endif$
 $endif$
 
