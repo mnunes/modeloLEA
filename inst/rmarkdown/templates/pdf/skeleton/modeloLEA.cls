@@ -6,11 +6,9 @@
 %%
 %% Dirk Eddelbuettel and James Balamuta
 %% August - September 2017
+%% 
+%% Adapted by Marcus Nunes - https://marcusnunes.me
 %%
-%% Adapted by Marcus Nunes for Federal University of
-%%   Rio Grande do Norte
-%% 
-%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % pnas-new.cls, v1.2, 2016/02/28 
 %
@@ -47,7 +45,7 @@
 
 %% Fonts and language
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[portuges]{babel}
+\RequirePackage[portuguese]{babel}
 \RequirePackage{amsmath,amsfonts,amssymb}
 \RequirePackage{lmodern}
 \RequirePackage[scaled]{helvet}
@@ -64,14 +62,14 @@
     \pdfpageheight=\paperheight
 \fi\fi
 \RequirePackage{xcolor}
-%\RequirePackage{tikz}
+\RequirePackage{tikz}
 \RequirePackage[framemethod=tikz]{mdframed}
 
 %% For single column equations and balancing the columns on final page
 %\RequirePackage{widetext}
 %% BEGIN
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{widetext}
+\ProvidesPackage{modeloLEA}%widetext}
 
 %% Mimics the widetext environment of revtex4 for any other class package
 %% Eg: article.cls
@@ -169,10 +167,10 @@
 \newcommand{\footerfont}{\normalfont\sffamily\fontsize{7}{9} \selectfont}
 \newcommand{\titlefont}{\fontfamily{lmss}\bfseries\fontsize{22pt}{24pt}\selectfont}
 \newcommand{\dropcapfont}{\fontfamily{lmss}\bfseries\fontsize{26pt}{28pt}\selectfont}
-\newcommand{\datesfont}{\normalfont\sffamily\fontsize{9}{9}\selectfont}
-\newcommand{\absfont}{\normalfont\sffamily\bfseries\fontsize{10}{10}\selectfont}
-\newcommand{\keywordsfont}{\normalfont\rmfamily\fontsize{8}{8}\selectfont}
-\newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{6}{6}\selectfont}
+\newcommand{\datesfont}{\normalfont\sffamily\fontsize{7}{8}\selectfont}
+\newcommand{\absfont}{\normalfont\sffamily\bfseries\fontsize{8}{11}\selectfont}
+\newcommand{\keywordsfont}{\normalfont\rmfamily\fontsize{7}{10}\selectfont}
+\newcommand{\copyrightfont}{\normalfont\rmfamily\fontsize{6}{8}\selectfont}
 
 %% Set URL link color & font
 \renewcommand\UrlFont{\color{pnasbluetext}\sffamily}
@@ -210,10 +208,7 @@
 \RequirePackage[noend]{algpseudocode}
 \RequirePackage{changepage}
 \RequirePackage[twoside,%
-				letterpaper,includeheadfoot,%
-				layoutsize={8.125in,10.875in},%
-                layouthoffset=0.1875in,%
-                layoutvoffset=0.0625in,%
+				includeheadfoot,
                 left=38.5pt,%
                 right=43pt,%
                 top=43pt,% 10pt provided by headsep
@@ -230,7 +225,7 @@
 %% Set document color scheme
 \definecolor{black50}{gray}{0.5} % 50% black for hrules
 \definecolor{color0}{RGB}{0,0,0} % Base
-\definecolor{color1}{RGB}{59,90,198} % author email, doi
+\definecolor{color1}{RGB}{59,90,198} % author email, doi_footer
 %\definecolor{color2}{RGB}{16,131,16} %
 % For sig statement box
 % already define above
@@ -266,9 +261,9 @@
 \pagestyle{fancy}          % Enables the custom headers/footers
 
 % Add name footer option
-\def\pinpfootercontents#1{\def\@pinpfootercontents{#1}}
-\pinpfootercontents{Package Vignette}
-\newcommand{\printpinpfootercontents}{\@pinpfootercontents}
+\def\modeloLEAfootercontents#1{\def\@modeloLEAfootercontents{#1}}
+\modeloLEAfootercontents{Package Vignette}
+\newcommand{\printmodeloLEAfootercontents}{\@modeloLEAfootercontents}
 
 %% For the line numbers overlay
 \def\leftlinenos{%
@@ -285,8 +280,8 @@
 
 \makeatletter
 \fancypagestyle{firststyle}{
-   \fancyfoot[R]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
-   \fancyfoot[L]{\footerfont\@ifundefined{@doi}{}{\@doi}}
+   \fancyfoot[R]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage\textendash\pageref{LastPage}}}
+   \fancyfoot[L]{\footerfont\@ifundefined{@doifooter}{}{\@doifooter}}
 }
 \makeatother
 
@@ -298,8 +293,8 @@
 \cfoot{}%
 \rfoot{}%
 \makeatletter
-\fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doi}{}{\@doi}}
-\fancyfoot[RO]{\footerfont \printpinpfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
+\fancyfoot[LE]{\footerfont\textbf{\thepage}\hspace{7pt}|\hspace{7pt}\@ifundefined{@doifooter}{}{\@doifooter}}
+\fancyfoot[RO]{\footerfont \printmodeloLEAfootercontents\hspace{7pt}|\hspace{7pt}\textbf{\today}\hspace{7pt}|\hspace{7pt}\textbf{\thepage}}
 \fancyfoot[RE,LO]{\footerfont\@ifundefined{@leadauthor}{}{\@leadauthor}}
 
 % Use footer routine for line numbers
@@ -363,7 +358,7 @@
 %% Article meta data additional fields
 \newcommand{\additionalelement}[1]{\def\@additionalelement{#1}}
 \newcommand{\dates}[1]{\def\@dates{#1}}
-\newcommand{\doi}[1]{\def\@doi{#1}}
+\newcommand{\doifooter}[1]{\def\@doifooter{#1}}
 \newcommand{\leadauthor}[1]{\def\@leadauthor{#1}}
 \newcommand{\etal}[1]{\def\@etal{#1}}
 \newcommand{\keywords}[1]{\def\@keywords{#1}}
@@ -461,7 +456,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \providecommand*{\toclevel@acknow@section}{0}
 % Format is set for research articles by default
 \titleformat{\acknow@section}[runin]
-   {\sffamily\normalsize\bfseries\color{pinpblue}}
+   {\sffamily\normalsize\bfseries\color{modeloLEAblue}}
    {}
    {0em}
    {#1.}
@@ -565,7 +560,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 %%% PNAS two column research article  style file
 %%% For use with pnas-new.cls
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pnasresearcharticle}[2016/02/28 v1.2 PNAS two column research article style]
+\ProvidesPackage{modeloLEA}%{pnasresearcharticle}[2016/02/28 v1.2 PNAS two column research article style]
 
 %% Set whether the abstract is set into the first column
 \setboolean{shortarticle}{true} 
@@ -618,26 +613,26 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \newenvironment{CodeChunk}{}{}
 
 %% Set colors -- now via test and fallback default in template
-%\definecolor{pinpblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
+%\definecolor{modeloLEAblue}{HTML}{185FAF}  % imagecolorpicker on blue for new R logo
 
 % Add colour to the title
-\appto{\titlefont}{\color{pinpblue}}
+\appto{\titlefont}{\color{modeloLEAblue}}
 
 % ...and section headings
 \titleformat{\section}
-  {\large\sffamily\bfseries\color{pinpblue}}
+  {\large\sffamily\bfseries\color{modeloLEAblue}}
   {\thesection.}
   {0.5em}
   {#1}
   []
 \titleformat{name=\section,numberless}
-  {\large\sffamily\bfseries\color{pinpblue}}
+  {\large\sffamily\bfseries\color{modeloLEAblue}}
   {}
   {0em}
   {#1}
   []  
 \titleformat{\subsection}[runin]
-  {\sffamily\bfseries\color{pinpblue}} %\itshape}%
+  {\sffamily\bfseries\color{modeloLEAblue}} %\itshape}%
   {\thesubsection.}
   {0.5em}
   {#1. }
@@ -646,7 +641,13 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 
 %% microtype with mathdesign, microtype already loaded
 \usepackage[bitstream-charter]{mathdesign} %% cf http://www.khirevich.com/latex/font/
- 
+
+%% doi command or bibliography with thanks to Achim Zeileis for the hint
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{\normalfont\texttt{doi:\discretionary{}{}{}#1}}}
+
+%% upquote for improved quotes in verbatim -- cf github issue #75
+\RequirePackage{upquote} % For keeping actual quotes in verbatim
+
 \endinput
 
 %%% END pnasresearcharticle
