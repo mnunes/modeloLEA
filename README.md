@@ -43,7 +43,7 @@ Embora o pacote já esteja instalado, ele não vai funcionar se não houver uma 
 
 Perceba que esta é uma versão preliminar do pacote para o modelo de relatório. É possível (bastante provável, na verdade) que hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer bug ou problema de instalação ou uso.
 
-O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_rascunho.pdf) exibe o resultado esperado para o rascunho do relatório, que deve ser avaliado pelo professor orientador. O arquivo [modeloLEA_final.pdf](https://github.com/mnunes/modeloLEA/blob/master/modeloLEA_final.pdf) exibe o resultado esperado para o relatório final, a ser entregue ao consulente.
+O arquivo [modeloLEA_rascunho.pdf](https://github.com/mnunes/modeloLEA/blob/master/documento_final.pdf) exibe o resultado esperado para o relatório final, a ser corrigido pelo orientador e depois entregue ao consulente.
 
 
 ## Instalação do LaTeX
