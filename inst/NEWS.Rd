@@ -1,7 +1,14 @@
 \name{NEWS}
 \title{News for Package \pkg{modeloLEA}}
 
-\section{Novidades no pacote modeloLEA - version 0.5.0 (2018-08-02)}{
+\section{Novidades no pacote modeloLEA - version 0.6.0 (2019-09-05)}{
+  \itemize{
+    \item Pacote refeito do zero novamente para funcionar nas versões mais atuais do R, da 3.6.0 em diante no Windows
+    \item O estilo não é mais baseado na PNAS, mas sim nos papers da Royal Society Open Science
+  }
+}
+
+\section{Novidades no pacote modeloLEA - version 0.5.0 (2019-08-02)}{
   \itemize{
     \item Pacote refeito do zero para funcionar nas versões mais atuais do R, da 3.6.0 em diante
     \item Outros itens deixaram de ser opcionais e passaram a ser obrigatórios
