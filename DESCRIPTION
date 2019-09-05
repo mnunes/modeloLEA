@@ -1,17 +1,16 @@
 Package: modeloLEA
 Type: Package
-Title: Modelo de Relatorio de Consultoria Estatistica
+Title: MModelo de Relatório do Laboratório de Estatística Aplicada da UFRN
 Version: 0.6.0
 Date: 2019-09-05
 Author: Marcus Nunes
 Maintainer: Marcus Nunes <marcus@marcusnunes.me>
 Depends:
   R (>= 3.5.0)
-Description: Um estilo de relatorio tipo 'PNAS' usando 'rmarkdown', derivado 
-  do estilo 'Proceedings of the National Academy of Sciences of the 
-  United States of America' ('PNAS', veja <https://www.pnas.org>). Foi 
-  pensado com 'LaTeX', em mente, para geracao de pdfs. Fortemente 
-  baseado no pacote 'pinp' do 'R' (veja <https://github.com/eddelbuettel/pinp>) 
+Description: Um estilo de relatorio tipo 'Royal Society Open Science' 
+  da Royal Society Publishing, usando 'rmarkdown'. Foi projetado
+  com 'LaTeX', em mente, para geracao de pdfs. Fortemente baseado no 
+  pacote 'rticles' do 'R' (veja <https://github.com/rstudio/rticles>) 
   e adaptado para o uso pelo Laboratorio de Estatistica Aplicada (LEA) da
   UFRN. 
 URL: https://github.com/mnunes/modeloLEA
