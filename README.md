@@ -77,9 +77,9 @@ Uma tela de diálogo aparecerá. Escolha a opção Modelo LEA (PDF) dentro da gu
 
 ![alt text](fig02.png "Como criar um novo relatório - Figura 2")
 
-Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta criada é `relatorio`. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Se houver algum problema com os acentos das palavras, vá ao menu `File > Reopen With Encoding...` e escolha a opção Windows 1252.
+Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta criada é `Untitled`. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Se houver algum problema com os acentos das palavras, vá ao menu `File > Reopen With Encoding...` e escolha a opção Windows 1252.
 
-Basta editar os arquivos `relatorio.Rmd` e `modeloLEA.bib` para produzir seu texto. O arquivo `relatorio.Rmd` contém o relatório em si, enquanto o arquivo `modeloLEA.bib` possui as referências bibliográficas. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
+Basta editar os arquivos `Untitled.Rmd` e `modeloLEA.bib` para produzir seu texto. O arquivo `Untitled.Rmd` contém o relatório em si, enquanto o arquivo `modeloLEA.bib` possui as referências bibliográficas. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
 
 A primeira compilação do relatório será um pouco demorada. A instalação padrão do TinyTeX não possui alguns dos pacotes exigidos pelo modelo do relatório, então tenha paciência. As compilações seguintes serão muito mais rápidas.
 
@@ -89,12 +89,10 @@ Lembre-se que esta é uma versão preliminar deste modelo de relatório. É poss
 
 ## Opções do Relatório
 
-A primeira versão do arquivo é criada com duas opções específicas. A opção `watermark: true` colocará uma marca d'água intitulada RASCUNHO no documento compilado. Esta marca d'água pode ser retirada alterando esta opção para `watermark: false`.
+Por padrão, a opção `echo=TRUE`, na linha 62 vai exibir o código do `R` utilizado na análise. Quando a versão final do relatório ficar pronta, basta alterar esta opção para `echo=FALSE`, de modo que apenas o resultado do código executado apareça na versão final do relatório.
 
-Também por padrão, a opção `echo=TRUE`, na linha 71, vai exibir o código do `R` utilizado na análise. Quando a versão final do relatório ficar pronta, basta alterar esta opção para `echo=FALSE`, de modo que apenas o resultado do código executado apareça na versão final do relatório.
-
-Por fim, após a compilação é gerada uma pasta chamada `relatorio_files`, que contém pdfs de alta resolução de todas as figuras do relatório. Assim, estas figuras podem ser, posteriormente, entregues ao consulente.
+Após a compilação é gerada uma pasta chamada `Untitled_files`, que contém pdfs de alta resolução de todas as figuras do relatório. Assim, estas figuras podem ser, posteriormente, entregues ao consulente.
 
 <hr>
 
-Este pacote foi inspirado pelo pacote [pinp](https://github.com/eddelbuettel/pinp). 
+Este pacote foi inspirado pelo pacote [rticles](https://github.com/rstudio/rticles). 
