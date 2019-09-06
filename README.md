@@ -77,7 +77,7 @@ Uma tela de diálogo aparecerá. Escolha a opção Modelo LEA (PDF) dentro da gu
 
 ![alt text](fig02.png "Como criar um novo relatório - Figura 2")
 
-Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta a ser criada é `relatorio`, dentro do diretório `~/Desktop/Consultoria` em meu computador. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Se houver algum problema com os acentos das palavras (e isso provavelmente acontecerá com usuários do Windows), vá ao menu `File > Reopen With Encoding...` e escolha a opção UTF-8.
+Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta a ser criada é `relatorio`, dentro do diretório `~/Documents/Consultoria` em meu computador. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Se houver algum problema com os acentos das palavras (e isso provavelmente acontecerá com usuários do Windows), vá ao menu `File > Reopen With Encoding...` e escolha a opção UTF-8.
 
 Até a versão 0.5.0 do pacote modeloLEA, este passo não era necessário no Windows. Eu havia feito a opção de deixar o incômodo de atualizar o encoding dos arquivos para os usuários de Linux e macOS. Ocorre que Yihui Xie, engenheiro de software do RStudio e criador do pacote `knitr`, afirma que [não utilizar o encoding UTF-8 no código do `knitr` é o seu maior arrependimento](https://yihui.name/en/2018/11/biggest-regret-knitr/). Em 
 
