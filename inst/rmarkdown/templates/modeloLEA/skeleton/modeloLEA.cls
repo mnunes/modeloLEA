@@ -485,7 +485,8 @@
 
 \settowidth{\myrunhwidth}{\runhead}
 
-\def\myrunhead{%\vbox{\hbox{\colorbox{black}{\hbox to 10pt{\hfil\textcolor{white}{\foliofont\thepage}\hfil}}}\vskip11pt
+\def\myrunhead{\hbox{\colorbox{black}{\hbox to 10pt{\hfil\textcolor{white}{\foliofont\thepage}\hfil}}}
+%\vbox{\hbox{\colorbox{black}{\hbox to 10pt{\hfil\textcolor{white}{\foliofont\thepage}\hfil}}}\vskip11pt
 %\hbox{\hskip3pt\begin{turn}{-90}{\vbox{\hbox{\runhead}
 %\vspace*{3pt}
 %\hbox to \the\myrunhwidth{\dotfill}}}\end{turn}}}\hspace*{-3.5pc}
