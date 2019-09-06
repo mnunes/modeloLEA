@@ -23,14 +23,14 @@ Modelo de documento para geração de relatórios no Laboratório de Estatístic
 Existem diversas opções a serem utilizadas no preâmbulo do documento, a fim de personalizá-lo. Estas opções estão descritas abaixo:
 
 \describe{
-  \item{\code{abstract}}{(Opcional, mas recomendado) Resumo do relatório.}
-  \item{\code{address}}{(Obrigatório) Descrição do local onde consulente e consultores trabalham ou estão vinculados.}
-  \item{\code{author}}{(Obrigatório) Lista de consultores, consulente(s) e orientador(a) do trabalho.}
-  \item{\code{bibliography}}{(Opcional, mas recomendado) Nome do arquivo \code{.bib} no qual as referências estão colocadas.}
-  \item{\code{footer_contents}}{(Opcional, mas recomendado) Título do relatório (ou uma abreviação dele) a fim que que apareça no rodapé de todas as páginas do documento.}
-  \item{\code{keywords}}{(Opcional, mas recomendado) Palavras-chave do relatório. Coloque o principal método estatístico utilizado no documento como primeira palavra-chave, a fim de facilitar a catalogação nos registros do LEA.}
-  \item{\code{title}}{(Obrigatório) Título do relatório.}
-  \item{\code{watermark}}{(Obrigatório) Valor lógico que colocará a marca d'água \sQuote{RASCUNHO} nas páginas do documento. Deve estar colocada como \code{TRUE} enquanto o relatório estiver circulando entre os consultores e os orientadores. Deve ser mudado para \code{FALSE} antes de ser entregue ao consulente.}
+  \item{\code{author}}{Lista de consultor(es), consulente(s) e orientador(a) do trabalho.}
+  \item{\code{address}}{Descrição do local onde consulente e consultores trabalham ou estão vinculados.}
+  \item{\code{corresp_author_name}}{Nome do consultor principal do trabalho.}
+  \item{\code{corresp_author_email}}{Email do consultor principal do trabalho.}
+  \item{\code{subject}}{Área(s) do conhecimento do trabalho realizado.}
+  \item{\code{keywords}}{Palavras-chave referentes ao trabalho realizado.}
+  \item{\code{abstract}}{Resumo do relatório.}
+  \item{\code{bibliography}}{Nome do arquivo \code{.bib} no qual as referências estão colocadas.}
 }
 O arquivo de exemplo do pacote possui um relatório fictício com estas opções já todas preenchidas.
 }
@@ -41,12 +41,16 @@ rmarkdown::render("MyArticle.Rmd")
 }
 }
 \references{
-D Dddelbuettel (2017). Pinp Is Not PNAS -- Two-Column PDF Template. \url{https://github.com/eddelbuettel/pinp}
-JJ Allaire, R Foundation, Hadley Wickham, Journal of Statistical Software, Yihui Xie, Ramnath
-Vaidyanathan, Association for Computing Machinery, Carl Boettiger, Elsevier, Karl Broman,
-Kirill Mueller, Bastiaan Quast, Randall Pruim, Ben Marwick, Charlotte Wickham, Oliver Keyes
-and Miao Yu (2017). rticles: Article Formats for R Markdown. R package version 0.4.1.
-\url{https://CRAN.R-project.org/package=rticles}
+JJ Allaire, Yihui Xie, R Foundation, Hadley Wickham, Journal of
+  Statistical Software, Ramnath Vaidyanathan, Association for Computing
+  Machinery, Carl Boettiger, Elsevier, Karl Broman, Kirill Mueller,
+  Bastiaan Quast, Randall Pruim, Ben Marwick, Charlotte Wickham, Oliver
+  Keyes, Miao Yu, Daniel Emaasit, Thierry Onkelinx, Alessandro
+  Gasparini, Marc-Andre Desautels, Dominik Leutnant, MDPI, Taylor and
+  Francis, Oğuzhan Öğreden, Dalton Hance, Daniel Nüst, Petter Uvesten,
+  Elio Campitelli, John Muschelli and Zhian N. Kamvar (2019). rticles:
+  Article Formats for R Markdown. R package version 0.10.
+  https://CRAN.R-project.org/package=rticles
 JJ Allaire, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang, Jeff Allen, Hadley
 Wickham, Aron Atkins, Rob Hyndman and Ruben Arslan (2017). rmarkdown: Dynamic Documents for R.
 R package version 1.6. \url{https://CRAN.R-project.org/package=rmarkdown}
