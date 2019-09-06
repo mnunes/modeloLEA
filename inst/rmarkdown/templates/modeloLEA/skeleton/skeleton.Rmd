@@ -76,7 +76,7 @@ Alem de verificar se há correlação entre estas variáveis, desejamos obter um
 
 
 
-# métodologia
+# Metodologia
 
 Os dados analisados neste trabalho foram obtidos a partir de uma amostra de 50 carros. As medições foram realizadas na decada de 1920 e disponibilizadas originalmente por \cite{Ezekiel1930}. Não há informações a respeito dos modelos dos carros utilizados neste experimento.
 
