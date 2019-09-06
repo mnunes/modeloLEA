@@ -77,13 +77,19 @@ Uma tela de diálogo aparecerá. Escolha a opção Modelo LEA (PDF) dentro da gu
 
 ![alt text](fig02.png "Como criar um novo relatório - Figura 2")
 
-Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta criada é `Untitled`. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Se houver algum problema com os acentos das palavras, vá ao menu `File > Reopen With Encoding...` e escolha a opção Windows 1252.
+Esta sequência de comandos criará uma pasta nova em seu computador. Esta pasta pode ter qualquer nome. No exemplo acima, o nome da pasta a ser criada é `relatorio`, dentro do diretório `~/Desktop/Consultoria` em meu computador. Esta pasta vai conter todos os arquivos necessários para a escrita do relatório de consultoria. Se houver algum problema com os acentos das palavras (e isso provavelmente acontecerá com usuários do Windows), vá ao menu `File > Reopen With Encoding...` e escolha a opção UTF-8.
 
-Basta editar os arquivos `Untitled.Rmd` e `modeloLEA.bib` para produzir seu texto. O arquivo `Untitled.Rmd` contém o relatório em si, enquanto o arquivo `modeloLEA.bib` possui as referências bibliográficas. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
+Até a versão 0.5.0 do pacote modeloLEA, este passo não era necessário no Windows. Eu havia feito a opção de deixar o incômodo de atualizar o encoding dos arquivos para os usuários de Linux e macOS. Ocorre que Yihui Xie, engenheiro de software do RStudio e criador do pacote `knitr`, afirma que [não utilizar o encoding UTF-8 no código do `knitr` é o seu maior arrependimento](https://yihui.name/en/2018/11/biggest-regret-knitr/). Em 
+
+> If Windows didn’t introduce all these different encodings, I think half of programmers in the world could spend three months on the beach enjoying the sunshine every year.
+
+Por isso, resolvi desistir de gastar meu tempo em algo que não adiciona nenhuma funcionalidade nova ao pacote, mas apenas cria dores de cabeça para mim. Por isso, a maioria dos usuários do Windows, ao criarem um novo arquivo, deverão ir ao menu `File > Reopen With Encoding...` e escolher a opção UTF-8.
+
+Terminada a minha reclamação, agora basta editar os arquivos `relatorio.Rmd` e `modeloLEA.bib` para produzir seu texto. O arquivo `relatorio.Rmd` contém o relatório em si, enquanto o arquivo `modeloLEA.bib` possui as referências bibliográficas. A compilação do relatório é feita através da combinação de teclas `Ctrl + Shift + K`.
 
 A primeira compilação do relatório será um pouco demorada. A instalação padrão do TinyTeX não possui alguns dos pacotes exigidos pelo modelo do relatório, então tenha paciência. As compilações seguintes serão muito mais rápidas.
 
-Lembre-se que esta é uma versão preliminar deste modelo de relatório. É possível que ainda hajam alguns bugs. Entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer problema.
+Lembre-se que esta é uma versão preliminar deste modelo de relatório. É possível que ainda hajam alguns bugs. Caso encontre algum, [crie uma reclamação neste link](https://github.com/mnunes/modeloLEA/issues) ou entre em contato pelo email marcus [arroba] marcusnunes.me para me avisar a respeito de qualquer problema.
 
 
 
@@ -91,7 +97,7 @@ Lembre-se que esta é uma versão preliminar deste modelo de relatório. É poss
 
 Por padrão, a opção `echo=TRUE`, na linha 62 vai exibir o código do `R` utilizado na análise. Quando a versão final do relatório ficar pronta, basta alterar esta opção para `echo=FALSE`, de modo que apenas o resultado do código executado apareça na versão final do relatório.
 
-Após a compilação é gerada uma pasta chamada `Untitled_files`, que contém pdfs de alta resolução de todas as figuras do relatório. Assim, estas figuras podem ser, posteriormente, entregues ao consulente.
+Após a compilação é gerada uma pasta chamada `relatorio_files`, que contém pdfs de alta resolução de todas as figuras do relatório. Assim, estas figuras podem ser, posteriormente, entregues ao consulente.
 
 <hr>
 
