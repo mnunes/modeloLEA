@@ -485,7 +485,7 @@
 
 \settowidth{\myrunhwidth}{\runhead}
 
-\def\myrunhead{\hbox{\colorbox{black}{\hbox to 10pt{\hfil\textcolor{white}{\foliofont\thepage}\hfil}}}
+\def\myrunhead{
 %\vbox{\hbox{\colorbox{black}{\hbox to 10pt{\hfil\textcolor{white}{\foliofont\thepage}\hfil}}}\vskip11pt
 %\hbox{\hskip3pt\begin{turn}{-90}{\vbox{\hbox{\runhead}
 %\vspace*{3pt}
@@ -581,7 +581,7 @@
       \global\@topnum\z@   % Prevents figures from going at top of page.
       \@maketitle
     \fi
-    \thispagestyle{plain}
+    %\thispagestyle{plain}
     \@thanks
   \endgroup
   \setcounter{footnote}{0}%
@@ -835,7 +835,7 @@
       \else
         \@restonecolfalse\newpage
       \fi
-      \thispagestyle{empty}%
+      %\thispagestyle{empty}%
       \setcounter{page}\z@
     }%
     {\if@restonecol\twocolumn \else \newpage \fi
@@ -848,7 +848,7 @@
       \else
         \@restonecolfalse\newpage
       \fi
-      \thispagestyle{empty}%
+      %\thispagestyle{empty}%
       \setcounter{page}\@ne
     }%
     {\if@restonecol\twocolumn \else \newpage \fi
@@ -1078,7 +1078,7 @@
                 \twocolumn[\section*{\indexname}]%
                 \@mkboth{\MakeUppercase\indexname}%
                         {\MakeUppercase\indexname}%
-                \thispagestyle{plain}\parindent\z@
+                %\thispagestyle{plain}\parindent\z@
                 \parskip\z@ \@plus .3\p@\relax
                 \let\item\@idxitem}
                {\if@restonecol\onecolumn\else\clearpage\fi}
@@ -1111,7 +1111,7 @@
   \space\number\day, \number\year}
 \setlength\columnsep{10\p@}
 \setlength\columnseprule{0\p@}
-\pagestyle{plain}
+%\pagestyle{plain}
 \pagenumbering{arabic}
 \if@twoside
 \else
@@ -1135,7 +1135,7 @@
 \def\researchfont{\fontfamily{\sfdefault}\fontseries{m}\fontshape{n}\fontsize{10}{14}\selectfont\raggedright\mathversion{bold}}
 
 
-\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+\newcommand{\clearemptydoublepage}{}
 
 \def\title{\@ifnextchar[{\@title@wst@}{\@title@nst@}}
 \def\@title@wst@[#1]{\@title@assign@}
@@ -1237,7 +1237,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
   \begingroup
 \ifquery
    \unsetvruler%
-   \pagestyle{empty}
+   %\pagestyle{empty}
    \noindent{\begin{tabular}{@{}p{67pt}@{\quad}>{\hangindent1em}P{25.5pc}@{}}%\fboxrule=.1pt\fboxsep0pt\fbox
    Journal: & \textbf{PROCEEDINGS OF THE ROYAL SOCIETY A}\\\\
    Article id: & \textbf{\jobname}\\\\
@@ -1262,7 +1262,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
     \def\@makefnmark{{{\normalfont\@thefnmark}}}%
     \long\def\@makefntext##1{\noindent{{\normalfont\@thefnmark}}\correshead##1\gdef\correshead{}}%
     \if@twocolumn
-    \thispagestyle{plain}
+    %\thispagestyle{plain}
       \ifnum \col@number=\@ne
         \@maketitle
       \else
@@ -1372,7 +1372,7 @@ at https://doi.org/\@doi\ or via http://\@jname.royalsocietypublishing.org.\par}
             }
   \end{minipage}%
   \par
-  \thispagestyle{plain}
+  %\thispagestyle{plain}
   \vskip 14pt plus8pt minus3pt
  }
  
