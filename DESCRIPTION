@@ -15,5 +15,5 @@ Description: Um estilo de relatorio tipo 'Royal Society Open Science'
   UFRN. 
 URL: https://github.com/mnunes/modeloLEA
 BugReports: https://github.com/mnunes/modeloLEA/issues
-Imports: rmarkdown, knitr, ggplot2, ggfortify
+Imports: rmarkdown, knitr, ggplot2, ggfortify, bookdown
 License: GPL3
