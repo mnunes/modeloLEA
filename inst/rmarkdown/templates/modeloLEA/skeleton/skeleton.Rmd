@@ -21,10 +21,6 @@ address:
   - code: e
     address: Orientação
 
-# preencha com o nome do principal consultor da colaboracao
-corresp_author_name:  "Aluno Consultor"
-corresp_author_email: "aluno.consultor@email.com.br"
-
 # area do conhecimento (pelo menos uma)
 subject:
   - "engenharia mecânica"
