@@ -12,7 +12,7 @@ Para rodar os exemplos disponíveis neste repositório, é necessário instalar 
 
 - RStudio (versão 1.2.1335 ou superior) - [link](https://www.rstudio.com/products/rstudio/download/#download)
 
-- Se o seu computador roda Windows, também é necessário instalar o programa RTool (versão 3.5) - [link](https://cran.r-project.org/bin/windows/Rtools/)
+- Se o seu computador roda Windows, também é necessário instalar o programa RTools (versão 3.5) - [link](https://cran.r-project.org/bin/windows/Rtools/)
 
 - LaTeX (o MikTeX, versão 2.9 ou superior, versão completa, é o mais usado no Windows. Entretanto, veja abaixo, na Seção _Instalação do LaTeX_, como fazer para instalar uma versão mais simples do LaTeX, a partir do próprio `R`)
 
