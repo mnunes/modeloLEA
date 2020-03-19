@@ -101,4 +101,8 @@ Após a compilação é gerada uma pasta chamada `relatorio_files`, que contém 
 
 <hr>
 
+Eventuais bugs ou erros de instalação devem ser reportados [neste link](https://github.com/mnunes/modeloLEA/issues). Ao submeter o seu bug, sempre adicione o output do comando `sessionInfo()`.
+
+<hr>
+
 Este pacote foi inspirado pelo pacote [rticles](https://github.com/rstudio/rticles). 
