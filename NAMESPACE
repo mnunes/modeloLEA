@@ -1,3 +1,4 @@
-export(modeloLEA)
+export(relatorio)
+export(apresentacao)
 import(knitr)
 import(rmarkdown)

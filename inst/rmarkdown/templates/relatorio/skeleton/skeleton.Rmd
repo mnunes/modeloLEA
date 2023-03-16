@@ -42,22 +42,22 @@ bibliography: modeloLEA.bib
 
 output: 
   bookdown::pdf_book:
-    base_format: modeloLEA::modeloLEA
+    base_format: modeloLEA::relatorio
 ---
 
 
-```{r definicoes, include=FALSE, message=FALSE}
+```{r definicoes, include = FALSE, message = FALSE}
 # pacotes a serem carregados para a analise
-library(ggplot2)
+library(tidyverse)
 theme_set(theme_bw())
-library(ggfortify)
+library(performance)
 # definicoes globais 
-# tamanho das figuras: largura=5, altura=4 (polegadas)
-knitr::opts_chunk$set(fig.width=5, fig.height=4, 
+# tamanho das figuras: largura = 5, altura = 4 (polegadas)
+knitr::opts_chunk$set(fig.width = 5, fig.height = 4, 
 # exibir o codigo do R nos chunks (mudar para FALSE na versao final)
-                      echo=TRUE,
+                      echo = TRUE,
 # mandar o latex manter a figura na posicao correta
-                      fig.pos='h')
+                      fig.pos = 'h')
 ```
 
 
@@ -80,20 +80,20 @@ Utilizaremos um método estatistico chamado regressão linear a fim de verificar
 
 Sejam $x_1, x_2, \cdots, x_n$ as observações referentes a velocidade dos carros em questão. Considere $y_1, y_2, \cdots, y_n$ as observações referentes a distância necessária para os carros pararem. De acordo com \cite{Kutner2004}, podemos expressar a dependencia entre $y$ e $x$ atraves da equação
 
-$$y_i = \beta_0 + \beta_1x_i + \varepsilon_i,$$
+$$y_i  = \beta_0 + \beta_1x_i + \varepsilon_i,$$
 
-\noindent onde $\beta_0$ e $\beta_1$ sao coeficientes estimados pelas equações
+\noindent em que $\beta_0$ e $\beta_1$ sao coeficientes estimados pelas equações
 
 \begin{align}
-\widehat{\beta}_1 &= \frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n(x_i-\overline{x})^2}  \label{estimadores01} \\
-\widehat{\beta}_0 &= \overline{y}-\widehat{\beta}_1\overline{x}  \label{estimadores02}
+\widehat{\beta}_1 & = \frac{\sum_{i = 1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum_{i = 1}^n(x_i-\overline{x})^2}  \label{estimadores01} \\
+\widehat{\beta}_0 & = \overline{y}-\widehat{\beta}_1\overline{x}  \label{estimadores02}
 \end{align}
 
 \noindent As quantidades $\overline{x}$ e $\overline{y}$ sao, respectivamente, as medias amostrais de $x_1, x_2, \cdots, x_n$ e $y_1, y_2, \cdots, y_n$. Estas medias amostrais sao dadas por
 
 \begin{align*}
-\overline{x} &= \frac{1}{n}\sum_{i=1}^nx_i \\
-\overline{y} &= \frac{1}{n}\sum_{i=1}^ny_i 
+\overline{x} & = \frac{1}{n}\sum_{i = 1}^nx_i \\
+\overline{y} & = \frac{1}{n}\sum_{i = 1}^ny_i 
 \end{align*}
 
 Determinamos se o coeficiente $\beta_1$ e estatisticamente significante atraves de um teste $t$. Sob a hipótese nula, assumimos que o estimador possui distribuição $t$ com $n-1$ graus de liberdade.
@@ -104,40 +104,40 @@ Determinamos se o coeficiente $\beta_1$ e estatisticamente significante atraves 
 
 A fim de verificar visualmente se há algum tipo de relação entre as variáveis consideradas neste estudo, exibimos o gráfico de dispersao dos dados na Figura \ref{fig:graficoDispersao}. Note que e possivel perceber uma forte tendência linear positiva na relação entre estas variáveis. Quanto maior o valor da velocidade, maior a distância necessária para o carro parar completamente.
 
-```{r graficoDispersao, fig.cap="\\label{fig:graficoDispersao} Gráfico de dispersao da distância de parada completa (pés) versus velocidade (mph) dos carros."}
-ggplot(cars, aes(x=speed, y=dist)) +
+```{r graficoDispersao, fig.cap = "\\label{fig:graficoDispersao} Gráfico de dispersao da distância de parada completa (pés) versus velocidade (mph) dos carros."}
+ggplot(cars, aes(x = speed, y = dist)) +
   geom_point() +
-  labs(x="Velocidade (mph)", y="Distância (pés)")
+  labs(x = "Velocidade (mph)", y = "Distância (pés)")
 ```
 
-```{r graficoDispersao02, fig.cap="\\label{fig:graficoDispersao02} Gráfico de dispersão da distância de parada completa (pés) versus velocidade (mph) dos carros com a reta que melhor se ajusta a estes dados."}
-ggplot(cars, aes(x=speed, y=dist)) +
+```{r graficoDispersao02, fig.cap = "\\label{fig:graficoDispersao02} Gráfico de dispersão da distância de parada completa (pés) versus velocidade (mph) dos carros com a reta que melhor se ajusta a estes dados."}
+ggplot(cars, aes(x = speed, y = dist)) +
   geom_point() +
-  labs(x="Velocidade (mph)", y="Distância (pés)") +
-  geom_smooth(method="lm", se=FALSE)
+  labs(x = "Velocidade (mph)", y = "Distância (pés)") +
+  geom_smooth(method = "lm", se = FALSE)
 ```
 
 Alem disso, adicionamos ao gráfico exibido na Figura \ref{fig:graficoDispersao02} a reta que melhor descreve a relação entre estas variáveis. Esta reta foi obtida atraves do método descrito na seção anterior, fazendo uso das fórmulas \eqref{estimadores01} e \eqref{estimadores02}. Explicitamente, a equação representada na Figura \ref{fig:graficoDispersao02} é dada por
 
 ```{r ajusteModeloLinear}
-ajuste <- lm(dist ~ speed, data=cars)
+ajuste <- lm(dist ~ speed, data = cars)
 ```
 
 \begin{equation}\label{equaçãoFinal}
-\widehat{y}_i = -17,5791 + 3,9324x_i.
+\widehat{y}_i  = -17,5791 + 3,9324x_i.
 \end{equation}
 
 Entretanto, precisamos testar se os coeficientes estimados e apresentados na relação \eqref{equaçãoFinal} são, de fato, estatisticamente significantes. Para isto, testaremos as hipóteses
 
 \begin{align*}
-H_0 &: \beta_0 = 0 \\
+H_0 &: \beta_0  = 0 \\
 H_1 &: \beta_0 \neq 0 \\
 \end{align*}
 
 \noindent e 
 
 \begin{align*}
-H_0 &: \beta_1 = 0 \\
+H_0 &: \beta_1  = 0 \\
 H_1 &: \beta_1 \neq 0 \\
 \end{align*}
 
@@ -154,12 +154,12 @@ $\beta_1$   &   3,9324   &    0,4155   & 9,464  & <0,0001  \\ \hline
 \end{center}
 \end{table}
 
-Note que, em ambos os casos, o p-valor encontrado é inferior a $\alpha = 0,05$. Portanto, podemos rejeitar ambas as hipóteses nulas e $\beta_0$ e $\beta_1$ são estatisticamente diferentes de zero.
+Note que, em ambos os casos, o p-valor encontrado é inferior a $\alpha  = 0,05$. Portanto, podemos rejeitar ambas as hipóteses nulas e $\beta_0$ e $\beta_1$ são estatisticamente diferentes de zero.
 
 Para finalizar a análise, devemos verificar se o modelo ajustado não viola as hipóteses do modelo de regressão linear. Para verificar isto, exibimos a análise de resíduos na Figura \ref{fig:residuos}.
 
-```{r residuos, fig.cap="\\label{fig:residuos} Análise de resíduos do modelo de regressão linear ajustado."}
-autoplot(ajuste)
+```{r residuos, fig.cap = "\\label{fig:residuos} Análise de resíduos do modelo de regressão linear ajustado."}
+check_model(ajuste, check = c("linearity", "qq", "homogeneity", "outliers"))
 ```
 
 Note que na parte superior esquerda da imagem, embora o gráfico dos resíduos versus valores ajustados não apresente tendência, a variância não é constante. Note que os pontos próximos de zero estão mais próximos entre si do que os pontos mais a direita no gráfico. Portanto, há uma violação das hipóteses da regressão linear neste caso.

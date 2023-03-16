@@ -1,0 +1,198 @@
+---
+title: Relação Entre Velocidade e Distância de Frenagem para Carros de Passeio
+subtitle: Apresentação (Parcial|Final)
+author: Aluno Consultor
+date: 6 de Abril de 2023
+institute: LEA - Laboratório de Estatística Aplicada
+output: modeloLEA::apresentacao
+fontsize: 12pt
+bibliography: referencias.bib
+nocite: '@*'
+---
+
+```{r,setup, include=FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+library(performance)
+library(knitr)
+library(kableExtra)
+library(ggfortify)
+
+opts_chunk$set(fig.width = 4, 
+               fig.height = 2.5,
+               # centralizar as figuras
+               fig.align = "center",
+               # nao exibir o codigo do R nos chunks (mudar para FALSE na versao final)
+               echo = FALSE, 
+               # nao exibir mensagens dos pacotes
+               message = FALSE)
+
+# tema geral para os graficos
+
+theme_set(
+  theme(
+    plot.background = element_rect(fill = "#F9F9F9", colour = "#F9F9F9"),
+    panel.background = element_rect(fill = "#F9F9F9", colour = "#F9F9F9"), 
+    panel.grid = element_line(color = "gray85")
+    )
+  )
+```
+
+# Roteiro
+
+## Roteiro
+
+1. Apresentação
+2. Objetivos
+3. Metodologia
+4. Resultados
+5. Discussão
+
+
+
+
+# Apresentação
+
+## Apresentação
+
+* Aluno Consultor, semestre que está cursando
+* Descrever se possui experiência com PET, iniciação científica ou estágio
+* Consulente, vindo de Outro Departamento (UFRN)
+* Marcus A. Nunes foi o professor orientador deste trabalho
+
+
+# Objetivos
+
+## Objetivos
+
+* Deseja verificar se existe relação entre 
+  * velocidade de um carro (em milhas por hora)
+  * distância que o carro levou para parar completamente (em pés)
+* A hipótese do consulente é a de que existe uma relação positiva entre estas variáveis
+* Determinar uma equação que descreva a relação entre as duas variáveis
+
+
+
+# Metodologia
+
+## Metodologia
+
+* Análise Exploratória dos Dados
+* Ajuste de um modelo de regressão linear simples
+* Análise dos resíduos
+
+
+## Metodologia - Análise Exploratória dos Dados
+
+```{r graficoDispersao, fig.cap = "\\label{fig:graficoDispersao} Gráfico de dispersao da distância de parada completa (pés) versus velocidade (mph) dos carros."}
+ggplot(cars, aes(x = speed, y = dist)) +
+  geom_point() +
+  labs(x = "Velocidade (mph)", y = "Distância (pés)")
+```
+
+
+## Metodologia - Regressão Linear
+
+* Sejam $x_1, x_2, \cdots, x_n$ as observações referentes a velocidade
+* Considere $y_1, y_2, \cdots, y_n$ as observações referentes a distância necessária para os carros pararem
+* A dependencia entre $y$ e $x$ pode ser expressa atraves da equação
+
+$$y_i  = \beta_0 + \beta_1x_i + \varepsilon_i,$$
+
+\noindent em que $\beta_0$ e $\beta_1$ sao coeficientes estimados pelas equações
+
+
+
+## Metodologia - Regressão Linear
+
+\begin{align*}
+\widehat{\beta}_1 & = \frac{\sum_{i = 1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum_{i = 1}^n(x_i-\overline{x})^2}\\
+\widehat{\beta}_0 & = \overline{y}-\widehat{\beta}_1\overline{x}
+\end{align*}
+
+\begin{align*}
+\overline{x} & = \frac{1}{n}\sum_{i = 1}^nx_i \\
+\overline{y} & = \frac{1}{n}\sum_{i = 1}^ny_i 
+\end{align*}
+
+
+
+
+# Resultados
+
+## Resultados
+
+```{r graficoDispersao02, fig.cap = "\\label{fig:graficoDispersao02} Gráfico de dispersão da distância de parada completa (pés) versus velocidade (mph) dos carros com a reta que melhor se ajusta a estes dados."}
+ggplot(cars, aes(x = speed, y = dist)) +
+  geom_point() +
+  labs(x = "Velocidade (mph)", y = "Distância (pés)") +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+
+
+## Resultados
+
+\begin{table}[!h]
+\caption{\label{tab:Resultados} Resultados dos testes de hipóteses realizados para a análise de regressão.}
+\begin{center}
+\begin{tabular}{lrrrr}\hline
+Coeficiente & \mbox{Estimativa} & \mbox{Erro Padrao} &   $t$  & \mbox{p-valor} \\ \hline
+$\beta_0$   & -17,5791   &    6,7584   & -2,601 &  0,0123  \\
+$\beta_1$   &   3,9324   &    0,4155   & 9,464  & <0,0001  \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+## Resultados - Resíduos
+
+```{r graficoResiduos01, fig.width=8}
+ajuste <- lm(dist ~ speed, data  = cars)
+
+autoplot(ajuste, 1)
+```
+
+
+## Resultados - Resíduos
+
+```{r graficoResiduos02, fig.width=8}
+autoplot(ajuste, 2)
+```
+
+
+## Resultados - Resíduos
+
+```{r graficoResiduos03, fig.width=8}
+ajuste <- lm(dist ~ speed, data  = cars)
+
+autoplot(ajuste, 3)
+```
+
+
+## Resultados - Resíduos
+
+```{r graficoResiduos04, fig.width=8}
+ajuste <- lm(dist ~ speed, data  = cars)
+
+autoplot(ajuste, 5)
+```
+
+
+
+# Discussão
+
+## Discussão
+
+* Variância dos resíduos não é constante
+* Outros gráficos não violam as hipóteses do modelo
+* Aplicar outra modelagem aos dados, como transformação ou modelo linear generalizado
+
+
+
+# Referências
+
+
+
+
