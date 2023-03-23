@@ -339,6 +339,8 @@ $endif$
   $endif$
 }
 
+\usepackage[portuguese]{babel}
+
 \begin{document}
 
 % Hide progress bar and footline on titlepage
@@ -373,6 +375,7 @@ $if(natbib)$
     $endif$
     \begin{frame}[allowframebreaks]{$biblio-title$}
     \bibliographytrue
+    \nocite{*}
     \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
     \end{frame}
   $endif$
@@ -381,6 +384,7 @@ $endif$
 $if(biblatex)$
   \begin{frame}[allowframebreaks]{$biblio-title$}
   \bibliographytrue
+  \nocite{*}
   \printbibliography[heading=none]
   \end{frame}
 $endif$

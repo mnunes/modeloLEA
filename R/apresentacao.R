@@ -77,13 +77,13 @@ apresentacao <- function(toc = FALSE,
   for (f in c("beamerfontthememonash.sty",fcolortheme,
               "beamerthememonash.sty", "titlepage.png", "figs/"))
     if (!file.exists(f))
-      file.copy(system.file("rmarkdown", "templates", "monash", "skeleton",
-                            f, package="binb"),
+      file.copy(system.file("rmarkdown", "templates", "apresentacao", "skeleton",
+                            f, package="modeloLEA"),
                 ".", recursive=TRUE)
   
-  template <- system.file("rmarkdown", "templates", "monash",
+  template <- system.file("rmarkdown", "templates", "apresentacao",
                           "resources", "template.tex",
-                          package="binb")
+                          package="modeloLEA")
   
   rmarkdown::beamer_presentation(template = template,
                                  toc = toc,

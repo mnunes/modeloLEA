@@ -4,7 +4,9 @@ subtitle: Apresentação (Parcial|Final)
 author: Aluno Consultor
 date: 6 de Abril de 2023
 institute: LEA - Laboratório de Estatística Aplicada
-output: modeloLEA::apresentacao
+output: 
+  modeloLEA::apresentacao:
+    keep_tex:  true
 fontsize: 12pt
 bibliography: referencias.bib
 nocite: '@*'
