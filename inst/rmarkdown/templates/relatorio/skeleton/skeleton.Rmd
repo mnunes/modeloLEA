@@ -51,13 +51,16 @@ output:
 library(tidyverse)
 theme_set(theme_bw())
 library(performance)
+library(knitr)
+library(kableExtra)
+
 # definicoes globais 
 # tamanho das figuras: largura = 5, altura = 4 (polegadas)
-knitr::opts_chunk$set(fig.width = 5, fig.height = 4, 
+opts_chunk$set(fig.width = 5, fig.height = 4, 
 # exibir o codigo do R nos chunks (mudar para FALSE na versao final)
-                      echo = TRUE,
+               echo = TRUE,
 # mandar o latex manter a figura na posicao correta
-                      fig.pos = 'h')
+               fig.pos = 'h')
 ```
 
 
@@ -143,16 +146,15 @@ H_1 &: \beta_1 \neq 0 \\
 
 \noindent Os resultados destes testes estão apresentados na Tabela \ref{tab:Resultados}.
 
-\begin{table}[!h]
-\caption{\label{tab:Resultados} Resultados dos testes de hipóteses realizados para a análise de regressão.}
-\begin{center}
-\begin{tabular}{lrrrr}\hline
-Coeficiente & \mbox{Estimativa} & \mbox{Erro Padrao} &   $t$  & \mbox{p-valor} \\ \hline
-$\beta_0$   & -17,5791   &    6,7584   & -2,601 &  0,0123  \\
-$\beta_1$   &   3,9324   &    0,4155   & 9,464  & <0,0001  \\ \hline
-\end{tabular}
-\end{center}
-\end{table}
+```{r Resultados}
+summary(ajuste)$coefficients |>
+  kable(caption = "Resultado das estimativas dos parâmetros da regressão ajustada.",
+        booktabs = TRUE,
+        col.names = c("Estimativa", "Erro Padrão", "t", "p-valor"),
+        digits = 4) |> 
+  kable_styling(latex_options = c("hold_position"))
+```
+
 
 Note que, em ambos os casos, o p-valor encontrado é inferior a $\alpha  = 0,05$. Portanto, podemos rejeitar ambas as hipóteses nulas e $\beta_0$ e $\beta_1$ são estatisticamente diferentes de zero.
 

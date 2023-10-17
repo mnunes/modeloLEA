@@ -1,12 +1,12 @@
 Package: modeloLEA
 Type: Package
 Title: Modelo de Relatorio do Laboratorio de Estatistica Aplicada da UFRN
-Version: 0.6.0
-Date: 2019-09-05
+Version: 0.7.0
+Date: 2023-12-17
 Author: Marcus Nunes
 Maintainer: Marcus Nunes <marcus@marcusnunes.me>
 Depends:
-  R (>= 3.5.0)
+  R (>= 4.0.0)
 Description: Um estilo de relatorio tipo 'Royal Society Open Science' 
   da Royal Society Publishing, usando 'rmarkdown'. Foi projetado
   com 'LaTeX', em mente, para geracao de pdfs. Fortemente baseado no 
@@ -15,5 +15,5 @@ Description: Um estilo de relatorio tipo 'Royal Society Open Science'
   UFRN. 
 URL: https://github.com/mnunes/modeloLEA
 BugReports: https://github.com/mnunes/modeloLEA/issues
-Imports: rmarkdown, knitr, tidyverse, performance, see, bookdown
+Imports: rmarkdown, knitr, kableExtra, tidyverse, performance, see, bookdown
 License: GPL3
